@@ -624,7 +624,6 @@ ac_includes_default="\
 ac_subst_vars='LTLIBOBJS
 LIBOBJS
 DIRECTORIES
-RABBITMQ
 CURL
 EGREP
 GREP
@@ -686,9 +685,7 @@ ac_subst_files=''
 ac_user_opts='
 enable_option_checking
 enable_dependencies
-with_sqlite
 with_curl
-with_rabbitmq
 '
       ac_precious_vars='build_alias
 host_alias
@@ -1324,9 +1321,7 @@ Optional Features:
 Optional Packages:
   --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
   --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
-  --without-sqlite        disable sqlite support
   --without-curl          disable Curl HTTP support
-  --without-rabbitmq      disable RabbitMQ support
 
 Some influential environment variables:
   CC          C compiler command
@@ -3168,10 +3163,15 @@ fi
 fi
 
 # ======================================================================
-# libmicrohttpd needed for our webserver
+# libcurl
 # ======================================================================
 
-microhttpd=1
+
+# Check whether --with-curl was given.
+if test "${with_curl+set}" = set; then :
+  withval=$with_curl;
+fi
+
 
 ac_ext=c
 ac_cpp='$CPP $CPPFLAGS'
@@ -3570,167 +3570,6 @@ fi
 done
 
 
-ac_fn_c_check_header_mongrel "$LINENO" "microhttpd.h" "ac_cv_header_microhttpd_h" "$ac_includes_default"
-if test "x$ac_cv_header_microhttpd_h" = xyes; then :
-
-else
-  microhttpd=0
-fi
-
-
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for MHD_start_daemon in -lmicrohttpd" >&5
-$as_echo_n "checking for MHD_start_daemon in -lmicrohttpd... " >&6; }
-if ${ac_cv_lib_microhttpd_MHD_start_daemon+:} false; then :
-  $as_echo_n "(cached) " >&6
-else
-  ac_check_lib_save_LIBS=$LIBS
-LIBS="-lmicrohttpd  $LIBS"
-cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-/* end confdefs.h.  */
-
-/* Override any GCC internal prototype to avoid an error.
-   Use char because int might match the return type of a GCC
-   builtin and then its argument prototype would still apply.  */
-#ifdef __cplusplus
-extern "C"
-#endif
-char MHD_start_daemon ();
-int
-main ()
-{
-return MHD_start_daemon ();
-  ;
-  return 0;
-}
-_ACEOF
-if ac_fn_c_try_link "$LINENO"; then :
-  ac_cv_lib_microhttpd_MHD_start_daemon=yes
-else
-  ac_cv_lib_microhttpd_MHD_start_daemon=no
-fi
-rm -f core conftest.err conftest.$ac_objext \
-    conftest$ac_exeext conftest.$ac_ext
-LIBS=$ac_check_lib_save_LIBS
-fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_microhttpd_MHD_start_daemon" >&5
-$as_echo "$ac_cv_lib_microhttpd_MHD_start_daemon" >&6; }
-if test "x$ac_cv_lib_microhttpd_MHD_start_daemon" = xyes; then :
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_LIBMICROHTTPD 1
-_ACEOF
-
-  LIBS="-lmicrohttpd $LIBS"
-
-else
-  microhttpd=0
-fi
-
-if test $microhttpd == 1
-then
-    $as_echo "#define HAVE_MICROHTTPD 1" >>confdefs.h
-
-    LDFLAGS="$LDFLAGS -lmicrohttpd"
-fi
-
-# ======================================================================
-# libsqlite optional for logging data
-# ======================================================================
-
-
-# Check whether --with-sqlite was given.
-if test "${with_sqlite+set}" = set; then :
-  withval=$with_sqlite;
-fi
-
-if test "x$with_sqlite" != "xno"; then :
-
-        sqlite=1
-        ac_fn_c_check_header_mongrel "$LINENO" "sqlite3.h" "ac_cv_header_sqlite3_h" "$ac_includes_default"
-if test "x$ac_cv_header_sqlite3_h" = xyes; then :
-
-else
-  sqlite=0
-fi
-
-
-        { $as_echo "$as_me:${as_lineno-$LINENO}: checking for sqlite3_close in -lsqlite3" >&5
-$as_echo_n "checking for sqlite3_close in -lsqlite3... " >&6; }
-if ${ac_cv_lib_sqlite3_sqlite3_close+:} false; then :
-  $as_echo_n "(cached) " >&6
-else
-  ac_check_lib_save_LIBS=$LIBS
-LIBS="-lsqlite3  $LIBS"
-cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-/* end confdefs.h.  */
-
-/* Override any GCC internal prototype to avoid an error.
-   Use char because int might match the return type of a GCC
-   builtin and then its argument prototype would still apply.  */
-#ifdef __cplusplus
-extern "C"
-#endif
-char sqlite3_close ();
-int
-main ()
-{
-return sqlite3_close ();
-  ;
-  return 0;
-}
-_ACEOF
-if ac_fn_c_try_link "$LINENO"; then :
-  ac_cv_lib_sqlite3_sqlite3_close=yes
-else
-  ac_cv_lib_sqlite3_sqlite3_close=no
-fi
-rm -f core conftest.err conftest.$ac_objext \
-    conftest$ac_exeext conftest.$ac_ext
-LIBS=$ac_check_lib_save_LIBS
-fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_sqlite3_sqlite3_close" >&5
-$as_echo "$ac_cv_lib_sqlite3_sqlite3_close" >&6; }
-if test "x$ac_cv_lib_sqlite3_sqlite3_close" = xyes; then :
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_LIBSQLITE3 1
-_ACEOF
-
-  LIBS="-lsqlite3 $LIBS"
-
-else
-  sqlite=0
-fi
-
-
-else
-
-        sqlite=0
-
-fi
-if test $sqlite == 1; then :
-
-        { $as_echo "$as_me:${as_lineno-$LINENO}: Enabling sqlite support" >&5
-$as_echo "$as_me: Enabling sqlite support" >&6;}
-        $as_echo "#define HAVE_SQLITE 1" >>confdefs.h
-
-        LDFLAGS="$LDFLAGS -lsqlite3"
-
-else
-
-        { $as_echo "$as_me:${as_lineno-$LINENO}: Disabled sqlite support" >&5
-$as_echo "$as_me: Disabled sqlite support" >&6;}
-
-fi
-
-# ======================================================================
-# libcurl3 optional for logging data to 3rd party websites
-# ======================================================================
-
-
-# Check whether --with-curl was given.
-if test "${with_curl+set}" = set; then :
-  withval=$with_curl;
-fi
-
 if test "x$with_curl" != "xno"; then :
 
         curl=1
@@ -3813,173 +3652,8 @@ CURL=${curl}
 
 
 # ======================================================================
-# librabbitmq optional for logging data to a RabbitMQ server
-#
-# Note, the DIR in use here is rabbitmq-logger and not rabbitmq as thats
-# the external libraries name
-# ======================================================================
-
-
-# Check whether --with-rabbitmq was given.
-if test "${with_rabbitmq+set}" = set; then :
-  withval=$with_rabbitmq;
-fi
-
-if test "x$with_rabbitmq" != "xno"; then :
-
-        rabbitmq=1
-        ac_fn_c_check_header_mongrel "$LINENO" "amqp.h" "ac_cv_header_amqp_h" "$ac_includes_default"
-if test "x$ac_cv_header_amqp_h" = xyes; then :
-
-else
-  rabbitmq=0
-fi
-
-
-        { $as_echo "$as_me:${as_lineno-$LINENO}: checking for amqp_new_connection in -lrabbitmq" >&5
-$as_echo_n "checking for amqp_new_connection in -lrabbitmq... " >&6; }
-if ${ac_cv_lib_rabbitmq_amqp_new_connection+:} false; then :
-  $as_echo_n "(cached) " >&6
-else
-  ac_check_lib_save_LIBS=$LIBS
-LIBS="-lrabbitmq  $LIBS"
-cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-/* end confdefs.h.  */
-
-/* Override any GCC internal prototype to avoid an error.
-   Use char because int might match the return type of a GCC
-   builtin and then its argument prototype would still apply.  */
-#ifdef __cplusplus
-extern "C"
-#endif
-char amqp_new_connection ();
-int
-main ()
-{
-return amqp_new_connection ();
-  ;
-  return 0;
-}
-_ACEOF
-if ac_fn_c_try_link "$LINENO"; then :
-  ac_cv_lib_rabbitmq_amqp_new_connection=yes
-else
-  ac_cv_lib_rabbitmq_amqp_new_connection=no
-fi
-rm -f core conftest.err conftest.$ac_objext \
-    conftest$ac_exeext conftest.$ac_ext
-LIBS=$ac_check_lib_save_LIBS
-fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_rabbitmq_amqp_new_connection" >&5
-$as_echo "$ac_cv_lib_rabbitmq_amqp_new_connection" >&6; }
-if test "x$ac_cv_lib_rabbitmq_amqp_new_connection" = xyes; then :
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_LIBRABBITMQ 1
-_ACEOF
-
-  LIBS="-lrabbitmq $LIBS"
-
-else
-  rabbitmq=0
-fi
-
-
-else
-
-        rabbitmq=0
-
-fi
-if test $rabbitmq == 1; then :
-
-        { $as_echo "$as_me:${as_lineno-$LINENO}: Enabling RabbitMQ support" >&5
-$as_echo "$as_me: Enabling RabbitMQ support" >&6;}
-        $as_echo "#define HAVE_RABBITMQ 1" >>confdefs.h
-
-        LDFLAGS="$LDFLAGS -lrabbitmq"
-
-else
-
-        { $as_echo "$as_me:${as_lineno-$LINENO}: Disabled RabbitMQ support" >&5
-$as_echo "$as_me: Disabled RabbitMQ support" >&6;}
-
-fi
-RABBITMQ=${rabbitmq}
-
-
-# ======================================================================
-# gd required for annotating images
-# ======================================================================
-
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for gdFreeFontCache in -lgd" >&5
-$as_echo_n "checking for gdFreeFontCache in -lgd... " >&6; }
-if ${ac_cv_lib_gd_gdFreeFontCache+:} false; then :
-  $as_echo_n "(cached) " >&6
-else
-  ac_check_lib_save_LIBS=$LIBS
-LIBS="-lgd  $LIBS"
-cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-/* end confdefs.h.  */
-
-/* Override any GCC internal prototype to avoid an error.
-   Use char because int might match the return type of a GCC
-   builtin and then its argument prototype would still apply.  */
-#ifdef __cplusplus
-extern "C"
-#endif
-char gdFreeFontCache ();
-int
-main ()
-{
-return gdFreeFontCache ();
-  ;
-  return 0;
-}
-_ACEOF
-if ac_fn_c_try_link "$LINENO"; then :
-  ac_cv_lib_gd_gdFreeFontCache=yes
-else
-  ac_cv_lib_gd_gdFreeFontCache=no
-fi
-rm -f core conftest.err conftest.$ac_objext \
-    conftest$ac_exeext conftest.$ac_ext
-LIBS=$ac_check_lib_save_LIBS
-fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_gd_gdFreeFontCache" >&5
-$as_echo "$ac_cv_lib_gd_gdFreeFontCache" >&6; }
-if test "x$ac_cv_lib_gd_gdFreeFontCache" = xyes; then :
-  gd=1
-else
-  gd=0
-fi
-
-if test $gd == 1
-then
-    $as_echo "#define HAVE_LIB_GD 1" >>confdefs.h
-
-    LDFLAGS="$LDFLAGS -lgd"
-fi
-
-# ======================================================================
 # Work out what to compile
 # ======================================================================
-
-# Webserver support
-#AS_IF([test $microhttpd == 1], [DIRS="$DIRS webserver"])
-
-# Image Filter library
-#DIRS="$DIRS imagefilter"
-
-# RabbitMQ
-#AS_IF([test $rabbitmq == 1],[DIRS="$DIRS rabbitmqapi"])
-
-# logger's
-#DIRS="$DIRS logger"
-
-# sensors
-#DIRS="$DIRS clouds sensors"
-
-# ======================================================================
-# Finish off generating all files
 
 # add libraries based on the directory names, in reverse order to aid linking
 for d in $DIRS
@@ -3987,11 +3661,8 @@ do
     LDFLAGS="-l$d $LDFLAGS"
 done
 
-#LDFLAGS="$LDFLAGS -lscheduler -lastro -lweather -lpthread -lm"
-
 LDFLAGS="$LDFLAGS -lpthread -lm"
 
-#DIRS="lib astro scheduler $DIRS"
 DIRS="lib $DIRS"
 
 DIRECTORIES=$DIRS

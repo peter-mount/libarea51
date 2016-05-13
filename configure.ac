@@ -64,43 +64,7 @@ AS_IF([test "x$enable_dependencies" != "xno" -a "x$DISTRIBUTION" != "x" -a -n "$
 ])
 
 # ======================================================================
-# libmicrohttpd needed for our webserver
-# ======================================================================
-AH_TEMPLATE(HAVE_MICROHTTPD, [microhttpd embedded webserver])
-microhttpd=1
-AC_CHECK_HEADER(microhttpd.h, [], [microhttpd=0])
-AC_CHECK_LIB(microhttpd, MHD_start_daemon, [], [microhttpd=0])
-if test $microhttpd == 1
-then
-    AC_DEFINE(HAVE_MICROHTTPD)
-    LDFLAGS="$LDFLAGS -lmicrohttpd"
-fi
-
-# ======================================================================
-# libsqlite optional for logging data
-# ======================================================================
-AH_TEMPLATE(HAVE_SQLITE, [sqlite embedded sql database])
-AC_ARG_WITH([sqlite],
-    AS_HELP_STRING([--without-sqlite], [disable sqlite support]))
-AS_IF([test "x$with_sqlite" != "xno"],
-    [
-        sqlite=1
-        AC_CHECK_HEADER(sqlite3.h, [], [sqlite=0])
-        AC_CHECK_LIB(sqlite3, sqlite3_close, [], [sqlite=0])
-    ],[
-        sqlite=0
-    ])
-AS_IF([test $sqlite == 1],
-    [
-        AC_MSG_NOTICE([Enabling sqlite support])
-        AC_DEFINE(HAVE_SQLITE)
-        LDFLAGS="$LDFLAGS -lsqlite3"
-    ],[
-        AC_MSG_NOTICE([Disabled sqlite support])
-    ])
-
-# ======================================================================
-# libcurl3 optional for logging data to 3rd party websites
+# libcurl
 # ======================================================================
 AH_TEMPLATE(HAVE_CURL, [Curl HTTP client])
 AC_ARG_WITH([curl],
@@ -124,64 +88,8 @@ AS_IF([test $curl == 1],
 AC_SUBST([CURL],[${curl}])
 
 # ======================================================================
-# librabbitmq optional for logging data to a RabbitMQ server
-#
-# Note, the DIR in use here is rabbitmq-logger and not rabbitmq as thats
-# the external libraries name
-# ======================================================================
-AH_TEMPLATE(HAVE_RABBITMQ, [RabbitMQ messaging server])
-AC_ARG_WITH([rabbitmq],
-    AS_HELP_STRING([--without-rabbitmq], [disable RabbitMQ support]))
-AS_IF([test "x$with_rabbitmq" != "xno"],
-    [
-        rabbitmq=1
-        AC_CHECK_HEADER(amqp.h, [], [rabbitmq=0])
-        AC_CHECK_LIB(rabbitmq, amqp_new_connection, [], [rabbitmq=0])
-    ],[
-        rabbitmq=0
-    ])
-AS_IF([test $rabbitmq == 1],
-    [
-        AC_MSG_NOTICE([Enabling RabbitMQ support])
-        AC_DEFINE(HAVE_RABBITMQ)
-        LDFLAGS="$LDFLAGS -lrabbitmq"
-    ],[
-        AC_MSG_NOTICE([Disabled RabbitMQ support])
-    ])
-AC_SUBST([RABBITMQ],[${rabbitmq}])
-
-# ======================================================================
-# gd required for annotating images
-# ======================================================================
-AH_TEMPLATE(HAVE_LIB_GD, [GD for annotating images])
-AC_CHECK_LIB([gd], [gdFreeFontCache], [gd=1], [gd=0])
-if test $gd == 1
-then
-    AC_DEFINE(HAVE_LIB_GD)
-    LDFLAGS="$LDFLAGS -lgd"
-fi
-
-# ======================================================================
 # Work out what to compile
 # ======================================================================
-
-# Webserver support
-#AS_IF([test $microhttpd == 1], [DIRS="$DIRS webserver"])
-
-# Image Filter library
-#DIRS="$DIRS imagefilter"
-
-# RabbitMQ
-#AS_IF([test $rabbitmq == 1],[DIRS="$DIRS rabbitmqapi"])
-
-# logger's
-#DIRS="$DIRS logger"
-
-# sensors
-#DIRS="$DIRS clouds sensors"
-
-# ======================================================================
-# Finish off generating all files
 
 # add libraries based on the directory names, in reverse order to aid linking
 for d in $DIRS
@@ -189,11 +97,8 @@ do
     LDFLAGS="-l$d $LDFLAGS"
 done
 
-#LDFLAGS="$LDFLAGS -lscheduler -lastro -lweather -lpthread -lm"
-
 LDFLAGS="$LDFLAGS -lpthread -lm"
 
-#DIRS="lib astro scheduler $DIRS"
 DIRS="lib $DIRS"
 
 AC_SUBST([DIRECTORIES],[$DIRS])
