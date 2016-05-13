@@ -179,6 +179,7 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <codeAssistance>
+        <buildAnalyzer>false</buildAnalyzer>
       </codeAssistance>
       <makefileType>
         <makeTool>
@@ -197,6 +198,7 @@
         <preBuild>
           <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
           <preBuildCommand>./prebuild.sh</preBuildCommand>
+          <preBuildFirst>true</preBuildFirst>
         </preBuild>
       </makefileType>
       <item path="lib/blockingqueue/add.c" ex="false" tool="0" flavor2="0">

@@ -16,23 +16,36 @@ LDFLAGS ?= @LDFLAGS@
 BUILD_DIR = ../build
 
 # Library destination & directory for individual build targets
-TARGET = $(BUILD_DIR)/lib$(MODULE).a
-DIR = $(BUILD_DIR)/$(MODULE)
+DIR = $(BUILD_DIR)/obj/$(MODULE)/$(MODULE)
+PACKAGE = ${BUILD_DIR}/packages/${MODULE}-@PACKAGE_VERSION@_amd64.deb
+BIN_DIR = ${BUILD_DIR}/$(MODULE)/usr/bin
+INCLUDE_DIR = ${BUILD_DIR}/$(MODULE)/usr/include
+TARGET = $(BUILD_DIR)/$(MODULE)/usr/lib/lib$(MODULE).a
+
+DEBIAN_DIR = $(BUILD_DIR)/$(MODULE)/DEBIAN
 
 # Add destination build dir to OBJS so it's defined in a single location
 TARGET_OBJS = $(patsubst %.o, $(DIR)/%.o, $(OBJS))
 
 # Any applications?
-BIN_DIR = ${BUILD_DIR}/bin
 TARGET_APPS = $(patsubst %, ${BIN_DIR}/%, $(APPS))
 
-all: $(TARGET)
+#all: $(TARGET) $(PACKAGE)
+#all: $(PACKAGE)
+all: $(TARGET) $(PACKAGE)
 
 .PHONY: apps
 apps: $(TARGET_APPS)
 
-$(TARGET): $(TARGET_OBJS)
+# Build the .a and copy any .h
+$(TARGET): $(TARGET_OBJS) $(TARGET_H)
+	@mkdir -p $(@D)
 	ar rcs $@ $^
+	@if [ -d ../include/$(MODULE) ] ;\
+	then \
+	    mkdir -p $(INCLUDE_DIR) ;\
+	    cp -rp ../include/${MODULE} $(INCLUDE_DIR) ;\
+	fi
 
 clean:
 	rm -rf $(DIR)
@@ -45,3 +58,9 @@ $(DIR)/%.o: %.c
 ${BIN_DIR}/%: %.o
 	@mkdir -p $(@D)
 	$(CC) -o $@ $< $(LDFLAGS)
+
+$(PACKAGE): $(TARGET)
+	@mkdir -p $(DEBIAN_DIR)
+	@cp -r ../packages/debian/${MODULE}/DEBIAN/control $(DEBIAN_DIR)
+	@mkdir -p $(@D)
+	dpkg-deb --build $(BUILD_DIR)/$(MODULE) $(PACKAGE)

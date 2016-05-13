@@ -5,41 +5,71 @@
       <df name="autom4te.cache">
       </df>
       <df name="build">
-        <df name="weather">
-          <df name="blockingqueue">
+        <df name="area51">
+          <df name="DEBIAN">
           </df>
-          <df name="bytebuffer">
-          </df>
-          <df name="charbuffer">
-            <df name="curl">
+          <df name="usr">
+            <df name="include">
+              <df name="area51">
+                <in>blockingQueue.h</in>
+                <in>bytebuffer.h</in>
+                <in>charbuffer.h</in>
+                <in>config.h</in>
+                <in>file.h</in>
+                <in>hashmap.h</in>
+                <in>history.h</in>
+                <in>list.h</in>
+                <in>string.h</in>
+                <in>table.h</in>
+                <in>thread.h</in>
+                <in>threadpool.h</in>
+              </df>
             </df>
-            <df name="json">
-            </df>
-            <df name="misc">
-            </df>
-            <df name="xml">
+            <df name="lib">
             </df>
           </df>
-          <df name="config">
-          </df>
-          <df name="file">
-          </df>
-          <df name="hashmap">
-            <df name="hash">
+        </df>
+        <df name="obj">
+          <df name="area51">
+            <df name="area51">
+              <df name="blockingqueue">
+              </df>
+              <df name="bytebuffer">
+              </df>
+              <df name="charbuffer">
+                <df name="curl">
+                </df>
+                <df name="json">
+                </df>
+                <df name="misc">
+                </df>
+                <df name="xml">
+                </df>
+              </df>
+              <df name="config">
+              </df>
+              <df name="file">
+              </df>
+              <df name="hashmap">
+                <df name="hash">
+                </df>
+              </df>
+              <df name="history">
+              </df>
+              <df name="list">
+              </df>
+              <df name="string">
+              </df>
+              <df name="table">
+              </df>
+              <df name="thread">
+              </df>
+              <df name="threadpool">
+              </df>
             </df>
           </df>
-          <df name="history">
-          </df>
-          <df name="list">
-          </df>
-          <df name="string">
-          </df>
-          <df name="table">
-          </df>
-          <df name="thread">
-          </df>
-          <df name="threadpool">
-          </df>
+        </df>
+        <df name="packages">
         </df>
       </df>
       <df name="include">
@@ -212,6 +242,14 @@
           <in>init.c</in>
           <in>start.c</in>
           <in>submit.c</in>
+        </df>
+      </df>
+      <df name="packages">
+        <df name="debian">
+          <df name="area51">
+            <df name="DEBIAN">
+            </df>
+          </df>
         </df>
       </df>
     </df>

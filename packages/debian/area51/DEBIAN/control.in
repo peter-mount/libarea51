@@ -1,0 +1,9 @@
+Package: libarea51
+Version: @PACKAGE_VERSION@
+Section: custom
+Priority: optional
+Architecture: amd64
+Essential: no
+Installed-Size: 1024
+Maintainer: area51.onl
+Description: Core Area51 library

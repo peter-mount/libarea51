@@ -10,15 +10,13 @@ then
     fi
 fi
 
-echo OS=$OS
-
 # Dependent on the OS ensure we have specific libraries installed
 case "$OS" in
     ubuntu)
         echo "Running under Ubuntu"
-        sudo apt-get install -y \
-            libmicrohttpd-dev \
-            libgdchart-gd2-noxpm-dev
+#        sudo apt-get install -y \
+#            libmicrohttpd-dev \
+#            libgdchart-gd2-noxpm-dev
         ;;
     debian)
         echo "Running under Debian"

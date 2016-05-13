@@ -1,6 +1,6 @@
 # autoconf script for building the pi weather station
 #
-AC_INIT([piweather], [0.1], [peter@retep.org])
+AC_INIT([area51], [0.1], [peter@retep.org])
 AC_MSG_NOTICE([libarea51])
 
 # Check for gcc
@@ -156,8 +156,12 @@ AC_SUBST([DIRECTORIES],[$DIRS])
 AC_SUBST([CPPFLAGS],[$CPPFLAGS])
 AC_SUBST([LDFLAGS],[$LDFLAGS])
 
+# Build make files
 MAKEFILES="SubMakefile $(find . -type f -name Makefile.in|sed s/\\.in//g)"
+# custom .h files
 MAKEFILES="$MAKEFILES $(find . -type f -name '*.h.in'|sed s/\\.in//g)"
+# Package files
+MAKEFILES="$MAKEFILES $(find packages -type f -name '*.in'|sed s/\\.in//g)"
 AC_CONFIG_FILES([$MAKEFILES])
 
 AC_OUTPUT()

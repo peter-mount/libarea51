@@ -51,5 +51,7 @@ SubMakefile
 config.cache
 /include/area51/charbuffer.h
 
+# Generated package files
+/packages/debian/*/DEBIAN/control
 
 /build/
