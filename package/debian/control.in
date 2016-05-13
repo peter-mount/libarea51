@@ -1,8 +1,9 @@
 Package: libarea51
 Version: @PACKAGE_VERSION@
+Depends: @DEPENDENCIES@
 Section: custom
 Priority: optional
-Architecture: amd64
+Architecture: @ARCHITECTURE@
 Essential: no
 Installed-Size: 1024
 Maintainer: area51.onl

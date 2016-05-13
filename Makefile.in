@@ -1,12 +1,14 @@
-DIRECTORIES = @DIRECTORIES@
-
 BUILD_DIR=build
 PACKAGE_DIR= $(BUILD_DIR)/package
 
-PACKAGE = $(BUILD_DIR)/@PACKAGE_NAME@-@PACKAGE_VERSION@_amd64.deb
+DIRECTORIES = @DIRECTORIES@
+
+ifneq (@DPKG_DEB@,)
+PACKAGES += $(BUILD_DIR)/@PACKAGE_NAME@-@PACKAGE_VERSION@_@ARCHITECTURE@.deb
+endif
 
 .PHONY: all
-all: $(DIRECTORIES) $(PACKAGE)
+all: $(DIRECTORIES) $(PACKAGES)
 
 .PHONY: apps
 apps: $(DIRECTORIES)
@@ -27,5 +29,5 @@ $(MAKECMDGOALS): $(DIRECTORIES)
 	@mkdir -p $(PACKAGE_DIR)/DEBIAN
 	@cp -r package/debian/control $(PACKAGE_DIR)/DEBIAN
 	@mkdir -p $(@D)
-	dpkg-deb --build $(PACKAGE_DIR) $@
+	@DPKG_DEB@ --build $(PACKAGE_DIR) $@
 	@rm -rf $(PACKAGE_DIR)/DEBIAN

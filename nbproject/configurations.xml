@@ -165,6 +165,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>nbproject/private/launcher.properties</itemPath>
     </logicalFolder>
+    <itemPath>dependencies/ubuntu</itemPath>
   </logicalFolder>
   <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
   <sourceRootList>
@@ -201,6 +202,8 @@
           <preBuildFirst>true</preBuildFirst>
         </preBuild>
       </makefileType>
+      <item path="dependencies/ubuntu" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="lib/blockingqueue/add.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/blockingqueue/get.c" ex="false" tool="0" flavor2="0">

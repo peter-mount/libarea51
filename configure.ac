@@ -20,6 +20,47 @@ LDFLAGS="$LDFLAGS -L../build"
 CPPFLAGS="$CPPFLAGS -I../include"
 
 # ======================================================================
+# Package generation
+
+# Debian if DPKG_DEB is not ""
+AC_PATH_PROG([DPKG_DEB], [dpkg-deb])
+AC_PATH_PROG([DPKG_ARCH], [dpkg-architecture])
+AS_IF([test -n "$DPKG_ARCH" ],[ARCHITECTURE=$($DPKG_ARCH | grep DEB_BUILD_ARCH= | cut -f2 -d '=')],[])
+
+# ARCHITECTURE for package, "" if not known
+AS_IF([test -n "$ARCHITECTURE"],[
+    AC_SUBST([ARCHITECTURE],[$ARCHITECTURE])
+    AC_MSG_NOTICE(['Build architecture $ARCHITECTURE'])
+],[
+    AC_MSG_NOTICE(['Build architecture unknown'])
+]);
+
+# ======================================================================
+# Distribution detection and dependencies
+AC_PATH_PROG([SUDO],[sudo])
+AC_PATH_PROG([APT_GET],[apt-get])
+AC_PATH_PROG([APK],[apk])
+
+AC_CHECK_FILE([/etc/os-release],[
+    DISTRIBUTION=$(. /etc/os-release;echo $ID)
+    AC_MSG_NOTICE(['Build distribution $DISTRIBUTION ($(. /etc/os-release;echo $VERSION_ID))'])
+])
+
+AC_CHECK_FILE([dependencies/$DISTRIBUTION],[
+    PKG_DEPENDENCIES=$(<dependencies/$DISTRIBUTION)
+    DEPENDENCIES=$(echo $PKG_DEPENDENCIES|sed "s/ /, /g")
+],[AC_MSG_NOTICE(['No dependencies for this platform'])])
+AC_SUBST([DEPENDENCIES],[$DEPENDENCIES])
+
+AH_TEMPLATE(INSTALL_DEPENDENCIES, [Install required dependencies])
+AC_ARG_WITH([dependencies],AS_HELP_STRING([--with-dependencies], [Install required dependencies during configuration]))
+AS_IF([test "x$with_dependencies" != "xno" -a "x$DISTRIBUTION" != "x" -a -n "$APT_GET" ],[
+    AC_MSG_NOTICE(['Installing dependencies'])
+    AS_IF([test "x$APT_GET" != "x"],[$SUDO $APT_GET install -y $PKG_DEPENDENCIES])
+    AS_IF([test "x$APK" != "x"],[$SUDO $APK add $PKG_DEPENDENCIES])
+])
+
+# ======================================================================
 # libmicrohttpd needed for our webserver
 # ======================================================================
 AH_TEMPLATE(HAVE_MICROHTTPD, [microhttpd embedded webserver])
