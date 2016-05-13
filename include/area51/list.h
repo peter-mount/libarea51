@@ -5,8 +5,8 @@
  * Created on March 26, 2014, 1:16 PM
  */
 
-#ifndef LIST_H
-#define	LIST_H
+#ifndef AREA51_LIST_H
+#define	AREA51_LIST_H
 
 #include <stdlib.h>
 

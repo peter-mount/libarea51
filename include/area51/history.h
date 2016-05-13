@@ -5,8 +5,8 @@
  * Created on April 12, 2014, 1:30 PM
  */
 
-#ifndef HISTORY_H
-#define	HISTORY_H
+#ifndef AREA51_HISTORY_H
+#define	AREA51_HISTORY_H
 
 #include <time.h>
 #include "area51/list.h"

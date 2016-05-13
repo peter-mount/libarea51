@@ -5,8 +5,8 @@
  * Created on April 29, 2014, 5:53 PM
  */
 
-#ifndef TABLE_H
-#define	TABLE_H
+#ifndef AREA51_TABLE_H
+#define	AREA51_TABLE_H
 
 #include "area51/charbuffer.h"
 #include "area51/list.h"

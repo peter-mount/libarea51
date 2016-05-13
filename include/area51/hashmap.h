@@ -18,8 +18,8 @@
  * Hash map.
  */
 
-#ifndef __HASHMAP_H
-#define __HASHMAP_H
+#ifndef AREA51___HASHMAP_H
+#define AREA51___HASHMAP_H
 
 #include <stdbool.h>
 #include <stdlib.h>

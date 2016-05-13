@@ -5,8 +5,8 @@
  * Created on March 26, 2014, 4:58 PM
  */
 
-#ifndef STRING_H
-#define	STRING_H
+#ifndef AREA51_STRING_H
+#define	AREA51_STRING_H
 
 extern char* genurl(const char *contextPath, const char *suffix);
 extern void fatalError(char *fmt, ...);

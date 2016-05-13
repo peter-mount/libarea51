@@ -34,6 +34,8 @@
               </df>
               <df name="list">
               </df>
+              <df name="math">
+              </df>
               <df name="string">
               </df>
               <df name="table">
@@ -57,6 +59,7 @@
                 <in>hashmap.h</in>
                 <in>history.h</in>
                 <in>list.h</in>
+                <in>math.h</in>
                 <in>string.h</in>
                 <in>table.h</in>
                 <in>thread.h</in>
@@ -80,6 +83,7 @@
           <in>hashmap.h</in>
           <in>history.h</in>
           <in>list.h</in>
+          <in>math.h</in>
           <in>string.h</in>
           <in>table.h</in>
           <in>thread.h</in>
@@ -211,6 +215,16 @@
           <in>removeHead.c</in>
           <in>removeTail.c</in>
           <in>size.c</in>
+        </df>
+        <df name="math">
+          <in>statistic_getCount.c</in>
+          <in>statistic_getMax.c</in>
+          <in>statistic_getMin.c</in>
+          <in>statistic_getTotal.c</in>
+          <in>statistic_getValue.c</in>
+          <in>statistic_init.c</in>
+          <in>statistic_reset.c</in>
+          <in>statistic_setValue.c</in>
         </df>
         <df name="string">
           <in>extractString.c</in>

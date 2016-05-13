@@ -5,8 +5,8 @@
  * Created on March 26, 2014, 3:05 PM
  */
 
-#ifndef THREADPOOL_H
-#define	THREADPOOL_H
+#ifndef AREA51_THREADPOOL_H
+#define	AREA51_THREADPOOL_H
 
 #include "area51/blockingQueue.h"
 #include "area51/list.h"

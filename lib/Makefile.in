@@ -135,6 +135,16 @@ OBJS += list/addHead.o \
 	list/removeTail.o \
 	list/size.o
 
+# Math
+OBJS += math/statistic_getCount.o \
+	math/statistic_getMax.o \
+	math/statistic_getMin.o \
+	math/statistic_getTotal.o \
+	math/statistic_getValue.o \
+	math/statistic_init.o \
+	math/statistic_reset.o \
+	math/statistic_setValue.o
+
 # String
 OBJS += string/extractString.o \
 	string/fatalError.o \

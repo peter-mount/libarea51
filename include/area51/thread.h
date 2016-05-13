@@ -5,8 +5,8 @@
  * Created on 08 April 2014, 18:33
  */
 
-#ifndef THREAD_H
-#define	THREAD_H
+#ifndef AREA51_THREAD_H
+#define	AREA51_THREAD_H
 
 extern int thread_setPriority(const int priority);
 

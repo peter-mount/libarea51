@@ -5,8 +5,8 @@
  * Created on February 27, 2014, 12:35 PM
  */
 
-#ifndef CONFIG_H
-#define	CONFIG_H
+#ifndef AREA51_CONFIG_H
+#define	AREA51_CONFIG_H
 
 #ifdef	__cplusplus
 extern "C" {

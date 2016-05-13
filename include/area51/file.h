@@ -5,8 +5,8 @@
  * Created on March 26, 2014, 4:58 PM
  */
 
-#ifndef FILE_H
-#define	FILE_H
+#ifndef AREA51_FILE_H
+#define	AREA51_FILE_H
 
 #include <sys/types.h>
 

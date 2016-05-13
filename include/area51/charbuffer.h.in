@@ -5,8 +5,8 @@
  * Created on February 11, 2014, 4:49 PM
  */
 
-#ifndef CHARBUFFER_H
-#define	CHARBUFFER_H
+#ifndef AREA51_CHARBUFFER_H
+#define	AREA51_CHARBUFFER_H
 
 #include <pthread.h>
 #include <stdio.h>

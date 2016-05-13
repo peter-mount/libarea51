@@ -5,8 +5,8 @@
  * Created on February 7, 2014, 4:52 PM
  */
 
-#ifndef BYTEBUFFER_H
-#define	BYTEBUFFER_H
+#ifndef AREA51_BYTEBUFFER_H
+#define	AREA51_BYTEBUFFER_H
 
 #ifdef	__cplusplus
 extern "C" {

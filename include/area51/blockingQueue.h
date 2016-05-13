@@ -5,8 +5,8 @@
  * Created on March 4, 2014, 6:39 PM
  */
 
-#ifndef BLOCKINGQUEUE_H
-#define	BLOCKINGQUEUE_H
+#ifndef AREA51_BLOCKINGQUEUE_H
+#define	AREA51_BLOCKINGQUEUE_H
 
 #include "area51/list.h"
 
@@ -34,5 +34,5 @@ extern struct Node *blockingqueue_get(struct blocking_queue *queue);
  */
 extern void blockingqueue_add(struct blocking_queue *queue, struct Node *node);
 
-#endif	/* BLOCKINGQUEUE_H */
+#endif	/* AREA51_BLOCKINGQUEUE_H */
 
