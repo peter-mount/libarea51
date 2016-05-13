@@ -49,12 +49,15 @@ AC_CHECK_FILE([/etc/os-release],[
 AC_CHECK_FILE([dependencies/$DISTRIBUTION],[
     PKG_DEPENDENCIES=$(<dependencies/$DISTRIBUTION)
     DEPENDENCIES=$(echo $PKG_DEPENDENCIES|sed "s/ /, /g")
-],[AC_MSG_NOTICE(['No dependencies for this platform'])])
+],[
+    PKG_DEPENDENCIES=
+    DEPENDENCIES=
+])
 AC_SUBST([DEPENDENCIES],[$DEPENDENCIES])
 
 AH_TEMPLATE(INSTALL_DEPENDENCIES, [Install required dependencies])
-AC_ARG_WITH([dependencies],AS_HELP_STRING([--with-dependencies], [Install required dependencies during configuration]))
-AS_IF([test "x$with_dependencies" != "xno" -a "x$DISTRIBUTION" != "x" -a -n "$APT_GET" ],[
+AC_ARG_ENABLE([dependencies],AS_HELP_STRING([--enable-dependencies], [Install required dependencies during configuration]))
+AS_IF([test "x$enable_dependencies" != "xno" -a "x$DISTRIBUTION" != "x" -a -n "$APT_GET" ],[
     AC_MSG_NOTICE(['Installing dependencies'])
     AS_IF([test "x$APT_GET" != "x"],[$SUDO $APT_GET install -y $PKG_DEPENDENCIES])
     AS_IF([test "x$APK" != "x"],[$SUDO $APK add $PKG_DEPENDENCIES])

@@ -46,6 +46,8 @@
           </df>
         </df>
         <df name="package">
+          <df name="DEBIAN">
+          </df>
           <df name="usr">
             <df name="include">
               <df name="area51">

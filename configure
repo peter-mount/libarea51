@@ -685,7 +685,7 @@ SHELL'
 ac_subst_files=''
 ac_user_opts='
 enable_option_checking
-with_dependencies
+enable_dependencies
 with_sqlite
 with_curl
 with_rabbitmq
@@ -1315,10 +1315,15 @@ if test -n "$ac_init_help"; then
    esac
   cat <<\_ACEOF
 
+Optional Features:
+  --disable-option-checking  ignore unrecognized --enable/--with options
+  --disable-FEATURE       do not include FEATURE (same as --enable-FEATURE=no)
+  --enable-FEATURE[=ARG]  include FEATURE [ARG=yes]
+  --enable-dependencies   Install required dependencies during configuration
+
 Optional Packages:
   --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
   --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
-  --with-dependencies     Install required dependencies during configuration
   --without-sqlite        disable sqlite support
   --without-curl          disable Curl HTTP support
   --without-rabbitmq      disable RabbitMQ support
@@ -3134,26 +3139,27 @@ if eval test \"x\$"$as_ac_File"\" = x"yes"; then :
     DEPENDENCIES=$(echo $PKG_DEPENDENCIES|sed "s/ /, /g")
 
 else
-  { $as_echo "$as_me:${as_lineno-$LINENO}: 'No dependencies for this platform'" >&5
-$as_echo "$as_me: 'No dependencies for this platform'" >&6;}
+
+    PKG_DEPENDENCIES=
+    DEPENDENCIES=
+
 fi
 
 DEPENDENCIES=$DEPENDENCIES
 
 
 
-
-# Check whether --with-dependencies was given.
-if test "${with_dependencies+set}" = set; then :
-  withval=$with_dependencies;
+# Check whether --enable-dependencies was given.
+if test "${enable_dependencies+set}" = set; then :
+  enableval=$enable_dependencies;
 fi
 
-if test "x$with_dependencies" != "xno" -a "x$DISTRIBUTION" != "x" -a -n "$APT_GET" ; then :
+if test "x$enable_dependencies" != "xno" -a "x$DISTRIBUTION" != "x" -a -n "$APT_GET" ; then :
 
     { $as_echo "$as_me:${as_lineno-$LINENO}: 'Installing dependencies'" >&5
 $as_echo "$as_me: 'Installing dependencies'" >&6;}
     if test "x$APT_GET" != "x"; then :
-  $SUDO $APT_GET install $PKG_DEPENDENCIES
+  $SUDO $APT_GET install -y $PKG_DEPENDENCIES
 fi
     if test "x$APK" != "x"; then :
   $SUDO $APK add $PKG_DEPENDENCIES
