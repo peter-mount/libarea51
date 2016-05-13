@@ -45,6 +45,28 @@
             </df>
           </df>
         </df>
+        <df name="package">
+          <df name="usr">
+            <df name="include">
+              <df name="area51">
+                <in>blockingQueue.h</in>
+                <in>bytebuffer.h</in>
+                <in>charbuffer.h</in>
+                <in>config.h</in>
+                <in>file.h</in>
+                <in>hashmap.h</in>
+                <in>history.h</in>
+                <in>list.h</in>
+                <in>string.h</in>
+                <in>table.h</in>
+                <in>thread.h</in>
+                <in>threadpool.h</in>
+              </df>
+            </df>
+            <df name="lib">
+            </df>
+          </df>
+        </df>
       </df>
       <df name="dependencies">
       </df>
