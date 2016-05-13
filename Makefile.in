@@ -1,0 +1,23 @@
+DIRECTORIES = @DIRECTORIES@
+
+.PHONY: all
+all: $(DIRECTORIES)
+	@$(MAKE) --keep-going apps
+
+.PHONY: apps
+apps: $(DIRECTORIES)
+
+.PHONY: clean
+clean:
+	rm -rf build
+
+.PHONY: $(DIRECTORIES)
+$(DIRECTORIES):
+	@$(MAKE) --keep-going --directory=$@ $(MAKECMDGOALS)
+
+.PHONY: $(MAKECMDGOALS)
+$(MAKECMDGOALS): $(DIRECTORIES)
+
+.PHONY: package
+package: all
+	bash ./package.sh 0.1
