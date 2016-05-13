@@ -8,6 +8,7 @@
  * The format is specific for each module but is usually a set of key value pairs delimited with whitespace
  */
 
+#include <string.h>
 #include "area51/config.h"
 
 void config_getBooleanParameter(CONFIG_SECTION *sect, const char *name, int *val) {

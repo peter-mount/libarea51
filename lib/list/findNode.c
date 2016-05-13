@@ -1,6 +1,7 @@
 
 
 #include <stdlib.h>
+#include <string.h>
 #include "area51/config.h"
 #include "area51/list.h"
 

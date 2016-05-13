@@ -1,4 +1,4 @@
-MODULE = weather
+MODULE = libarea51
 
 # ======================================================================
 # This may seem excessive but this is how some big shared libraries

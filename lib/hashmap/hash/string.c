@@ -20,6 +20,7 @@
 
 #include <stdbool.h>
 #include <stdint.h>
+#include <string.h>
 
 bool hashmapStringEquals(void *key_a, void *key_b)
 {

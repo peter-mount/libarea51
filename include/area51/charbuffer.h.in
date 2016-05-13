@@ -62,10 +62,10 @@ extern void charbuffer_end_xml(struct charbuffer *b, char *tag);
 extern int charbuffer_append_urlencode(struct charbuffer *b, char *src);
 extern int charbuffer_append_form_field(struct charbuffer *b, char *name, char *value);
 extern int charbuffer_append_form_fieldf(struct charbuffer *b, char *name, char *fmt, ...);
-ifeq (@CURL@,1)
+#if @CURL@
 extern size_t charbuffer_curl_write(void *b, size_t s, size_t n, void *stream);
 extern size_t charbuffer_curl_write_sink(void *b, size_t s, size_t n, void *stream);
-endif
+#endif
 
 #endif	/* CHARBUFFER_H */
 
