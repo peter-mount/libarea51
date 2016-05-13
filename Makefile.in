@@ -1,8 +1,12 @@
 DIRECTORIES = @DIRECTORIES@
 
+BUILD_DIR=build
+PACKAGE_DIR= $(BUILD_DIR)/package
+
+PACKAGE = $(BUILD_DIR)/@PACKAGE_NAME@-@PACKAGE_VERSION@_amd64.deb
+
 .PHONY: all
-all: $(DIRECTORIES)
-	@$(MAKE) --keep-going apps
+all: $(DIRECTORIES) $(PACKAGE)
 
 .PHONY: apps
 apps: $(DIRECTORIES)
@@ -18,6 +22,10 @@ $(DIRECTORIES):
 .PHONY: $(MAKECMDGOALS)
 $(MAKECMDGOALS): $(DIRECTORIES)
 
-.PHONY: package
-package: all
-	bash ./package.sh 0.1
+# Rule to build debian .deb packages
+%.deb:
+	@mkdir -p $(PACKAGE_DIR)/DEBIAN
+	@cp -r package/debian/control $(PACKAGE_DIR)/DEBIAN
+	@mkdir -p $(@D)
+	dpkg-deb --build $(PACKAGE_DIR) $@
+	@rm -rf $(PACKAGE_DIR)/DEBIAN

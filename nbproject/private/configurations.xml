@@ -5,30 +5,6 @@
       <df name="autom4te.cache">
       </df>
       <df name="build">
-        <df name="area51">
-          <df name="DEBIAN">
-          </df>
-          <df name="usr">
-            <df name="include">
-              <df name="area51">
-                <in>blockingQueue.h</in>
-                <in>bytebuffer.h</in>
-                <in>charbuffer.h</in>
-                <in>config.h</in>
-                <in>file.h</in>
-                <in>hashmap.h</in>
-                <in>history.h</in>
-                <in>list.h</in>
-                <in>string.h</in>
-                <in>table.h</in>
-                <in>thread.h</in>
-                <in>threadpool.h</in>
-              </df>
-            </df>
-            <df name="lib">
-            </df>
-          </df>
-        </df>
         <df name="obj">
           <df name="area51">
             <df name="area51">
@@ -69,7 +45,29 @@
             </df>
           </df>
         </df>
-        <df name="packages">
+        <df name="package">
+          <df name="DEBIAN">
+          </df>
+          <df name="usr">
+            <df name="include">
+              <df name="area51">
+                <in>blockingQueue.h</in>
+                <in>bytebuffer.h</in>
+                <in>charbuffer.h</in>
+                <in>config.h</in>
+                <in>file.h</in>
+                <in>hashmap.h</in>
+                <in>history.h</in>
+                <in>list.h</in>
+                <in>string.h</in>
+                <in>table.h</in>
+                <in>thread.h</in>
+                <in>threadpool.h</in>
+              </df>
+            </df>
+            <df name="lib">
+            </df>
+          </df>
         </df>
       </df>
       <df name="include">
@@ -244,12 +242,8 @@
           <in>submit.c</in>
         </df>
       </df>
-      <df name="packages">
+      <df name="package">
         <df name="debian">
-          <df name="area51">
-            <df name="DEBIAN">
-            </df>
-          </df>
         </df>
       </df>
     </df>
