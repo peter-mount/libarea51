@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="autom4te.cache">
+      </df>
+      <df name="build">
+        <df name="obj">
+          <df name="area51">
+            <df name="area51">
+              <df name="blockingqueue">
+              </df>
+              <df name="bytebuffer">
+              </df>
+              <df name="charbuffer">
+                <df name="curl">
+                </df>
+                <df name="json">
+                </df>
+                <df name="misc">
+                </df>
+                <df name="xml">
+                </df>
+              </df>
+              <df name="config">
+              </df>
+              <df name="file">
+              </df>
+              <df name="hashmap">
+                <df name="hash">
+                </df>
+              </df>
+              <df name="history">
+              </df>
+              <df name="list">
+              </df>
+              <df name="math">
+              </df>
+              <df name="string">
+              </df>
+              <df name="table">
+              </df>
+              <df name="thread">
+              </df>
+              <df name="threadpool">
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="package">
+          <df name="usr">
+            <df name="include">
+              <df name="area51">
+                <in>blockingQueue.h</in>
+                <in>bytebuffer.h</in>
+                <in>charbuffer.h</in>
+                <in>config.h</in>
+                <in>file.h</in>
+                <in>hashmap.h</in>
+                <in>history.h</in>
+                <in>list.h</in>
+                <in>math.h</in>
+                <in>string.h</in>
+                <in>table.h</in>
+                <in>thread.h</in>
+                <in>threadpool.h</in>
+              </df>
+            </df>
+            <df name="lib">
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="dependencies">
+      </df>
+      <df name="include">
+        <df name="area51">
+          <in>blockingQueue.h</in>
+          <in>bytebuffer.h</in>
+          <in>charbuffer.h</in>
+          <in>config.h</in>
+          <in>file.h</in>
+          <in>hashmap.h</in>
+          <in>history.h</in>
+          <in>list.h</in>
+          <in>math.h</in>
+          <in>string.h</in>
+          <in>table.h</in>
+          <in>thread.h</in>
+          <in>threadpool.h</in>
+        </df>
+      </df>
+      <df name="lib">
+        <df name="blockingqueue">
+          <in>add.c</in>
+          <in>get.c</in>
+          <in>init.c</in>
+        </df>
+        <df name="bytebuffer">
+          <in>free.c</in>
+          <in>init.c</in>
+          <in>put.c</in>
+          <in>read.c</in>
+          <in>reset.c</in>
+          <in>size.c</in>
+          <in>toarray.c</in>
+          <in>write.c</in>
+        </df>
+        <df name="charbuffer">
+          <df name="curl">
+            <in>append.c</in>
+            <in>appendFormField.c</in>
+            <in>appendFormFieldF.c</in>
+            <in>write.c</in>
+          </df>
+          <df name="json">
+            <in>append.c</in>
+            <in>end.c</in>
+            <in>reset.c</in>
+          </df>
+          <df name="misc">
+            <in>appendInt.c</in>
+            <in>center.c</in>
+            <in>padleft.c</in>
+            <in>padright.c</in>
+            <in>time_hm.c</in>
+            <in>time_hms.c</in>
+          </df>
+          <df name="xml">
+            <in>append.c</in>
+            <in>end.c</in>
+            <in>reset.c</in>
+          </df>
+          <in>append.c</in>
+          <in>appendbuffer.c</in>
+          <in>free.c</in>
+          <in>init.c</in>
+          <in>printf.c</in>
+          <in>put.c</in>
+          <in>read.c</in>
+          <in>reset.c</in>
+          <in>size.c</in>
+          <in>toarray.c</in>
+          <in>tostring.c</in>
+        </df>
+        <df name="config">
+          <in>free.c</in>
+          <in>getBooleanParameter.c</in>
+          <in>getCharParameter.c</in>
+          <in>getDoubleParameter.c</in>
+          <in>getFloatParameter.c</in>
+          <in>getHexLongParameter.c</in>
+          <in>getHexParameter.c</in>
+          <in>getIntParameter.c</in>
+          <in>getLongParameter.c</in>
+          <in>getParameter.c</in>
+          <in>getSection.c</in>
+          <in>parser.c</in>
+          <in>scanParameter.c</in>
+        </df>
+        <df name="file">
+          <in>mkdirs.c</in>
+        </df>
+        <df name="hashmap">
+          <df name="hash">
+            <in>int.c</in>
+            <in>string.c</in>
+          </df>
+          <in>calculateIndex.c</in>
+          <in>containsKey.c</in>
+          <in>countCollisions.c</in>
+          <in>create.c</in>
+          <in>createEntry.c</in>
+          <in>currentCapacity.c</in>
+          <in>equals.c</in>
+          <in>expand.c</in>
+          <in>forEach.c</in>
+          <in>free.c</in>
+          <in>get.c</in>
+          <in>hash.c</in>
+          <in>hashKey.c</in>
+          <in>hashmap-int.h</in>
+          <in>memoize.c</in>
+          <in>put.c</in>
+          <in>remove.c</in>
+          <in>size.c</in>
+        </df>
+        <df name="history">
+          <in>append.c</in>
+          <in>clear.c</in>
+          <in>expire.c</in>
+          <in>free.c</in>
+          <in>get.c</in>
+          <in>init.c</in>
+        </df>
+        <df name="list">
+          <in>addHead.c</in>
+          <in>addTail.c</in>
+          <in>enqueue.c</in>
+          <in>findNode.c</in>
+          <in>getHead.c</in>
+          <in>getNext.c</in>
+          <in>getPred.c</in>
+          <in>getTail.c</in>
+          <in>insert.c</in>
+          <in>isEmpty.c</in>
+          <in>isHead.c</in>
+          <in>isNode.c</in>
+          <in>isTail.c</in>
+          <in>list_init.c</in>
+          <in>node_alloc.c</in>
+          <in>node_free.c</in>
+          <in>node_init.c</in>
+          <in>remove.c</in>
+          <in>removeHead.c</in>
+          <in>removeTail.c</in>
+          <in>size.c</in>
+        </df>
+        <df name="math">
+          <in>statistic_getCount.c</in>
+          <in>statistic_getMax.c</in>
+          <in>statistic_getMin.c</in>
+          <in>statistic_getTotal.c</in>
+          <in>statistic_getValue.c</in>
+          <in>statistic_init.c</in>
+          <in>statistic_reset.c</in>
+          <in>statistic_setValue.c</in>
+        </df>
+        <df name="string">
+          <in>extractString.c</in>
+          <in>fatalError.c</in>
+          <in>fatalIfNull.c</in>
+          <in>find.c</in>
+          <in>findEndOfLine.c</in>
+          <in>findNextLine.c</in>
+          <in>findNonWhitespace.c</in>
+          <in>findString.c</in>
+          <in>findWhitespace.c</in>
+          <in>genUrl.c</in>
+          <in>strendswith.c</in>
+        </df>
+        <df name="table">
+          <in>append.c</in>
+          <in>destroy.c</in>
+          <in>format.c</in>
+          <in>init.c</in>
+          <in>newcell.c</in>
+          <in>newrow.c</in>
+        </df>
+        <df name="thread">
+          <in>setPriority.c</in>
+        </df>
+        <df name="threadpool">
+          <in>init.c</in>
+          <in>start.c</in>
+          <in>submit.c</in>
+        </df>
+      </df>
+      <df name="package">
+        <df name="debian">
+        </df>
+      </df>
+    </df>
+    <itemPath>dependencies/ubuntu</itemPath>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>jenkins@ubuntu-dev.europa:22</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -1,0 +1,608 @@
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+make[1]: Entering directory '/opt/netbeans/clibs/lib'
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c config/free.c -o ../build/libarea51/config/free.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c config/getBooleanParameter.c -o ../build/libarea51/config/getBooleanParameter.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c config/getCharParameter.c -o ../build/libarea51/config/getCharParameter.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c config/getDoubleParameter.c -o ../build/libarea51/config/getDoubleParameter.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c config/getFloatParameter.c -o ../build/libarea51/config/getFloatParameter.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c config/getHexLongParameter.c -o ../build/libarea51/config/getHexLongParameter.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c config/getHexParameter.c -o ../build/libarea51/config/getHexParameter.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c config/getIntParameter.c -o ../build/libarea51/config/getIntParameter.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c config/getLongParameter.c -o ../build/libarea51/config/getLongParameter.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c config/getParameter.c -o ../build/libarea51/config/getParameter.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c config/getSection.c -o ../build/libarea51/config/getSection.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c config/parser.c -o ../build/libarea51/config/parser.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c config/scanParameter.c -o ../build/libarea51/config/scanParameter.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c blockingqueue/add.c -o ../build/libarea51/blockingqueue/add.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c blockingqueue/get.c -o ../build/libarea51/blockingqueue/get.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c blockingqueue/init.c -o ../build/libarea51/blockingqueue/init.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c bytebuffer/free.c -o ../build/libarea51/bytebuffer/free.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c bytebuffer/init.c -o ../build/libarea51/bytebuffer/init.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c bytebuffer/put.c -o ../build/libarea51/bytebuffer/put.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c bytebuffer/read.c -o ../build/libarea51/bytebuffer/read.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c bytebuffer/reset.c -o ../build/libarea51/bytebuffer/reset.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c bytebuffer/size.c -o ../build/libarea51/bytebuffer/size.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c bytebuffer/toarray.c -o ../build/libarea51/bytebuffer/toarray.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c bytebuffer/write.c -o ../build/libarea51/bytebuffer/write.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/append.c -o ../build/libarea51/charbuffer/append.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/appendbuffer.c -o ../build/libarea51/charbuffer/appendbuffer.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/free.c -o ../build/libarea51/charbuffer/free.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/init.c -o ../build/libarea51/charbuffer/init.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/printf.c -o ../build/libarea51/charbuffer/printf.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/put.c -o ../build/libarea51/charbuffer/put.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/read.c -o ../build/libarea51/charbuffer/read.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/reset.c -o ../build/libarea51/charbuffer/reset.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/size.c -o ../build/libarea51/charbuffer/size.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/toarray.c -o ../build/libarea51/charbuffer/toarray.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/tostring.c -o ../build/libarea51/charbuffer/tostring.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/json/append.c -o ../build/libarea51/charbuffer/json/append.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/json/end.c -o ../build/libarea51/charbuffer/json/end.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/json/reset.c -o ../build/libarea51/charbuffer/json/reset.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/misc/appendInt.c -o ../build/libarea51/charbuffer/misc/appendInt.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/misc/center.c -o ../build/libarea51/charbuffer/misc/center.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/misc/padleft.c -o ../build/libarea51/charbuffer/misc/padleft.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/misc/padright.c -o ../build/libarea51/charbuffer/misc/padright.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/misc/time_hm.c -o ../build/libarea51/charbuffer/misc/time_hm.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/misc/time_hms.c -o ../build/libarea51/charbuffer/misc/time_hms.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/xml/append.c -o ../build/libarea51/charbuffer/xml/append.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/xml/end.c -o ../build/libarea51/charbuffer/xml/end.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/xml/reset.c -o ../build/libarea51/charbuffer/xml/reset.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/curl/append.c -o ../build/libarea51/charbuffer/curl/append.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/curl/appendFormField.c -o ../build/libarea51/charbuffer/curl/appendFormField.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/curl/appendFormFieldF.c -o ../build/libarea51/charbuffer/curl/appendFormFieldF.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c charbuffer/curl/write.c -o ../build/libarea51/charbuffer/curl/write.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c file/mkdirs.c -o ../build/libarea51/file/mkdirs.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/calculateIndex.c -o ../build/libarea51/hashmap/calculateIndex.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/containsKey.c -o ../build/libarea51/hashmap/containsKey.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/countCollisions.c -o ../build/libarea51/hashmap/countCollisions.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/create.c -o ../build/libarea51/hashmap/create.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/createEntry.c -o ../build/libarea51/hashmap/createEntry.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/currentCapacity.c -o ../build/libarea51/hashmap/currentCapacity.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/equals.c -o ../build/libarea51/hashmap/equals.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/expand.c -o ../build/libarea51/hashmap/expand.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/forEach.c -o ../build/libarea51/hashmap/forEach.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/free.c -o ../build/libarea51/hashmap/free.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/get.c -o ../build/libarea51/hashmap/get.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/hash.c -o ../build/libarea51/hashmap/hash.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/hashKey.c -o ../build/libarea51/hashmap/hashKey.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/memoize.c -o ../build/libarea51/hashmap/memoize.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/put.c -o ../build/libarea51/hashmap/put.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/remove.c -o ../build/libarea51/hashmap/remove.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/size.c -o ../build/libarea51/hashmap/size.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/hash/int.c -o ../build/libarea51/hashmap/hash/int.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c hashmap/hash/string.c -o ../build/libarea51/hashmap/hash/string.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c history/append.c -o ../build/libarea51/history/append.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c history/clear.c -o ../build/libarea51/history/clear.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c history/expire.c -o ../build/libarea51/history/expire.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c history/free.c -o ../build/libarea51/history/free.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c history/get.c -o ../build/libarea51/history/get.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c history/init.c -o ../build/libarea51/history/init.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/addHead.c -o ../build/libarea51/list/addHead.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/addTail.c -o ../build/libarea51/list/addTail.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/enqueue.c -o ../build/libarea51/list/enqueue.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/findNode.c -o ../build/libarea51/list/findNode.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/getHead.c -o ../build/libarea51/list/getHead.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/getNext.c -o ../build/libarea51/list/getNext.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/getPred.c -o ../build/libarea51/list/getPred.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/getTail.c -o ../build/libarea51/list/getTail.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/isEmpty.c -o ../build/libarea51/list/isEmpty.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/isHead.c -o ../build/libarea51/list/isHead.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/isNode.c -o ../build/libarea51/list/isNode.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/isTail.c -o ../build/libarea51/list/isTail.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/insert.c -o ../build/libarea51/list/insert.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/list_init.c -o ../build/libarea51/list/list_init.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/node_alloc.c -o ../build/libarea51/list/node_alloc.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/node_free.c -o ../build/libarea51/list/node_free.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/node_init.c -o ../build/libarea51/list/node_init.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/remove.c -o ../build/libarea51/list/remove.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/removeHead.c -o ../build/libarea51/list/removeHead.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/removeTail.c -o ../build/libarea51/list/removeTail.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c list/size.c -o ../build/libarea51/list/size.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c string/extractString.c -o ../build/libarea51/string/extractString.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c string/fatalError.c -o ../build/libarea51/string/fatalError.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c string/fatalIfNull.c -o ../build/libarea51/string/fatalIfNull.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c string/find.c -o ../build/libarea51/string/find.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c string/findEndOfLine.c -o ../build/libarea51/string/findEndOfLine.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c string/findNextLine.c -o ../build/libarea51/string/findNextLine.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c string/findNonWhitespace.c -o ../build/libarea51/string/findNonWhitespace.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c string/findString.c -o ../build/libarea51/string/findString.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c string/findWhitespace.c -o ../build/libarea51/string/findWhitespace.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c string/genUrl.c -o ../build/libarea51/string/genUrl.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c string/strendswith.c -o ../build/libarea51/string/strendswith.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c table/append.c -o ../build/libarea51/table/append.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c table/destroy.c -o ../build/libarea51/table/destroy.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c table/format.c -o ../build/libarea51/table/format.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c table/init.c -o ../build/libarea51/table/init.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c table/newcell.c -o ../build/libarea51/table/newcell.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c table/newrow.c -o ../build/libarea51/table/newrow.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c thread/setPriority.c -o ../build/libarea51/thread/setPriority.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c threadpool/init.c -o ../build/libarea51/threadpool/init.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c threadpool/start.c -o ../build/libarea51/threadpool/start.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+cc -I..  -I../include -c threadpool/submit.c -o ../build/libarea51/threadpool/submit.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ar rcs ../build/liblibarea51.a ../build/libarea51/config/free.o ../build/libarea51/config/getBooleanParameter.o ../build/libarea51/config/getCharParameter.o ../build/libarea51/config/getDoubleParameter.o ../build/libarea51/config/getFloatParameter.o ../build/libarea51/config/getHexLongParameter.o ../build/libarea51/config/getHexParameter.o ../build/libarea51/config/getIntParameter.o ../build/libarea51/config/getLongParameter.o ../build/libarea51/config/getParameter.o ../build/libarea51/config/getSection.o ../build/libarea51/config/parser.o ../build/libarea51/config/scanParameter.o ../build/libarea51/blockingqueue/add.o ../build/libarea51/blockingqueue/get.o ../build/libarea51/blockingqueue/init.o ../build/libarea51/bytebuffer/free.o ../build/libarea51/bytebuffer/init.o ../build/libarea51/bytebuffer/put.o ../build/libarea51/bytebuffer/read.o ../build/libarea51/bytebuffer/reset.o ../build/libarea51/bytebuffer/size.o ../build/libarea51/bytebuffer/toarray.o ../build/libarea51/bytebuffer/write.o ../build/libarea51/charbuffer/append.o ../build/libarea51/charbuffer/appendbuffer.o ../build/libarea51/charbuffer/free.o ../build/libarea51/charbuffer/init.o ../build/libarea51/charbuffer/printf.o ../build/libarea51/charbuffer/put.o ../build/libarea51/charbuffer/read.o ../build/libarea51/charbuffer/reset.o ../build/libarea51/charbuffer/size.o ../build/libarea51/charbuffer/toarray.o ../build/libarea51/charbuffer/tostring.o ../build/libarea51/charbuffer/json/append.o ../build/libarea51/charbuffer/json/end.o ../build/libarea51/charbuffer/json/reset.o ../build/libarea51/charbuffer/misc/appendInt.o ../build/libarea51/charbuffer/misc/center.o ../build/libarea51/charbuffer/misc/padleft.o ../build/libarea51/charbuffer/misc/padright.o ../build/libarea51/charbuffer/misc/time_hm.o ../build/libarea51/charbuffer/misc/time_hms.o ../build/libarea51/charbuffer/xml/append.o ../build/libarea51/charbuffer/xml/end.o ../build/libarea51/charbuffer/xml/reset.o ../build/libarea51/charbuffer/curl/append.o ../build/libarea51/charbuffer/curl/appendFormField.o ../build/libarea51/charbuffer/curl/appendFormFieldF.o ../build/libarea51/charbuffer/curl/write.o ../build/libarea51/file/mkdirs.o ../build/libarea51/hashmap/calculateIndex.o ../build/libarea51/hashmap/containsKey.o ../build/libarea51/hashmap/countCollisions.o ../build/libarea51/hashmap/create.o ../build/libarea51/hashmap/createEntry.o ../build/libarea51/hashmap/currentCapacity.o ../build/libarea51/hashmap/equals.o ../build/libarea51/hashmap/expand.o ../build/libarea51/hashmap/forEach.o ../build/libarea51/hashmap/free.o ../build/libarea51/hashmap/get.o ../build/libarea51/hashmap/hash.o ../build/libarea51/hashmap/hashKey.o ../build/libarea51/hashmap/memoize.o ../build/libarea51/hashmap/put.o ../build/libarea51/hashmap/remove.o ../build/libarea51/hashmap/size.o ../build/libarea51/hashmap/hash/int.o ../build/libarea51/hashmap/hash/string.o ../build/libarea51/history/append.o ../build/libarea51/history/clear.o ../build/libarea51/history/expire.o ../build/libarea51/history/free.o ../build/libarea51/history/get.o ../build/libarea51/history/init.o ../build/libarea51/list/addHead.o ../build/libarea51/list/addTail.o ../build/libarea51/list/enqueue.o ../build/libarea51/list/findNode.o ../build/libarea51/list/getHead.o ../build/libarea51/list/getNext.o ../build/libarea51/list/getPred.o ../build/libarea51/list/getTail.o ../build/libarea51/list/isEmpty.o ../build/libarea51/list/isHead.o ../build/libarea51/list/isNode.o ../build/libarea51/list/isTail.o ../build/libarea51/list/insert.o ../build/libarea51/list/list_init.o ../build/libarea51/list/node_alloc.o ../build/libarea51/list/node_free.o ../build/libarea51/list/node_init.o ../build/libarea51/list/remove.o ../build/libarea51/list/removeHead.o ../build/libarea51/list/removeTail.o ../build/libarea51/list/size.o ../build/libarea51/string/extractString.o ../build/libarea51/string/fatalError.o ../build/libarea51/string/fatalIfNull.o ../build/libarea51/string/find.o ../build/libarea51/string/findEndOfLine.o ../build/libarea51/string/findNextLine.o ../build/libarea51/string/findNonWhitespace.o ../build/libarea51/string/findString.o ../build/libarea51/string/findWhitespace.o ../build/libarea51/string/genUrl.o ../build/libarea51/string/strendswith.o ../build/libarea51/table/append.o ../build/libarea51/table/destroy.o ../build/libarea51/table/format.o ../build/libarea51/table/init.o ../build/libarea51/table/newcell.o ../build/libarea51/table/newrow.o ../build/libarea51/thread/setPriority.o ../build/libarea51/threadpool/init.o ../build/libarea51/threadpool/start.o ../build/libarea51/threadpool/submit.o
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+make[1]: Leaving directory '/opt/netbeans/clibs/lib'
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+make[1]: Entering directory '/opt/netbeans/clibs'
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+make[2]: Entering directory '/opt/netbeans/clibs/lib'
+make[2]: Nothing to be done for 'apps'.
+make[2]: Leaving directory '/opt/netbeans/clibs/lib'
+make[1]: Leaving directory '/opt/netbeans/clibs'
