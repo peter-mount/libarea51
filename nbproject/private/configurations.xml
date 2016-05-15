@@ -71,8 +71,6 @@
           </df>
         </df>
       </df>
-      <df name="dependencies">
-      </df>
       <df name="include">
         <df name="area51">
           <in>blockingQueue.h</in>

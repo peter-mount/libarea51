@@ -14,7 +14,7 @@ AC_LANG(C)
 DIRS=""
 
 # Project base for include paths
-LDFLAGS="$LDFLAGS -L../build"
+LDFLAGS="$LDFLAGS -L../build/package/usr/lib"
 
 # header files
 CPPFLAGS="$CPPFLAGS -I../include"
