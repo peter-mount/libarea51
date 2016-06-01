@@ -172,4 +172,7 @@ OBJS += thread/setPriority.o \
 	threadpool/start.o \
 	threadpool/submit.o
 
+# Time
+OBJS += time/parse_iso8601.o
+
 include ../SubMakefile
