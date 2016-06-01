@@ -58,14 +58,6 @@ AC_CHECK_FILE([dependencies/$DISTRIBUTION],[
 ])
 AC_SUBST([DEPENDENCIES],[$DEPENDENCIES])
 
-AH_TEMPLATE(INSTALL_DEPENDENCIES, [Install required dependencies])
-AC_ARG_ENABLE([dependencies],AS_HELP_STRING([--enable-dependencies], [Install required dependencies during configuration]))
-AS_IF([test "x$enable_dependencies" != "xno" -a "x$DISTRIBUTION" != "x" -a -n "$APT_GET" ],[
-    AC_MSG_NOTICE(['Installing dependencies'])
-    AS_IF([test "x$APT_GET" != "x"],[$SUDO $APT_GET install -y $PKG_DEPENDENCIES])
-    AS_IF([test "x$APK" != "x"],[$SUDO $APK add $PKG_DEPENDENCIES])
-])
-
 # ======================================================================
 # libcurl
 # ======================================================================

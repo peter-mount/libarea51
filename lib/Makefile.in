@@ -80,6 +80,10 @@ ifeq (@CURL@,1)
 OBJS += charbuffer/curl/write.o
 endif
 
+# Curl
+OBJS +=	curl/get.o \
+	curl/pool.o
+
 # Files
 OBJS += file/mkdirs.o
 

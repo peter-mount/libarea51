@@ -12,64 +12,13 @@
               </df>
               <df name="bytebuffer">
               </df>
-              <df name="charbuffer">
-                <df name="curl">
-                </df>
-                <df name="json">
-                </df>
-                <df name="misc">
-                </df>
-                <df name="xml">
-                </df>
-              </df>
               <df name="config">
               </df>
-              <df name="file">
-              </df>
-              <df name="hashmap">
-                <df name="hash">
-                </df>
-              </df>
-              <df name="history">
-              </df>
-              <df name="list">
-              </df>
-              <df name="math">
-              </df>
-              <df name="string">
-              </df>
-              <df name="table">
-              </df>
-              <df name="thread">
-              </df>
-              <df name="threadpool">
-              </df>
             </df>
           </df>
         </df>
-        <df name="package">
-          <df name="usr">
-            <df name="include">
-              <df name="area51">
-                <in>blockingQueue.h</in>
-                <in>bytebuffer.h</in>
-                <in>charbuffer.h</in>
-                <in>config.h</in>
-                <in>file.h</in>
-                <in>hashmap.h</in>
-                <in>history.h</in>
-                <in>list.h</in>
-                <in>math.h</in>
-                <in>string.h</in>
-                <in>table.h</in>
-                <in>thread.h</in>
-                <in>threadpool.h</in>
-              </df>
-            </df>
-            <df name="lib">
-            </df>
-          </df>
-        </df>
+      </df>
+      <df name="dependencies">
       </df>
       <df name="include">
         <df name="area51">
@@ -77,15 +26,18 @@
           <in>bytebuffer.h</in>
           <in>charbuffer.h</in>
           <in>config.h</in>
+          <in>curl.h</in>
           <in>file.h</in>
           <in>hashmap.h</in>
           <in>history.h</in>
           <in>list.h</in>
           <in>math.h</in>
+          <in>pool.h</in>
           <in>string.h</in>
           <in>table.h</in>
           <in>thread.h</in>
           <in>threadpool.h</in>
+          <in>time.h</in>
         </df>
       </df>
       <df name="lib">
@@ -156,6 +108,10 @@
           <in>parser.c</in>
           <in>scanParameter.c</in>
         </df>
+        <df name="curl">
+          <in>get.c</in>
+          <in>pool.c</in>
+        </df>
         <df name="file">
           <in>mkdirs.c</in>
         </df>
@@ -224,6 +180,13 @@
           <in>statistic_reset.c</in>
           <in>statistic_setValue.c</in>
         </df>
+        <df name="pool">
+          <in>free.c</in>
+          <in>new.c</in>
+          <in>offer.c</in>
+          <in>poll.c</in>
+          <in>pool_int.h</in>
+        </df>
         <df name="string">
           <in>extractString.c</in>
           <in>fatalError.c</in>
@@ -252,6 +215,9 @@
           <in>init.c</in>
           <in>start.c</in>
           <in>submit.c</in>
+        </df>
+        <df name="time">
+          <in>parse_iso8601.c</in>
         </df>
       </df>
       <df name="package">
