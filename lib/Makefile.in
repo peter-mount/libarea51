@@ -145,6 +145,12 @@ OBJS += math/statistic_getCount.o \
 	math/statistic_reset.o \
 	math/statistic_setValue.o
 
+# Pool
+OBJS +=	pool/free.o \
+	pool/new.o \
+	pool/offer.o \
+	pool/poll.o
+	
 # String
 OBJS += string/extractString.o \
 	string/fatalError.o \
