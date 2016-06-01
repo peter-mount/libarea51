@@ -39,6 +39,16 @@ extern "C" {
      * @param p Pool
      */
     extern void pool_free(struct Pool *p);
+    
+    /**
+     * Fills a pool to capacity.
+     * 
+     * This is optional but allows the pool to be preloaded with content
+     * on startup.
+     * 
+     * @param p Pool
+     */
+    extern void pool_fill(struct Pool *p);
     /**
      * Poll for a new entry from the pool
      * @param p Pool

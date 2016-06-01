@@ -150,7 +150,8 @@ OBJS += math/statistic_getCount.o \
 	math/statistic_setValue.o
 
 # Pool
-OBJS +=	pool/free.o \
+OBJS +=	pool/fillc.o \
+	pool/free.o \
 	pool/new.o \
 	pool/offer.o \
 	pool/poll.o
