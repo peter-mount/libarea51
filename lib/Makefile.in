@@ -73,16 +73,14 @@ OBJS += charbuffer/json/append.o \
 	charbuffer/xml/reset.o
 
 # charbuffer curl extensions - some are dependent on libcurl some are standard
-OBJS += charbuffer/curl/append.o \
-        charbuffer/curl/appendFormField.o \
-        charbuffer/curl/appendFormFieldF.o
-ifeq (@CURL@,1)
-OBJS += charbuffer/curl/write.o
-endif
 
 # Curl
-OBJS +=	curl/get.o \
-	curl/pool.o
+OBJS += curl/append.o \
+        curl/appendFormField.o \
+        curl/appendFormFieldF.o \
+	curl/get.o \
+	curl/pool.o \
+	curl/write.o
 
 # Files
 OBJS += file/mkdirs.o
@@ -150,7 +148,7 @@ OBJS += math/statistic_getCount.o \
 	math/statistic_setValue.o
 
 # Pool
-OBJS +=	pool/fillc.o \
+OBJS +=	pool/fill.o \
 	pool/free.o \
 	pool/new.o \
 	pool/offer.o \
