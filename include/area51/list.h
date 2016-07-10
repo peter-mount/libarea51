@@ -8,6 +8,7 @@
 #ifndef AREA51_LIST_H
 #define	AREA51_LIST_H
 
+#include <stdint.h>
 #include <stdlib.h>
 
 #ifdef	__cplusplus

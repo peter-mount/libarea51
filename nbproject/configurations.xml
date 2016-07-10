@@ -24,12 +24,6 @@
           <in>write.c</in>
         </df>
         <df name="charbuffer">
-          <df name="curl">
-            <in>append.c</in>
-            <in>appendFormField.c</in>
-            <in>appendFormFieldF.c</in>
-            <in>write.c</in>
-          </df>
           <df name="json">
             <in>append.c</in>
             <in>end.c</in>
@@ -74,6 +68,12 @@
           <in>getSection.c</in>
           <in>parser.c</in>
           <in>scanParameter.c</in>
+        </df>
+        <df name="curl">
+          <in>append.c</in>
+          <in>appendFormField.c</in>
+          <in>appendFormFieldF.c</in>
+          <in>write.c</in>
         </df>
         <df name="file">
           <in>mkdirs.c</in>
@@ -247,20 +247,6 @@
       </item>
       <item path="lib/charbuffer/appendbuffer.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="lib/charbuffer/curl/append.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="lib/charbuffer/curl/appendFormField.c"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="lib/charbuffer/curl/appendFormFieldF.c"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="lib/charbuffer/curl/write.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="lib/charbuffer/free.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/charbuffer/init.c" ex="false" tool="0" flavor2="0">
@@ -328,6 +314,14 @@
       <item path="lib/config/parser.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/config/scanParameter.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/curl/append.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/curl/appendFormField.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/curl/appendFormFieldF.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/curl/write.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/file/mkdirs.c" ex="false" tool="0" flavor2="0">
       </item>
