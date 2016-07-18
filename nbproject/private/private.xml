@@ -11,10 +11,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="Area51 TD"/>
         <group name="NR TD">
-            <file>file:/home/peter/NetBeansProjects/libarea51/configure.ac</file>
-            <file>file:/home/peter/NetBeansProjects/libarea51/SubMakefile.in</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/APKBUILD</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/lib/Makefile.in</file>
             <file>file:/home/peter/NetBeansProjects/libarea51/include/area51/blockingQueue.h</file>
             <file>file:/home/peter/NetBeansProjects/libarea51/include/area51/list.h</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/configure.ac</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/SubMakefile.in</file>
         </group>
     </open-files>
 </project-private>

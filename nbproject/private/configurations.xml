@@ -17,63 +17,9 @@
                 </df>
                 <df name="misc">
                 </df>
-                <df name="xml">
-                </df>
               </df>
               <df name="config">
               </df>
-              <df name="curl">
-              </df>
-              <df name="file">
-              </df>
-              <df name="hashmap">
-                <df name="hash">
-                </df>
-              </df>
-              <df name="history">
-              </df>
-              <df name="list">
-              </df>
-              <df name="math">
-              </df>
-              <df name="pool">
-              </df>
-              <df name="string">
-              </df>
-              <df name="table">
-              </df>
-              <df name="thread">
-              </df>
-              <df name="threadpool">
-              </df>
-              <df name="time">
-              </df>
-            </df>
-          </df>
-        </df>
-        <df name="package">
-          <df name="usr">
-            <df name="include">
-              <df name="area51">
-                <in>blockingQueue.h</in>
-                <in>bytebuffer.h</in>
-                <in>charbuffer.h</in>
-                <in>config.h</in>
-                <in>curl.h</in>
-                <in>file.h</in>
-                <in>hashmap.h</in>
-                <in>history.h</in>
-                <in>list.h</in>
-                <in>math.h</in>
-                <in>pool.h</in>
-                <in>string.h</in>
-                <in>table.h</in>
-                <in>thread.h</in>
-                <in>threadpool.h</in>
-                <in>time.h</in>
-              </df>
-            </df>
-            <df name="lib">
             </df>
           </df>
         </df>
@@ -99,6 +45,12 @@
           <in>threadpool.h</in>
           <in>time.h</in>
         </df>
+      </df>
+      <df name="json">
+        <in>copyString.c</in>
+        <in>getInt.c</in>
+        <in>getString.c</in>
+        <in>parseFile.c</in>
       </df>
       <df name="lib">
         <df name="blockingqueue">
@@ -142,6 +94,7 @@
           <in>printf.c</in>
           <in>put.c</in>
           <in>read.c</in>
+          <in>read_mem.c</in>
           <in>reset.c</in>
           <in>size.c</in>
           <in>toarray.c</in>

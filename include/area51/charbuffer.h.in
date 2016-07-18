@@ -36,6 +36,7 @@ extern int charbuffer_init(struct charbuffer *b);
 extern int charbuffer_printf(struct charbuffer *b, char *fmt, ...);
 extern int charbuffer_put(struct charbuffer *b, char *src, int len);
 extern void charbuffer_read(struct charbuffer *b, FILE *in);
+extern int charbuffer_readmem(struct charbuffer *b, int fh);
 extern void charbuffer_reset(struct charbuffer *b);
 extern int charbuffer_size(struct charbuffer *b);
 extern void *charbuffer_toarray(struct charbuffer *b, int *len);

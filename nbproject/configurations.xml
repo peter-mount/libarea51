@@ -49,6 +49,7 @@
           <in>printf.c</in>
           <in>put.c</in>
           <in>read.c</in>
+          <in>read_mem.c</in>
           <in>reset.c</in>
           <in>size.c</in>
           <in>toarray.c</in>
@@ -274,6 +275,8 @@
       <item path="lib/charbuffer/put.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/charbuffer/read.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/charbuffer/read_mem.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/charbuffer/reset.c" ex="false" tool="0" flavor2="0">
       </item>
