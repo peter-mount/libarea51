@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <curl/curl.h>
 #include <area51/curl.h>
+#include <area51/log.h>
 
 /**
  * A simple http get request
@@ -28,12 +29,12 @@ int curl_get(char *url, struct charbuffer *buf) {
         curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &httpCode);
 
         if (res != CURLE_OK) {
-            fprintf(stderr, "Failed to submit %s %s\n", url, curl_easy_strerror(res));
+            logconsole("Failed to submit %s %s\n", url, curl_easy_strerror(res));
         } else if (httpCode == 200) {
             ret = 0;
         } else {
-            fprintf(stderr, "Failed to submit %s %d\n", url, httpCode);
             ret = httpCode;
+            logconsole("Failed to submit %s %d\n", url, ret);
         }
     }
     curl_pool_offer(curl);

@@ -2,7 +2,7 @@
 
 pkgname="libarea51"
 pkgver="0.1"
-pkgrel="3"
+pkgrel="4"
 pkgdesc="Area51 core C library"
 arch="x86_64"
 url="https://area51.onl/"
@@ -40,7 +40,7 @@ json() {
 }
 
 jsondev() {
-  depends="libarea51-json libarea51 json-c-dev"
+  depends="libarea51-json libarea51-dev json-c-dev"
   mkdir -p "$subpkgdir/usr/include/area51"
   cp -rp build/package/usr/include/area51/json.h "$subpkgdir/usr/include/area51"
 }

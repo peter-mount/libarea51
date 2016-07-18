@@ -137,6 +137,9 @@ OBJS += list/addHead.o \
 	list/removeTail.o \
 	list/size.o
 
+# log
+OBJS += log/log.o
+
 # Math
 OBJS += math/statistic_getCount.o \
 	math/statistic_getMax.o \
