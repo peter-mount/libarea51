@@ -8,9 +8,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <networkrail/json.h>
-#include <json-c/json.h>
+#include <area51/json.h>
 
+#include <json-c/json.h>
 #include <fcntl.h>
 #include <elf.h>
 #include <sys/mman.h>

@@ -114,6 +114,12 @@ OBJS += history/append.o \
 	history/get.o \
 	history/init.o
 
+# Json
+OBJS += json/copyString.o \
+	json/getInt.o \
+	json/getString.o \
+	json/parseFile.o
+
 # Linked lists
 OBJS += list/addHead.o \
 	list/addTail.o \

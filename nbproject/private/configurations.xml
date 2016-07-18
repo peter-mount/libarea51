@@ -13,12 +13,10 @@
               <df name="bytebuffer">
               </df>
               <df name="charbuffer">
-                <df name="json">
-                </df>
-                <df name="misc">
-                </df>
               </df>
               <df name="config">
+              </df>
+              <df name="curl">
               </df>
             </df>
           </df>
@@ -36,7 +34,9 @@
           <in>file.h</in>
           <in>hashmap.h</in>
           <in>history.h</in>
+          <in>json.h</in>
           <in>list.h</in>
+          <in>log.h</in>
           <in>math.h</in>
           <in>pool.h</in>
           <in>string.h</in>
@@ -45,12 +45,6 @@
           <in>threadpool.h</in>
           <in>time.h</in>
         </df>
-      </df>
-      <df name="json">
-        <in>copyString.c</in>
-        <in>getInt.c</in>
-        <in>getString.c</in>
-        <in>parseFile.c</in>
       </df>
       <df name="lib">
         <df name="blockingqueue">
@@ -158,6 +152,12 @@
           <in>get.c</in>
           <in>init.c</in>
         </df>
+        <df name="json">
+          <in>copyString.c</in>
+          <in>getInt.c</in>
+          <in>getString.c</in>
+          <in>parseFile.c</in>
+        </df>
         <df name="list">
           <in>addHead.c</in>
           <in>addTail.c</in>
@@ -180,6 +180,9 @@
           <in>removeHead.c</in>
           <in>removeTail.c</in>
           <in>size.c</in>
+        </df>
+        <df name="log">
+          <in>log.c</in>
         </df>
         <df name="math">
           <in>statistic_getCount.c</in>

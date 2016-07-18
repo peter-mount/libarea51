@@ -1,8 +1,0 @@
-MODULE = area51-json
-
-OBJS =  json/copyString.o \
-	json/getInt.o \
-	json/getString.o \
-	json/parseFile.o
-
-include ../SubMakefile
