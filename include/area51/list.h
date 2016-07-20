@@ -59,7 +59,7 @@ extern "C" {
     extern struct Node *list_removeTail(struct List *l);
     extern int list_size(struct List *list);
 
-    extern void node_alloc(char *name);
+    extern struct Node *node_alloc(char *name);
     extern void node_init(struct Node *node);
     extern void node_free(struct Node *n);
 #ifdef	__cplusplus
