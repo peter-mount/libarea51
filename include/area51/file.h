@@ -15,6 +15,11 @@ extern "C" {
 #endif
 
     extern int mkdirs(char *path, mode_t nmode);
+    
+    /**
+     * Backup a file by adding a .1, .2 suffix, keeping the last 9 versions
+     */
+    extern void backupFile(char *filename);
 
 #ifdef	__cplusplus
 }

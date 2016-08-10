@@ -48,6 +48,10 @@ struct Hashmap {
     bool (*equals)(void* keyA, void* keyB);
     pthread_mutex_t lock;
     size_t size;
+    // Used in memory mapping
+    void *mmap;
+    size_t msize;
+    int fsock;
 };
 
 extern size_t hashmapCalculateIndex(size_t bucketCount, int hash);

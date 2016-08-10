@@ -23,6 +23,7 @@
 
 #include <stdbool.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /** A hash map. */
 typedef struct Hashmap Hashmap;
@@ -139,6 +140,16 @@ extern size_t hashmapCurrentCapacity(Hashmap* map);
  */
 extern size_t hashmapCountCollisions(Hashmap* map);
 
+/**
+ * Write the contents of a Hashmap to a file
+ */
+extern void hashmapWrite(Hashmap *m, bool(*w)(void *k, void *v, void *c), FILE *f);
+
+/**
+ * Read a hashmap from a file
+ */
+extern void hashmapRead(Hashmap *m, bool(*r)(Hashmap *m, FILE *f), FILE *f);
+extern int hashmapReadMemMap(Hashmap *m, void *(*r)(Hashmap *m, void *p), int fsock);
 
 extern bool hashmapStringEquals(void *key_a,void *key_b);
 extern int hashmapStringHash(void *str);

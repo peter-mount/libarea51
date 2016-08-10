@@ -43,8 +43,8 @@ $(TARGET): $(TARGET_OBJS) $(TARGET_H)
 	fi
 
 clean:
-	rm -rf $(DIR)
-	rm -f $(TARGET)
+#	rm -rf $(DIR)
+#	rm -f $(TARGET)
 
 $(DIR)/%.o: %.c
 	@mkdir -p $(@D)

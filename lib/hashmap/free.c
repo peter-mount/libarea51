@@ -15,6 +15,8 @@
  */
 
 #include "hashmap-int.h"
+#include <unistd.h>
+#include <sys/mman.h>
 
 void hashmapFree(Hashmap* map) {
     size_t i;
@@ -26,6 +28,13 @@ void hashmapFree(Hashmap* map) {
             entry = next;
         }
     }
+    
+    if(map->mmap)
+        munmap(map->mmap,map->msize);
+    
+    if(map->fsock)
+        close(map->fsock);
+    
     free(map->buckets);
     pthread_mutex_destroy(&map->lock);
     free(map);

@@ -83,7 +83,8 @@ OBJS += curl/append.o \
 	curl/write.o
 
 # Files
-OBJS += file/mkdirs.o
+OBJS += file/backupfile.o \
+	file/mkdirs.o
 
 # Hashmap
 OBJS += hashmap/calculateIndex.o \
@@ -101,8 +102,11 @@ OBJS += hashmap/calculateIndex.o \
 	hashmap/hashKey.o \
 	hashmap/memoize.o \
 	hashmap/put.o \
+	hashmap/read.o \
+	hashmap/readMemMap.o \
 	hashmap/remove.o \
 	hashmap/size.o \
+	hashmap/write.o \
 	hashmap/hash/int.o \
 	hashmap/hash/string.o \
 
