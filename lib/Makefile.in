@@ -129,6 +129,7 @@ OBJS += list/addHead.o \
 	list/addTail.o \
 	list/enqueue.o \
 	list/findNode.o \
+	list/forEach.o \
 	list/getHead.o \
 	list/getNext.o \
 	list/getPred.o \
@@ -145,7 +146,8 @@ OBJS += list/addHead.o \
 	list/remove.o \
 	list/removeHead.o \
 	list/removeTail.o \
-	list/size.o
+	list/size.o \
+	list/sort.o
 
 # log
 OBJS += log/log.o

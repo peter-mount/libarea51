@@ -10,6 +10,7 @@
 
 #include <stdint.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 #ifdef	__cplusplus
 extern "C" {
@@ -62,6 +63,16 @@ extern "C" {
     extern struct Node *node_alloc(char *name);
     extern void node_init(struct Node *node);
     extern void node_free(struct Node *n);
+    
+    // Sort a list using a comparator
+    extern void list_sort(struct List *list, int (*comparator)(struct Node *a, struct Node *b));
+    // Compare against a nodes name
+    extern int list_name_compare(struct Node *a, struct Node *b);
+    // Case insensitive compare against a nodes name
+    extern int list_name_casecompare(struct Node *a, struct Node *b);
+    
+    extern void list_forEach(struct List *l, bool(*action)(struct Node *n, void *c), void *c);
+
 #ifdef	__cplusplus
 }
 #endif
