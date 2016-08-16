@@ -24,6 +24,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <area51/list.h>
 
 /** A hash map. */
 typedef struct Hashmap Hashmap;
@@ -116,7 +117,6 @@ extern void hashmapUnlock(Hashmap* map);
  * Key utilities.
  */
 
-
 /**
  * Gets current capacity.
  */
@@ -149,5 +149,8 @@ extern bool hashmapShortEquals(void* keyA, void* keyB);
 // Equals and hashing functions for string keys
 extern bool hashmapStringEquals(void *key_a, void *key_b);
 extern int hashmapStringHash(void *str);
+
+// Add an item to a list stored within the hashmap
+extern struct List *hashmapAddList(Hashmap *m, void *k, void *v);
 
 #endif /* __HASHMAP_H */ 

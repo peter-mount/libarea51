@@ -87,7 +87,8 @@ OBJS += file/backupfile.o \
 	file/mkdirs.o
 
 # Hashmap
-OBJS += hashmap/calculateIndex.o \
+OBJS += hashmap/addList.o \
+	hashmap/calculateIndex.o \
 	hashmap/containsKey.o \
 	hashmap/countCollisions.o \
 	hashmap/create.o \
