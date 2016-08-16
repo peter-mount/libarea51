@@ -76,7 +76,7 @@ extern bool hashmapContainsKey(Hashmap* map, void* key);
  * If memory allocation fails, the callback is not called, this function
  * returns NULL, and errno is set to ENOMEM.
  */
-extern void* hashmapMemoize(Hashmap* map, void* key, 
+extern void* hashmapMemoize(Hashmap* map, void* key,
         void* (*initialValue)(void* key, void* context), void* context);
 
 /**
@@ -94,7 +94,7 @@ extern size_t hashmapSize(Hashmap* map);
  * Invokes the given callback on each entry in the map. Stops iterating if
  * the callback returns false.
  */
-extern void hashmapForEach(Hashmap* map, 
+extern void hashmapForEach(Hashmap* map,
         bool (*callback)(void* key, void* value, void* context),
         void* context);
 
@@ -116,19 +116,6 @@ extern void hashmapUnlock(Hashmap* map);
  * Key utilities.
  */
 
-/**
- * Hashes int keys. 'key' is a pointer to int.
- */
-extern int hashmapIntHash(void* key);
-
-/**
- * Compares two int keys for equality.
- */
-extern bool hashmapIntEquals(void* keyA, void* keyB);
-
-/**
- * For debugging.
- */
 
 /**
  * Gets current capacity.
@@ -151,7 +138,16 @@ extern void hashmapWrite(Hashmap *m, bool(*w)(void *k, void *v, void *c), FILE *
 extern void hashmapRead(Hashmap *m, bool(*r)(Hashmap *m, FILE *f), FILE *f);
 extern int hashmapReadMemMap(Hashmap *m, void *(*r)(Hashmap *m, void *p), int fsock);
 
-extern bool hashmapStringEquals(void *key_a,void *key_b);
+// Equals and hashing functions for integer keys. Keys are pointers to the int
+extern int hashmapIntHash(void* key);
+extern bool hashmapIntEquals(void* keyA, void* keyB);
+
+// Equals and hashing functions for short keys. Keys are pointers to the short
+extern int hashmapShortHash(void* key);
+extern bool hashmapShortEquals(void* keyA, void* keyB);
+
+// Equals and hashing functions for string keys
+extern bool hashmapStringEquals(void *key_a, void *key_b);
 extern int hashmapStringHash(void *str);
 
 #endif /* __HASHMAP_H */ 

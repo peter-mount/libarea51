@@ -108,7 +108,8 @@ OBJS += hashmap/calculateIndex.o \
 	hashmap/size.o \
 	hashmap/write.o \
 	hashmap/hash/int.o \
-	hashmap/hash/string.o \
+	hashmap/hash/short.o \
+	hashmap/hash/string.o
 
 # History
 OBJS += history/append.o \
