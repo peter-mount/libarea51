@@ -153,4 +153,7 @@ extern int hashmapStringHash(void *str);
 // Add an item to a list stored within the hashmap
 extern struct List *hashmapAddList(Hashmap *m, void *k, void *v);
 
+// Stream mapping: take current value and map it to the value in a hashmap
+extern int hashmapGetMapper(Stream *, Hashmap *);
+
 #endif /* __HASHMAP_H */ 

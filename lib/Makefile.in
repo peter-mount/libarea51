@@ -110,6 +110,7 @@ OBJS += hashmap/addList.o \
 	hashmap/get.o \
 	hashmap/hash.o \
 	hashmap/hashKey.o \
+	hashmap/hashmapGetMapper.o \
 	hashmap/memoize.o \
 	hashmap/put.o \
 	hashmap/read.o \
@@ -140,6 +141,7 @@ OBJS += list/addHead.o \
 	list/addTail.o \
 	list/enqueue.o \
 	list/findNode.o \
+	list/flatMap.o \
 	list/forEach.o \
 	list/getHead.o \
 	list/getNext.o \

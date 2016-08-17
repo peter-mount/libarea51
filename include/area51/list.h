@@ -81,7 +81,13 @@ extern "C" {
 
     extern void list_forEach(struct List *l, bool(*action)(struct Node *n, void *c), void *c);
 
+    // Return a Stream of a list's content
     extern Stream *list_stream(struct List *);
+    
+    // Take the current value on a stream (Must be List) and flatMap it to the lists content
+    extern Stream *list_flatMap(void *, void *);
+
+    // Map a Node to it's name/value
     extern int list_map_node_name(Stream *);
 
 #ifdef __cplusplus
