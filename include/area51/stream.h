@@ -21,10 +21,18 @@ extern "C" {
     } StreamData;
 
     extern Stream *stream_new();
+    extern Stream *stream_array(void **array, long size);
+    extern Stream *stream_of(void *, void (*)(void *));
+    extern Stream *stream_range(long, long);
+    extern Stream *stream_range_r(long, long, long);
+
     extern void *stream_run(Stream *, void *);
     extern void stream_next(StreamData *);
     extern void stream_terminate(StreamData *);
     extern void *stream_free(Stream *);
+
+    extern void *stream_getVal(StreamData *d);
+    extern void stream_setVal(StreamData *d, void *v, void *f);
 
     extern int stream_map(Stream *, void *(*)(void *));
 
@@ -38,8 +46,8 @@ extern "C" {
     extern int stream_notFirst(Stream *s, void (*)(StreamData *));
 
     extern int stream_findFirst(Stream *);
-    extern int stream_limit(Stream *,long);
-    extern int stream_skip(Stream *,long);
+    extern int stream_limit(Stream *, long);
+    extern int stream_skip(Stream *, long);
 
     extern int stream_forEach(Stream *, void (*)(StreamData *));
 

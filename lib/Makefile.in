@@ -187,6 +187,7 @@ OBJS += stream/collect.o \
 	stream/debug.o \
 	stream/filter.o \
 	stream/findFirst.o \
+	stream/flatMap.o \
 	stream/forEach.o \
 	stream/free.o \
 	stream/invoke.o \
@@ -196,8 +197,12 @@ OBJS += stream/collect.o \
 	stream/next.o \
 	stream/onFirst.o \
 	stream/run.o \
+	stream/streamArray.o \
+	stream/streamOf.o \
+	stream/streamRange.o \
 	stream/skip.o \
-	stream/terminate.o
+	stream/terminate.o \
+	stream/values.o
 
 # String
 OBJS += string/extractString.o \

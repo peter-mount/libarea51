@@ -28,6 +28,10 @@ void *stream_run(Stream *s, void *context) {
                     d->task->action(d);
                 else
                     s->continueStream = false;
+
+                if (d->val && d->free)
+                    d->free(d->val);
+
                 free(d);
 
             } else
