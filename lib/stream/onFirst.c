@@ -28,7 +28,7 @@ static int onFirstLast(Stream *s, void (*action)(StreamData *), void (*task)(Str
 
 static void first(StreamData *d) {
     struct firstLast *ctx = d->task->taskContext;
-    if (ctx->flag) {
+    if (ctx && !ctx->flag && ctx->action) {
         ctx->flag = true;
         ctx->action(d);
     }
