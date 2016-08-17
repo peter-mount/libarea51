@@ -5,14 +5,10 @@
 #include "stream-int.h"
 
 static void findFirst(StreamData *d) {
-    void (*action)(StreamData *) = d->task->taskContext;
-
-    if (action)
-        action(d);
-
+    stream_next(d);
     stream_terminate(d);
 }
 
-int stream_findFirst(Stream *s, void (*action)(StreamData *)) {
-    return stream_invoke(s, findFirst, action, NULL);
+int stream_findFirst(Stream *s) {
+    return stream_invoke(s, findFirst, NULL, NULL);
 }

@@ -37,7 +37,9 @@ extern "C" {
     extern int stream_onFirst(Stream *s, void (*)(StreamData *));
     extern int stream_notFirst(Stream *s, void (*)(StreamData *));
 
-    extern int stream_findFirst(Stream *, void (*)(StreamData *));
+    extern int stream_findFirst(Stream *);
+    extern int stream_limit(Stream *,long);
+    extern int stream_skip(Stream *,long);
 
     extern int stream_forEach(Stream *, void (*)(StreamData *));
 

@@ -190,11 +190,13 @@ OBJS += stream/collect.o \
 	stream/forEach.o \
 	stream/free.o \
 	stream/invoke.o \
+	stream/limit.o \
 	stream/map.o \
 	stream/new.o \
 	stream/next.o \
 	stream/onFirst.o \
 	stream/run.o \
+	stream/skip.o \
 	stream/terminate.o
 
 # String
