@@ -5,16 +5,19 @@
 #include <stdbool.h>
 #include "stream-int.h"
 
+static void init(StreamCollector *ctx) {
+    if (ctx->initRequired && ctx->init) {
+        ctx->context = ctx->init(ctx->stream->context);
+        ctx->initRequired = false;
+    }
+}
+
 static void add(StreamData *d) {
     StreamCollector *ctx = stream_getTaskContext(d);
     if (!ctx)
         return;
 
-    if (ctx->initRequired && ctx->init) {
-        ctx->stream = d->task->stream;
-        ctx->context = ctx->init(d->task->stream->context);
-        ctx->initRequired = false;
-    }
+    init(ctx);
 
     if (ctx->next)
         ctx->next(ctx->context, d->val);
@@ -23,8 +26,13 @@ static void add(StreamData *d) {
 static void freeStreamCollector(void *c) {
     if (c) {
         StreamCollector *ctx = c;
-        if (ctx->finish)
+
+        if (ctx->finish) {
+            init(ctx);
+
             ctx->stream->result = ctx->finish(ctx->context);
+        }
+
         free(ctx);
     }
 }
