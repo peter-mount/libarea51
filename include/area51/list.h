@@ -6,13 +6,14 @@
  */
 
 #ifndef AREA51_LIST_H
-#define	AREA51_LIST_H
+#define AREA51_LIST_H
 
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <area51/stream.h>
 
-#ifdef	__cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -22,7 +23,14 @@ extern "C" {
     struct Node {
         struct Node *n_succ;
         struct Node *n_pred;
-        char *name;
+
+        /*
+         * The name or value of the node
+         */
+        union {
+            char *name;
+            void *value;
+        };
         int8_t pri;
         int8_t pad;
     };
@@ -63,19 +71,22 @@ extern "C" {
     extern struct Node *node_alloc(char *name);
     extern void node_init(struct Node *node);
     extern void node_free(struct Node *n);
-    
+
     // Sort a list using a comparator
     extern void list_sort(struct List *list, int (*comparator)(struct Node *a, struct Node *b));
     // Compare against a nodes name
     extern int list_name_compare(struct Node *a, struct Node *b);
     // Case insensitive compare against a nodes name
     extern int list_name_casecompare(struct Node *a, struct Node *b);
-    
+
     extern void list_forEach(struct List *l, bool(*action)(struct Node *n, void *c), void *c);
 
-#ifdef	__cplusplus
+    extern Stream *list_stream(struct List *);
+    extern int list_map_node_name(Stream *);
+
+#ifdef __cplusplus
 }
 #endif
 
-#endif	/* LIST_H */
+#endif /* LIST_H */
 

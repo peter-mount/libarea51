@@ -72,6 +72,15 @@ OBJS += charbuffer/json/append.o \
 	charbuffer/xml/end.o \
 	charbuffer/xml/reset.o
 
+# Standard comparator functions
+OBJS += comparator/double.o \
+	comparator/int.o \
+	comparator/long.o \
+	comparator/short.o \
+	comparator/string.o \
+	comparator/string_case.o \
+	comparator/time_t.o
+
 # charbuffer curl extensions - some are dependent on libcurl some are standard
 
 # Curl
@@ -142,6 +151,7 @@ OBJS += list/addHead.o \
 	list/isTail.o \
 	list/insert.o \
 	list/list_init.o \
+	list/map_name.o \
 	list/node_alloc.o \
 	list/node_free.o \
 	list/node_init.o \
@@ -149,7 +159,8 @@ OBJS += list/addHead.o \
 	list/removeHead.o \
 	list/removeTail.o \
 	list/size.o \
-	list/sort.o
+	list/sort.o \
+	list/stream.o
 
 # log
 OBJS += log/log.o
@@ -170,7 +181,22 @@ OBJS +=	pool/fill.o \
 	pool/new.o \
 	pool/offer.o \
 	pool/poll.o
-	
+
+OBJS += stream/collect.o \
+	stream/context.o \
+	stream/debug.o \
+	stream/filter.o \
+	stream/findFirst.o \
+	stream/forEach.o \
+	stream/free.o \
+	stream/invoke.o \
+	stream/map.o \
+	stream/new.o \
+	stream/next.o \
+	stream/onFirst.o \
+	stream/run.o \
+	stream/terminate.o
+
 # String
 OBJS += string/extractString.o \
 	string/fatalError.o \
