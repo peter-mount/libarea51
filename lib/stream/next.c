@@ -7,18 +7,16 @@
 #include "stream-int.h"
 
 void stream_next(StreamData *d) {
-    if (!d->task->stream->continueStream)
-        return;
+    StreamTask *next = d->task->next;
 
-    bool debug = d->task->stream->debug;
+    if (!next || !next->action)
+        stream_terminate(d);
+    else {
+        d->task = next;
 
-    d->task = d->task->next;
+        if (d->task->stream->debug)
+            stream_debug_task(d);
 
-    if (debug)
-        stream_debug_task(d);
-
-    if (d->task && d->task->action)
         d->task->action(d);
-    else
-        d->task->stream->continueStream = false;
+    }
 }
