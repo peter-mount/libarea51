@@ -1,9 +1,9 @@
 
 #include <stdlib.h>
-#include "area51/list.h"
+#include <area51/list.h>
 
-struct Node *list_removeTail(struct List *l) {
-    struct Node *n = NULL;
+Node *list_removeTail(List *l) {
+    Node *n = NULL;
 
     if (!list_isEmpty(l)) {
         n = l->l_tailpred;

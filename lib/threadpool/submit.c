@@ -4,6 +4,6 @@
 #include "area51/blockingQueue.h"
 #include "area51/threadpool.h"
 
-void threadpool_submit(struct thread_pool *pool, struct Node *job) {
+void threadpool_submit(struct thread_pool *pool, Node *job) {
     blockingqueue_add(&pool->queue, job);
 }

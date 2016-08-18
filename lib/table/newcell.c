@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdarg.h>
 #include <math.h>
-#include "area51/list.h"
+#include <area51/list.h>
 #include "area51/table.h"
 
 static TABLE_CELL *newCell(TABLE_ROW *r, char *content, TABLE_ALIGN_T align) {

@@ -7,7 +7,7 @@
 /**
  * Comparator for a node's name
  */
-int list_name_compare(struct Node *a, struct Node *b) {
+int list_name_compare(Node *a, Node *b) {
     if (a->name == b->name)
         return 0;
     if (a->name == NULL)
@@ -20,7 +20,7 @@ int list_name_compare(struct Node *a, struct Node *b) {
 /*
  * Case insensitive comparator for a node's name
  */
-int list_name_casecompare(struct Node *a, struct Node *b) {
+int list_name_casecompare(Node *a, Node *b) {
     if (a->name == b->name)
         return 0;
     if (a->name == NULL)
@@ -35,11 +35,11 @@ int list_name_casecompare(struct Node *a, struct Node *b) {
  * @param list
  * @param comparator
  */
-void list_sort(struct List *list, int (*comparator)(struct Node *a, struct Node *b)) {
+void list_sort(List *list, int (*comparator)(Node *a, Node *b)) {
     if (list_isEmpty(list))
         return;
 
-    struct Node *ptr1, *ptr2;
+    Node *ptr1, *ptr2;
     bool swapped;
     do {
         swapped = false;

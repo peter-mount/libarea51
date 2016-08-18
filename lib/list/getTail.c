@@ -1,7 +1,7 @@
 
 #include <stdlib.h>
-#include "area51/list.h"
+#include <area51/list.h>
 
-struct Node *list_getTail(struct List *l) {
+Node *list_getTail(List *l) {
     return l->l_head->n_succ == NULL ? NULL : l->l_tailpred;
 }

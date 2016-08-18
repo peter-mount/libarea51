@@ -4,7 +4,7 @@
 void pool_free(struct Pool *p) {
     if (p) {
         struct PoolInt *pi = (struct PoolInt *) p;
-        struct Node *n = list_removeHead(&pi->list);
+        Node *n = list_removeHead(&pi->list);
         while (n) {
             struct PoolEntry *e = (struct PoolEntry *) n;
             if (pi->free && e->entry)

@@ -3,7 +3,7 @@
  */
 
 #include <stdlib.h>
-#include "area51/list.h"
+#include <area51/list.h>
 
 /**
  * Free's a node.
@@ -17,7 +17,7 @@
  * 
  * @param n Node to free
  */
-void node_free(struct Node *n) {
+void node_free(Node *n) {
     if (n->name)
         free(n->name);
     free(n);

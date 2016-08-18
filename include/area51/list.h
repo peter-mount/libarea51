@@ -20,9 +20,10 @@ extern "C" {
     /**
      * A node within a list.
      */
+    typedef struct Node Node;
     struct Node {
-        struct Node *n_succ;
-        struct Node *n_pred;
+        Node *n_succ;
+        Node *n_pred;
 
         /*
          * The name or value of the node
@@ -40,49 +41,49 @@ extern "C" {
      * EXCEPT for node_free().
      */
     struct MinNode {
-        struct Node *n_succ;
-        struct Node *n_pred;
+        Node *n_succ;
+        Node *n_pred;
     };
 
-    struct List {
-        struct Node *l_head;
-        struct Node *l_tail;
-        struct Node *l_tailpred;
-    };
+    typedef struct List {
+        Node *l_head;
+        Node *l_tail;
+        Node *l_tailpred;
+    } List;
 
-    extern void list_init(struct List *list);
-    extern void list_addHead(struct List *l, struct Node *n);
-    extern void list_addTail(struct List *l, struct Node *n);
-    extern struct Node *list_findNode(struct List *l, const char *name);
-    extern struct Node *list_getHead(struct List *l);
-    extern struct Node *list_getNext(struct Node *n);
-    extern struct Node *list_getPred(struct Node *n);
-    extern struct Node *list_getTail(struct List *l);
-    extern void list_insert(struct List *l, struct Node *n, struct Node *after);
-    extern int list_isEmpty(struct List *l);
-    extern int list_isHead(struct Node *n);
-    extern int list_isNode(struct Node *n);
-    extern int list_isTail(struct Node *n);
-    extern struct Node *list_remove(struct Node *n);
-    extern struct Node *list_removeHead(struct List *l);
-    extern struct Node *list_removeTail(struct List *l);
-    extern int list_size(struct List *list);
+    extern void list_init(List *list);
+    extern void list_addHead(List *l, Node *n);
+    extern void list_addTail(List *l, Node *n);
+    extern Node *list_findNode(List *l, const char *name);
+    extern Node *list_getHead(List *l);
+    extern Node *list_getNext(Node *n);
+    extern Node *list_getPred(Node *n);
+    extern Node *list_getTail(List *l);
+    extern void list_insert(List *l, Node *n, Node *after);
+    extern int list_isEmpty(List *l);
+    extern int list_isHead(Node *n);
+    extern int list_isNode(Node *n);
+    extern int list_isTail(Node *n);
+    extern Node *list_remove(Node *n);
+    extern Node *list_removeHead(List *l);
+    extern Node *list_removeTail(List *l);
+    extern int list_size(List *list);
 
-    extern struct Node *node_alloc(char *name);
-    extern void node_init(struct Node *node);
-    extern void node_free(struct Node *n);
+    extern Node *node_alloc(char *name);
+    extern void node_init(Node *node);
+    extern void node_free(Node *n);
 
     // Sort a list using a comparator
-    extern void list_sort(struct List *list, int (*comparator)(struct Node *a, struct Node *b));
+    extern void list_sort(List *list, int (*comparator)(Node *a, Node *b));
     // Compare against a nodes name
-    extern int list_name_compare(struct Node *a, struct Node *b);
+    extern int list_name_compare(Node *a, Node *b);
     // Case insensitive compare against a nodes name
-    extern int list_name_casecompare(struct Node *a, struct Node *b);
+    extern int list_name_casecompare(Node *a, Node *b);
 
-    extern void list_forEach(struct List *l, bool(*action)(struct Node *n, void *c), void *c);
+    extern void list_forEach(List *l, bool(*action)(Node *n, void *c), void *c);
 
     // Return a Stream of a list's content
-    extern Stream *list_stream(struct List *);
+    extern Stream *list_stream(List *);
     
     // Take the current value on a stream (Must be List) and flatMap it to the lists content
     extern Stream *list_flatMap(void *, void *);

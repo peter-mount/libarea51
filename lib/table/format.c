@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <string.h>
-#include "area51/list.h"
+#include <area51/list.h>
 #include "area51/table.h"
 
 void table_format(TABLE *t) {
-    struct Node *rn, *cn;
+    Node *rn, *cn;
     TABLE_ROW *r;
     TABLE_CELL *c;
     int s, i;

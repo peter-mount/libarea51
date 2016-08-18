@@ -5,7 +5,7 @@
 #include "area51/stream.h"
 
 static void *map_name(void *v) {
-    return v ? ((struct Node *) v)->name : NULL;
+    return v ? ((Node *) v)->name : NULL;
 }
 
 int list_map_node_name(Stream *s) {

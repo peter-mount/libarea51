@@ -5,7 +5,7 @@
 #include <area51/stream.h>
 
 static void supplier(StreamData *d) {
-    struct Node *n = stream_getTaskContext(d);
+    Node *n = stream_getTaskContext(d);
     if (n && list_isNode(n)) {
         // The node is the value to pass on
         stream_setVal(d, n, NULL);
@@ -19,7 +19,7 @@ static void supplier(StreamData *d) {
         stream_terminate(d);
 }
 
-Stream *list_stream(struct List *l) {
+Stream *list_stream(List *l) {
     Stream *s = stream_new();
     if (s && l)
         stream_invoke(s, supplier, list_getHead(l), NULL);

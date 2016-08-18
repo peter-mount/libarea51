@@ -1,8 +1,8 @@
 
 #include <stdlib.h>
-#include "area51/list.h"
+#include <area51/list.h>
 
-void list_insert(struct List *l, struct Node *n, struct Node *after) {
+void list_insert(List *l, Node *n, Node *after) {
     if (after == NULL) {
         list_addHead(l, n);
         return;

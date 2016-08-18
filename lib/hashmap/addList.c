@@ -21,15 +21,15 @@
  * @param v value to add
  * @returns The underlying list
  */
-struct List *hashmapAddList(Hashmap *m, void *k, void *v) {
-    struct List *l = (struct List *) hashmapGet(m, k);
+List*hashmapAddList(Hashmap *m, void *k, void *v) {
+    List*l = (List*) hashmapGet(m, k);
     if (!l) {
-        l = (struct List *) malloc(sizeof (struct List));
+        l = (List*) malloc(sizeof (struct List));
         list_init(l);
         hashmapPut(m, k, l);
     }
 
-    struct Node *n = node_alloc((char *) v);
+    Node *n = node_alloc((char *) v);
     list_addTail(l, n);
     return l;
 }

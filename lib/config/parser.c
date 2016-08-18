@@ -15,7 +15,7 @@
 #include <dirent.h>
 #include "area51/charbuffer.h"
 #include "area51/config.h"
-#include "area51/list.h"
+#include <area51/list.h>
 #include "area51/string.h"
 
 CONFIG *config = NULL;
@@ -43,7 +43,7 @@ static char *newSection(CONFIG_SECTION **sect, char *p) {
 
         list_init(&(*sect)->parameters);
 
-        list_addTail(&config->sections, (struct Node *) (*sect));
+        list_addTail(&config->sections, (Node *) (*sect));
 
     }
 
@@ -63,7 +63,7 @@ static int appendParameter(CONFIG_SECTION *sect, char *key, char *value) {
     param->node.name = key;
     param->value = value;
 
-    list_addTail(&sect->parameters, (struct Node *) param);
+    list_addTail(&sect->parameters, (Node *) param);
 
     return 0;
 }

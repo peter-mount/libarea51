@@ -3,9 +3,9 @@
  */
 
 #include <stdlib.h>
-#include "area51/list.h"
+#include <area51/list.h>
 
-void node_init(struct Node *node) {
+void node_init(Node *node) {
     node->n_pred = NULL;
     node->n_succ = NULL;
     node->name = NULL;

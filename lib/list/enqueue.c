@@ -1,8 +1,8 @@
 
 #include <stdlib.h>
-#include "area51/list.h"
+#include <area51/list.h>
 
-void list_enqueue(struct List *l, struct Node *n) {
+void list_enqueue(List *l, Node *n) {
     // Empty list so just add it
     if (list_isEmpty(l)) {
         list_addHead(l, n);
@@ -12,7 +12,7 @@ void list_enqueue(struct List *l, struct Node *n) {
     // Find the first node with lower priority to ours.
     // So, if we have nodes of the same priority we skip it as we
     // enqueue after it
-    struct Node *c = l->l_head;
+    Node *c = l->l_head;
     while (list_isNode(c) && c->pri >= n->pri)
         c = c->n_succ;
 

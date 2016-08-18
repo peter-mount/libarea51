@@ -4,7 +4,7 @@
 
 #include <pthread.h>
 #include "area51/blockingQueue.h"
-#include "area51/list.h"
+#include <area51/list.h>
 
 void blockingqueue_init(struct blocking_queue *queue) {
     pthread_mutex_init(&queue->mutex, NULL);

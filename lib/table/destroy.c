@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <string.h>
-#include "area51/list.h"
+#include <area51/list.h>
 #include "area51/table.h"
 
 static void free_row(TABLE_ROW *r) {
-    struct Node *n = r->cells.l_head;
+    Node *n = r->cells.l_head;
     while (list_isNode(n)) {
         TABLE_CELL *c = (TABLE_CELL *) n;
         n = n->n_succ;
@@ -14,7 +14,7 @@ static void free_row(TABLE_ROW *r) {
 }
 
 void table_destroy(TABLE *t) {
-    struct Node *n = t->rows.l_head;
+    Node *n = t->rows.l_head;
     while (list_isNode(n)) {
         TABLE_ROW *r = (TABLE_ROW *) n;
         n = n->n_succ;

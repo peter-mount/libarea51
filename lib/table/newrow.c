@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
-#include "area51/list.h"
+#include <area51/list.h>
 #include "area51/table.h"
 
 TABLE_ROW *table_newRow(TABLE *t) {

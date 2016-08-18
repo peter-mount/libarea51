@@ -1,6 +1,6 @@
 
 #include <stdlib.h>
-#include "area51/list.h"
+#include <area51/list.h>
 
 /**
  * Is node really a node?
@@ -10,6 +10,6 @@
  * @param n
  * @return 
  */
-int list_isNode(struct Node *n) {
+int list_isNode(Node *n) {
     return (n && n->n_succ && n->n_pred) ? 1 : 0;
 }

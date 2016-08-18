@@ -28,7 +28,7 @@ extern "C" {
 
     struct PoolInt {
         struct Pool pool;
-        struct List list;
+        List list;
         // Max pool size
         int maxSize;
         pthread_mutex_t mutex;
@@ -39,7 +39,7 @@ extern "C" {
     };
 
     struct PoolEntry {
-        struct Node node;
+        Node node;
         void *entry;
     };
 

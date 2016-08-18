@@ -8,7 +8,7 @@
 static void *worker(void *arg) {
     struct thread_worker *worker = (struct thread_worker *) arg;
     while (1) {
-        struct Node *n = blockingqueue_get(&worker->pool->queue);
+        Node *n = blockingqueue_get(&worker->pool->queue);
         if (n) {
             worker->worker(n, worker->data);
         }
@@ -22,7 +22,7 @@ static void *worker(void *arg) {
  * @param worker worker
  * @param data argument passed to worker
  */
-void threadpool_start(struct thread_pool *pool, void *(*poolWorker) (struct Node *, void *), void *data) {
+void threadpool_start(struct thread_pool *pool, void *(*poolWorker) (Node *, void *), void *data) {
     struct thread_worker *w = (struct thread_worker *) malloc(sizeof (struct thread_worker));
     memset(w, 0, sizeof (struct thread_worker));
     w->pool = pool;

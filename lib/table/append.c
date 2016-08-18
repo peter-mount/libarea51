@@ -1,11 +1,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include "area51/charbuffer.h"
-#include "area51/list.h"
+#include <area51/list.h>
 #include "area51/table.h"
 
 void table_append(struct charbuffer *b, TABLE *t) {
-    struct Node *rn, *cn;
+    Node *rn, *cn;
     TABLE_ROW *r;
     TABLE_CELL *c;
     int s, i;
