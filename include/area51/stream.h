@@ -32,8 +32,8 @@ extern "C" {
     extern Stream *stream_array(void **array, long size);
 
     extern Stream *stream_of(void *, void (*)(void *));
-#define stream_of_long(v) (stream_of((void *)(v)))
-#define stream_of_int(v) (stream_of((void *)((long)(v))))
+#define stream_of_long(v) (stream_of((void *)(v),NULL))
+#define stream_of_int(v) (stream_of((void *)((long)(v)),NULL))
 
     extern Stream *stream_range(long, long);
     extern Stream *stream_range_r(long, long, long);
@@ -70,7 +70,7 @@ extern "C" {
 
     extern int stream_invoke(Stream *, void (*)(StreamData *), void *, void (*)(void *));
 
-    extern int stream_collect(Stream *, void *(*)(void *), void (*)(void *, void *), void *(*)(void *));
+    extern int stream_collect(Stream *, void (*)(void *), void (*)(void *, void *), void *(*)(void *), void*, void*);
 
     extern void stream_debug(Stream *s);
 

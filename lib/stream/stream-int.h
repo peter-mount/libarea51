@@ -67,11 +67,12 @@ extern "C" {
 
     struct StreamCollector {
         Stream *stream;
-        void *(*init)(void *);
+        void (*init)(void *);
         void (*next)(void *, void*);
         void *(*finish)(void *);
         bool initRequired;
         void *context;
+        void (*freeContext)(void *);
     };
 
 #ifdef __cplusplus
