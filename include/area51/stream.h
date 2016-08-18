@@ -8,6 +8,18 @@
 extern "C" {
 #endif
 
+    // Convert long to void* in arguments
+#define stream_long_void(v) ((void *)(v))
+
+    // Convert int to void* in arguments
+#define stream_int_void(v) ((void *)((long)(v)))
+
+    // Convert void* to long
+#define stream_void_long(v) ((long)(v))
+
+    // Convert void* to int
+#define stream_void_int(v) ((int)((long)(v)))
+
     typedef struct Stream Stream;
 
     typedef struct StreamCollector StreamCollector;
@@ -18,7 +30,11 @@ extern "C" {
 
     extern Stream *stream_new();
     extern Stream *stream_array(void **array, long size);
+
     extern Stream *stream_of(void *, void (*)(void *));
+#define stream_of_long(v) (stream_of((void *)(v)))
+#define stream_of_int(v) (stream_of((void *)((long)(v))))
+
     extern Stream *stream_range(long, long);
     extern Stream *stream_range_r(long, long, long);
 
