@@ -2,18 +2,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <area51/list.h>
-
-#include "area51/stream.h"
+#include <area51/stream.h>
 
 static void supplier(StreamData *d) {
     struct Node *n = stream_getTaskContext(d);
     if (n && list_isNode(n)) {
         // The node is the value to pass on
-        d->val = n;
-        
+        stream_setVal(d, n, NULL);
+
         // Move to the next node
         stream_setTaskContext(d, list_getNext(n), NULL);
-        
+
         // Pass the value down the stream
         stream_next(d);
     } else

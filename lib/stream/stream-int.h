@@ -38,7 +38,7 @@ extern "C" {
 
         // Result of any reduction
         void *result;
-        
+
         bool debug;
     };
 
@@ -57,6 +57,12 @@ extern "C" {
 
         // If set function to free taskContext
         void (*freeTaskContext)(void *);
+    };
+
+    struct StreamData {
+        StreamTask *task;
+        void *val;
+        void (*free)(void *);
     };
 
     struct StreamCollector {

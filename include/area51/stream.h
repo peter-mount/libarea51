@@ -14,11 +14,7 @@ extern "C" {
 
     typedef struct StreamTask StreamTask;
 
-    typedef struct StreamData {
-        StreamTask *task;
-        void *val;
-        void (*free)(void *);
-    } StreamData;
+    typedef struct StreamData StreamData;
 
     extern Stream *stream_new();
     extern Stream *stream_array(void **array, long size);
@@ -36,7 +32,7 @@ extern "C" {
 
     extern int stream_map(Stream *, void *(*)(void *));
     extern int stream_flatMap(Stream *, Stream *(*)(void *, void *), void *);
-    
+
     extern int stream_filter(Stream *, bool (*)(void *, void *), void *, void (*)(void *));
     extern int stream_equal(Stream *, void *, void (*)(void *));
     extern int stream_notEqual(Stream *, void *, void (*)(void *));
