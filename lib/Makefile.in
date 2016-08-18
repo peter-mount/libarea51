@@ -117,10 +117,13 @@ OBJS += hashmap/addList.o \
 	hashmap/readMemMap.o \
 	hashmap/remove.o \
 	hashmap/size.o \
+	hashmap/stream.o \
 	hashmap/write.o \
 	hashmap/hash/int.o \
 	hashmap/hash/short.o \
-	hashmap/hash/string.o
+	hashmap/hash/string.o \
+	hashmap/map/keyValue_key.o \
+	hashmap/map/keyValue_value.o
 
 # History
 OBJS += history/append.o \

@@ -25,9 +25,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <area51/list.h>
+#include <area51/stream.h>
 
 /** A hash map. */
 typedef struct Hashmap Hashmap;
+
+// KeyValue pair - used with Streams
+
+typedef struct KeyValue {
+    void *key;
+    void *value;
+} KeyValue;
 
 /**
  * Creates a new hash map. Returns NULL if memory allocation fails.
@@ -155,5 +163,14 @@ extern struct List *hashmapAddList(Hashmap *m, void *k, void *v);
 
 // Stream mapping: take current value and map it to the value in a hashmap
 extern int hashmapGetMapper(Stream *, Hashmap *);
+
+// Return a Stream that will iterate over all entries within the map
+extern Stream *hashmapStream(Hashmap *);
+
+// Map a KeyValue to its value
+extern void *map_keyValue_value(void *);
+
+// Map a KeyValue to its key
+extern void *map_keyValue_key(void *);
 
 #endif /* __HASHMAP_H */ 
