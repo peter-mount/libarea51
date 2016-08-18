@@ -8,7 +8,6 @@ void *stream_free(Stream *s) {
     void *r=NULL;
     
     if (s) {
-        r = s->result;
         
         StreamTask *t = s->start;
         while (t) {
@@ -21,6 +20,8 @@ void *stream_free(Stream *s) {
 
         if (s->context && s->freeContext)
             s->freeContext(s->context);
+        
+        r = s->result;
 
         free(s);
     }

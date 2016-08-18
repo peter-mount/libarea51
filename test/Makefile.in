@@ -4,6 +4,7 @@
 
 # Streams
 OBJS  = stream/_run.o \
+	stream/collect.o \
 	stream/on.o
 
 ######################################################################
@@ -36,8 +37,8 @@ $(TEST_BIN): $(DIR)/runtest.o $(TEST_LIB_A)
 	@mkdir -p $(@D)
 	$(CC) -o $@ $< -L${DIR} -ltests -larea51 $(LDFLAGS) 
 	$(CC) -o $@ $< $(TEST_LIB_A) -larea51 $(LDFLAGS) 
-#	$(CC) -o $@ $(TARGET_OBJS) -L${DIR} -ltests -larea51 $(LDFLAGS) 
-#	$(CC) -o $@ $< -larea51 $(LDFLAGS) 
 
+# CD is required here to ensure that any core files from a test segfaulting
+# being generated within the source tree
 test: $(TEST_BIN)
-	LD_LIBRARY_PATH=${LIBDIR} $(TEST_BIN)
+	cd $(BUILD_DIR);LD_LIBRARY_PATH=${LIBDIR} $(TEST_BIN)

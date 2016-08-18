@@ -4,7 +4,7 @@
 
 #define TEST_SIZE 5
 
-char *TEST_DATA[] = {
+static char *TEST_DATA[] = {
     "a", "b", "c", "d", "e"
 };
 

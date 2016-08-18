@@ -6,5 +6,6 @@
 #include "stream-int.h"
 
 void stream_terminate(StreamData *d) {
-    d->task->stream->continueStream = false;
+    if (d && d->task && d->task->stream)
+        d->task->stream->continueStream = false;
 }

@@ -5,16 +5,18 @@
 #include "stream-int.h"
 
 void *stream_context(StreamData *d) {
-    return d->task->stream->context;
+    return d && d->task && d->task->stream ? d->task->stream->context : NULL;
 }
 
 void *stream_getTaskContext(StreamData *d) {
-    return d->task->taskContext;
+    return d && d->task ? d->task->taskContext : NULL;
 }
 
 void stream_setTaskContext(StreamData *d, void *c, void (*free)(void *)) {
-    if (d->task->taskContext && d->task->freeTaskContext)
-        d->task->freeTaskContext(d->task->taskContext);
-    d->task->taskContext = c;
-    d->task->freeTaskContext = free;
+    if (d && d->task) {
+        if (d->task->taskContext && d->task->freeTaskContext)
+            d->task->freeTaskContext(d->task->taskContext);
+        d->task->taskContext = c;
+        d->task->freeTaskContext = free;
+    }
 }

@@ -55,3 +55,6 @@ config.cache
 /package/debian/control
 
 /build/
+
+# Tests can generate core files when segfaulting
+core

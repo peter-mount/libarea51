@@ -31,7 +31,7 @@ static void freeStreamCollector(void *c) {
 
         if (ctx->finish)
             ctx->stream->result = ctx->finish(ctx->context);
-
+        
         if (ctx->freeContext)
             ctx->freeContext(ctx->context);
 

@@ -9,9 +9,7 @@
 void stream_next(StreamData *d) {
     StreamTask *next = d->task->next;
 
-    if (!next || !next->action)
-        stream_terminate(d);
-    else {
+    if (next && next->action) {
         d->task = next;
 
         if (d->task->stream->debug)

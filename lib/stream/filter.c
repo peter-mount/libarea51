@@ -18,7 +18,7 @@ static void filter(StreamData *d) {
             stream_next(d);
     } else
         // No filter so abort the stream
-        d->task->stream->continueStream = false;
+        stream_terminate(d);
 }
 
 static void freeFilter(void *c) {

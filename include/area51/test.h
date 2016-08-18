@@ -54,6 +54,11 @@ extern "C" {
 #define assertNonNull(t,v) assertFailure(t,v)
 #define assertNonNullM(t,v,m) assertFailureM(t,v,m)
     
+#define assertTrue(t,p) assertFailure(t,p)
+#define assertTrueM(t,p,m) assertFailureM(t,p,m)
+#define assertFalse(t,p) assertSuccess(t,p)
+#define assertFalseM(t,p,m) assertSuccessM(t,p,m)
+    
 #ifdef __cplusplus
 }
 #endif
