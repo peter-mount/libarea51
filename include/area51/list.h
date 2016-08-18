@@ -86,7 +86,7 @@ extern "C" {
     extern Stream *list_stream(List *);
     
     // Take the current value on a stream (Must be List) and flatMap it to the lists content
-    extern Stream *list_flatMap(void *, void *);
+    extern int list_flatMap(Stream *s);
 
     // Map a Node to it's name/value
     extern int list_map_node_name(Stream *);

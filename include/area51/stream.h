@@ -46,8 +46,8 @@ extern "C" {
     extern void *stream_getVal(StreamData *d);
     extern void stream_setVal(StreamData *d, void *v, void *f);
 
-    extern int stream_map(Stream *, void *(*)(void *));
-    extern int stream_flatMap(Stream *, Stream *(*)(void *, void *), void *);
+    extern int stream_map(Stream *, void (*)(StreamData *));
+    extern int stream_flatMap(Stream *, Stream *(*)(StreamData *, void *), void *);
 
     extern int stream_filter(Stream *, bool (*)(void *, void *), void *, void (*)(void *));
     extern int stream_equal(Stream *, void *, void (*)(void *));

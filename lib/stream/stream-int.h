@@ -40,6 +40,7 @@ extern "C" {
         void *result;
 
         bool debug;
+        int sid;
     };
 
     struct StreamTask {
@@ -57,6 +58,9 @@ extern "C" {
 
         // If set function to free taskContext
         void (*freeTaskContext)(void *);
+
+        // Used in debugging
+        unsigned int tid : 8;
     };
 
     struct StreamData {
@@ -74,6 +78,11 @@ extern "C" {
         void *context;
         void (*freeContext)(void *);
     };
+
+    extern void stream_debug_r(Stream *, bool);
+    extern void stream_debug_task(StreamData *);
+    extern void stream_debug_res(const char *, void *);
+    extern void stream_debug_run(const char *, void *, void *);
 
 #ifdef __cplusplus
 }

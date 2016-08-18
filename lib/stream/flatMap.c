@@ -26,16 +26,18 @@ static void link(StreamData *d) {
 }
 
 struct ctx {
-    Stream *(*mapper)(void *, void *);
+    Stream *(*mapper)(StreamData *, void *);
     void *c;
 };
 
 static void flatMap(StreamData *d) {
-    struct ctx *ctx = d->task->taskContext;
-    if (!ctx || !d->val)
+    struct ctx *ctx = stream_getTaskContext(d);
+
+    // No context or null data then stop here, no data to flatMap
+    if (!ctx || !stream_getVal(d))
         return;
 
-    Stream *s = ctx->mapper(d->val, ctx->c);
+    Stream *s = ctx->mapper(d, ctx->c);
 
     if (s) {
         if (stream_invoke(s, link, d, NULL)) {
@@ -44,13 +46,13 @@ static void flatMap(StreamData *d) {
         }
 
         if (d->task->stream->debug)
-            stream_debug(s);
+            stream_debug_r(s, true);
 
         stream_run(s, NULL);
     }
 }
 
-int stream_flatMap(Stream *s, Stream *(*mapper)(void *d, void *c), void *c) {
+int stream_flatMap(Stream *s, Stream *(*mapper)(StreamData *d, void *c), void *c) {
     struct ctx *ctx = malloc(sizeof (struct ctx));
     if (!ctx)
         return EXIT_FAILURE;

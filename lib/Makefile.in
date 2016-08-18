@@ -230,6 +230,9 @@ OBJS += table/append.o \
 	table/newcell.o \
 	table/newrow.o
 
+# Test
+OBJS += test/test.o
+
 # Threads
 OBJS += thread/setPriority.o \
 	threadpool/init.o \

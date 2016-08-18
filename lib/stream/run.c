@@ -7,12 +7,14 @@
 #include "stream-int.h"
 
 void *stream_run(Stream *s, void *context) {
-    bool debug = s->debug;
-
-    if (debug)
-        logconsole("Running stream %lx context %lx", s, context);
+    void *r = NULL;
 
     if (s) {
+        bool debug = s->debug;
+
+        if (debug)
+            stream_debug_run("Running", s, context);
+
         s->context = context;
         s->result = NULL;
         while (s->continueStream) {
@@ -22,7 +24,7 @@ void *stream_run(Stream *s, void *context) {
                 d->task = s->start;
 
                 if (debug)
-                    logconsole("Invoking %16lx val %lx", d->task ? d->task->action : NULL, d->val);
+                    stream_debug_task(d);
 
                 if (d->task && d->task->action)
                     d->task->action(d);
@@ -38,17 +40,17 @@ void *stream_run(Stream *s, void *context) {
                 s->continueStream = false;
 
             if (debug)
-                logconsole("continueStream %s", s->continueStream ? "YES" : "NO");
+                stream_debug_res("Continue", stream_long_void(s->continueStream));
         }
+
+        if (debug)
+            stream_debug_res("Stopped", s);
+
+        r = stream_free(s);
+
+        if (debug)
+            stream_debug_res("Result", r);
     }
-
-    if (debug)
-        logconsole("Stream finished");
-
-    void *r = stream_free(s);
-
-    if (debug)
-        logconsole("Stream result %lx", r);
 
     return r;
 }

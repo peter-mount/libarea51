@@ -2,6 +2,10 @@
 #include <area51/list.h>
 #include <area51/stream.h>
 
-Stream *list_flatMap(void *v, void *c) {
-    return list_stream((List *) v);
+static Stream *flatMap(StreamData *d, void *c) {
+    return list_stream((List *) stream_getVal(d));
+}
+
+int list_flatMap(Stream *s) {
+    return stream_flatMap(s, flatMap, NULL);
 }

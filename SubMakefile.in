@@ -46,6 +46,8 @@ clean:
 #	rm -rf $(DIR)
 #	rm -f $(TARGET)
 
+test:
+
 $(DIR)/%.o: %.c
 	@mkdir -p $(@D)
 	$(CC) $(CPPFLAGS) $(CCFLAGS) -c $< -o $@

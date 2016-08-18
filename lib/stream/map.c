@@ -7,10 +7,10 @@
 static void map(StreamData *d) {
     void *(*mapper)(void *) = d->task->taskContext;
     if (mapper)
-        d->val = mapper(d->val);
+        mapper(d);
     stream_next(d);
 }
 
-int stream_map(Stream *s, void *(*mapper)(void *)) {
+int stream_map(Stream *s, void (*mapper)(StreamData *)) {
     return stream_invoke(s, map, mapper, NULL);
 }

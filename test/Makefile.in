@@ -1,0 +1,43 @@
+######################################################################
+# Build and run local tests
+######################################################################
+
+# Streams
+OBJS  = stream/_run.o \
+	stream/on.o
+
+######################################################################
+# Don't edit below this line
+######################################################################
+#OBJS        = runtest.o ${TESTS}
+CCFLAGS     = -O2 @CCFLAGS@
+CPPFLAGS    = -I.. @CPPFLAGS@
+LDFLAGS     = @LDFLAGS@
+BUILD_DIR   = ../build
+DIR	    = $(BUILD_DIR)/test
+LIBDIR      = $(BUILD_DIR)/package/usr/lib
+TARGET_OBJS = $(patsubst %.o, $(DIR)/%.o, $(OBJS))
+TEST_BIN    = $(DIR)/runtest
+TEST_LIB    = tests
+TEST_LIB_A  = $(DIR)/lib${TEST_LIB}.a
+all:
+
+clean:
+
+$(DIR)/%.o: %.c
+	@mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CCFLAGS) -c $< -o $@
+
+$(TEST_LIB_A): $(TARGET_OBJS)
+	@mkdir -p $(@D)
+	ar -rcs $@ $(TARGET_OBJS)
+
+$(TEST_BIN): $(DIR)/runtest.o $(TEST_LIB_A)
+	@mkdir -p $(@D)
+	$(CC) -o $@ $< -L${DIR} -ltests -larea51 $(LDFLAGS) 
+	$(CC) -o $@ $< $(TEST_LIB_A) -larea51 $(LDFLAGS) 
+#	$(CC) -o $@ $(TARGET_OBJS) -L${DIR} -ltests -larea51 $(LDFLAGS) 
+#	$(CC) -o $@ $< -larea51 $(LDFLAGS) 
+
+test: $(TEST_BIN)
+	LD_LIBRARY_PATH=${LIBDIR} $(TEST_BIN)

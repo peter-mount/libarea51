@@ -168,9 +168,9 @@ extern int hashmapGetMapper(Stream *, Hashmap *);
 extern Stream *hashmapStream(Hashmap *);
 
 // Map a KeyValue to its value
-extern void *map_keyValue_value(void *);
+extern void map_keyValue_value(StreamData *);
 
 // Map a KeyValue to its key
-extern void *map_keyValue_key(void *);
+extern void map_keyValue_key(StreamData *);
 
 #endif /* __HASHMAP_H */ 

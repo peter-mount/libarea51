@@ -5,7 +5,8 @@
 /*
  * Mapping function to take a KeyValue and return its value
  */
-void *map_keyValue_value(void *v) {
-    KeyValue *k = v;
-    return k ? k->value : NULL;
+void map_keyValue_value(StreamData *d) {
+    KeyValue *k = stream_getVal(d);
+    if (k)
+        stream_setVal(d, k->value, NULL);
 }

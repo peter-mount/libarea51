@@ -15,7 +15,7 @@ void stream_next(StreamData *d) {
     d->task = d->task->next;
 
     if (debug)
-        logconsole("Moving forward to %lx val %lx", d->task, d->val);
+        stream_debug_task(d);
 
     if (d->task && d->task->action)
         d->task->action(d);

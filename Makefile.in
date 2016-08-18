@@ -21,6 +21,10 @@ clean:
 $(DIRECTORIES):
 	@$(MAKE) --keep-going --directory=$@ $(MAKECMDGOALS)
 
+.PHONY: test
+test:
+	@$(MAKE) --keep-going --directory=$@ $(MAKECMDGOALS)
+
 .PHONY: $(MAKECMDGOALS)
 $(MAKECMDGOALS): $(DIRECTORIES)
 
