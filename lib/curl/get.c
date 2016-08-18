@@ -10,7 +10,7 @@
  * @param buf charbuffer to accept content
  * @return 0 if successful, 1 on error or http code if not http 200
  */
-int curl_get(char *url, struct charbuffer *buf) {
+int curl_get(char *url, CharBuffer *buf) {
     int ret = 1;
 
     CURL *curl = curl_pool_poll();

@@ -15,7 +15,7 @@
  * @param b charbuffer
  * @return 0 if initialised, 1 if no memory
  */
-int charbuffer_init(struct charbuffer *b) {
+int charbuffer_init(CharBuffer *b) {
     b->pos = 0;
     b->size = 0;
     b->buffer = malloc(CHARBUFFER_INITIAL_SIZE);

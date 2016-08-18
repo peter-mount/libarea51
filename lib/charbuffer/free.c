@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include "area51/charbuffer.h"
 
-void charbuffer_free(struct charbuffer *b) {
+void charbuffer_free(CharBuffer *b) {
     if (b->buffer)
         free(b->buffer);
     b->buffer = NULL;

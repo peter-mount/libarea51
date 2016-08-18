@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include "area51/charbuffer.h"
 
-int charbuffer_append_center(struct charbuffer *b, char *src, int width) {
+int charbuffer_append_center(CharBuffer *b, char *src, int width) {
     int l, r0, r1, r2, i;
 
     l = strlen(src);

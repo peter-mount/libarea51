@@ -12,7 +12,7 @@
  * @param fmt field value or format
  * @param ... args when fmt is a format
  */
-void charbuffer_append_xml(struct charbuffer *b, char *n, char *fmt, ...) {
+void charbuffer_append_xml(CharBuffer *b, char *n, char *fmt, ...) {
     va_list argp;
 
     charbuffer_put(b, "<", 1);

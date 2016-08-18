@@ -7,7 +7,7 @@
  * @param b buffer
  * @param m time to render in minutes
  */
-void charbuffer_time_hms(struct charbuffer *b, double t) {
+void charbuffer_time_hms(CharBuffer *b, double t) {
     div_t d = div((int) round(t * 3600.0), 3600);
     charbuffer_append_int(b, d.quot, 2);
     charbuffer_add(b, ':');

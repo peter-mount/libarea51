@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include "area51/charbuffer.h"
 
-int charbuffer_append_padleft(struct charbuffer *b, char *src, int width) {
+int charbuffer_append_padleft(CharBuffer *b, char *src, int width) {
     int l = strlen(src);
     if (l > width)
         l = width;

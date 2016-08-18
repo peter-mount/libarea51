@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include "area51/charbuffer.h"
 
-int charbuffer_append_form_field(struct charbuffer *b, char *name, char *value) {
+int charbuffer_append_form_field(CharBuffer *b, char *name, char *value) {
     int ret = CHARBUFFER_OK;
 
     if (b->pos)

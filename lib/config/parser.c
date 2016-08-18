@@ -108,7 +108,7 @@ static char *parseParameter(CONFIG_SECTION *sect, char *p) {
     return p;
 }
 
-static void config_parse_charbuffer(struct charbuffer * b) {
+static void config_parse_charbuffer(CharBuffer * b) {
 
     CONFIG_SECTION *sect = NULL;
 
@@ -144,7 +144,7 @@ static void config_parse_charbuffer(struct charbuffer * b) {
     }
 }
 
-static void config_parse_file(struct charbuffer *buffer, char *name) {
+static void config_parse_file(CharBuffer *buffer, char *name) {
     FILE *f = fopen(name, "r");
     if (!f) {
         fprintf(stderr, "Unable to read %s\n", name);
@@ -159,7 +159,7 @@ static void config_parse_file(struct charbuffer *buffer, char *name) {
 }
 
 void config_parse_dir(char *name) {
-    struct charbuffer buffer;
+    CharBuffer buffer;
     charbuffer_init(&buffer);
 
     if (config)

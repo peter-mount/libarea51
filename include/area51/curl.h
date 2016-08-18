@@ -27,7 +27,7 @@ extern "C" {
     extern CURL *curl_pool_poll();
     extern void curl_pool_offer(CURL *curl);
 
-    extern int curl_get(char *url, struct charbuffer *buf);
+    extern int curl_get(char *url, CharBuffer *buf);
 
 #ifdef __cplusplus
 }

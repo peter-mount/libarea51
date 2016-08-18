@@ -37,7 +37,7 @@ typedef struct {
     int *width;
 } TABLE;
 
-extern void table_append(struct charbuffer *b, TABLE *t);
+extern void table_append(CharBuffer *b, TABLE *t);
 extern TABLE *table_create();
 extern void table_destroy(TABLE *t);
 extern TABLE_ROW *table_newRow(TABLE *t);

@@ -13,7 +13,7 @@
  * @param b charbuffer
  * @return the size, -1 if the lock cannot be obtained
  */
-int charbuffer_size(struct charbuffer *b) {
+int charbuffer_size(CharBuffer *b) {
     int ret = -1;
     if (0 == pthread_mutex_lock(&b->mutex)) {
         // pos is the append point so to the client the size of data present!

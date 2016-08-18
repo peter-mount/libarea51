@@ -11,7 +11,7 @@ static char hex[] = "0123456789abcdef";
 /**
  * Appends a string to a charbuffer urlencoding it in the process
  */
-int charbuffer_append_urlencode(struct charbuffer *b, char *src) {
+int charbuffer_append_urlencode(CharBuffer *b, char *src) {
     int ret = CHARBUFFER_OK;
     char tmp[3];
     char *p = src;

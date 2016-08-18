@@ -12,7 +12,7 @@
  * @param fmt field value or format
  * @param ... args when fmt is a format
  */
-void charbuffer_append_json(struct charbuffer *b, char *n, char *fmt, ...) {
+void charbuffer_append_json(CharBuffer *b, char *n, char *fmt, ...) {
     va_list argp;
 
     // If not first entry then , separator

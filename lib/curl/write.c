@@ -10,7 +10,7 @@
  * 
  * To use this method with libcurl:
  * 
- *    struct charbuffer *buffer;
+ *    CharBuffer *buffer;
  *    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, charbuffer_curl_write);
  *    curl_easy_setopt(curl, CURLOPT_WRITEDATA, buffer);
  *    charbuffer_reset(buffer);
@@ -24,7 +24,7 @@
  * @return s*n always
  */
 size_t charbuffer_curl_write(void *b, size_t s, size_t n, void *stream) {
-    struct charbuffer *l = (struct charbuffer *) stream;
+    CharBuffer *l = (CharBuffer *) stream;
     charbuffer_put(l, (char *) b, s * n);
     return s*n;
 }

@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include "area51/charbuffer.h"
 
-static int ensure_capacity(struct charbuffer *b, int size) {
+static int ensure_capacity(CharBuffer *b, int size) {
     if (size > b->size) {
         char *newbuffer = (char *) malloc(size);
 
@@ -34,7 +34,7 @@ static int ensure_capacity(struct charbuffer *b, int size) {
  * @param len   length
  * @return 0 if added, 1 if error
  */
-int charbuffer_put(struct charbuffer *b, char *src, int len) {
+int charbuffer_put(CharBuffer *b, char *src, int len) {
     if (0 != pthread_mutex_lock(&b->mutex)) {
         return CHARBUFFER_ERROR;
     }
@@ -61,7 +61,7 @@ int charbuffer_put(struct charbuffer *b, char *src, int len) {
  * @param len   length
  * @return 0 if added, 1 if error
  */
-int charbuffer_add(struct charbuffer *b, char c) {
+int charbuffer_add(CharBuffer *b, char c) {
     if (0 != pthread_mutex_lock(&b->mutex)) {
         return CHARBUFFER_ERROR;
     }

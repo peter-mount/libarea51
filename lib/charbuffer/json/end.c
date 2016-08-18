@@ -12,6 +12,6 @@ static char *END = "}\n";
  * 
  * @param b charbuffer
  */
-void charbuffer_end_json(struct charbuffer *b) {
+void charbuffer_end_json(CharBuffer *b) {
     charbuffer_put(b, END, END_SIZE);
 }

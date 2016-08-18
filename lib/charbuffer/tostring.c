@@ -19,7 +19,7 @@
  * @return array containing the buffer content, null on error
  */
 
-char *charbuffer_tostring(struct charbuffer *b, int *len) {
+char *charbuffer_tostring(CharBuffer *b, int *len) {
     if (0 != pthread_mutex_lock(&b->mutex)) {
         return NULL;
     }

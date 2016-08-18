@@ -12,7 +12,7 @@ static char *START = "{";
  * 
  * @param b charbuffer
  */
-void charbuffer_reset_json(struct charbuffer *b) {
+void charbuffer_reset_json(CharBuffer *b) {
     charbuffer_reset(b);
     charbuffer_put(b, START, START_SIZE);
 }

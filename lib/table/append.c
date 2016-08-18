@@ -4,7 +4,7 @@
 #include <area51/list.h>
 #include "area51/table.h"
 
-void table_append(struct charbuffer *b, TABLE *t) {
+void table_append(CharBuffer *b, TABLE *t) {
     Node *rn, *cn;
     TABLE_ROW *r;
     TABLE_CELL *c;

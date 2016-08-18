@@ -5,7 +5,7 @@
 
 #define INT_DIGITS 19		/* enough for 64 bit integer */
 
-void charbuffer_append_int(struct charbuffer *b, int v, int width) {
+void charbuffer_append_int(CharBuffer *b, int v, int width) {
     char buf[INT_DIGITS];
     int i = 0;
     int m = width ? width : INT_DIGITS;

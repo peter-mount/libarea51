@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include "area51/charbuffer.h"
 
-void charbuffer_read(struct charbuffer *b, FILE *in) {
+void charbuffer_read(CharBuffer *b, FILE *in) {
     char t[1024];
     int i = fread((void*) t, 1, 1024, in);
     while (i > 0) {

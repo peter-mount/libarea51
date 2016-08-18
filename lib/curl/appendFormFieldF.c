@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include "area51/charbuffer.h"
 
-int charbuffer_append_form_fieldf(struct charbuffer *b, char *name, char *fmt, ...) {
+int charbuffer_append_form_fieldf(CharBuffer *b, char *name, char *fmt, ...) {
     va_list argp;
     int ret = CHARBUFFER_OK;
 

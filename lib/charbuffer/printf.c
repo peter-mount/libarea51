@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include "area51/charbuffer.h"
 
-int charbuffer_printf(struct charbuffer *b, char *fmt, ...) {
+int charbuffer_printf(CharBuffer *b, char *fmt, ...) {
     va_list argp;
     int ret;
     char *c;

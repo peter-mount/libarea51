@@ -15,7 +15,7 @@ static char *END = ">";
  * 
  * @param b charbuffer
  */
-void charbuffer_reset_xml(struct charbuffer *b, char *tag) {
+void charbuffer_reset_xml(CharBuffer *b, char *tag) {
     charbuffer_reset(b);
     charbuffer_put(b, START, START_SIZE);
     charbuffer_append(b, tag);

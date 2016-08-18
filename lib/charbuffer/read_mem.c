@@ -15,7 +15,7 @@
 /*
  * Similar to charbuffer_read() but this uses a filehandle and memory maps the file
  */
-int charbuffer_readmem(struct charbuffer *b, int fh) {
+int charbuffer_readmem(CharBuffer *b, int fh) {
     struct stat sb;
     if (fh==1 || fstat(fh, &sb) == -1) {
         return CHARBUFFER_ERROR;
