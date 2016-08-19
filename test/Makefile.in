@@ -14,7 +14,11 @@ OBJS  = stream/_run.o \
 #OBJS        = runtest.o ${TESTS}
 CCFLAGS     = -O2 @CCFLAGS@
 CPPFLAGS    = -I.. @CPPFLAGS@
-LDFLAGS     = @LDFLAGS@
+
+# -rdynamic allows the test binary to have its symbols resolved by dladdr
+# see http://stackoverflow.com/a/37433934/6734016
+LDFLAGS     = @LDFLAGS@ -rdynamic
+
 BUILD_DIR   = ../build
 DIR	    = $(BUILD_DIR)/test
 LIBDIR      = $(BUILD_DIR)/package/usr/lib

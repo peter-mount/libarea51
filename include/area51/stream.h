@@ -68,7 +68,8 @@ extern "C" {
     extern void *stream_getTaskContext(StreamData *);
     extern void stream_setTaskContext(StreamData *, void *, void (*)(void *));
 
-    extern int stream_invoke(Stream *, void (*)(StreamData *), void *, void (*)(void *));
+#define stream_invoke(s,a,c,f) stream_invoke_r((s),(a),(c),(f),__PRETTY_FUNCTION__)
+    extern int stream_invoke_r(Stream *, void (*)(StreamData *), void *, void (*)(void *), const char *);
 
     extern int stream_collect(Stream *, void (*)(void *), void (*)(void *, void *), void *(*)(void *), void*, void*);
 

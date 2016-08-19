@@ -61,8 +61,7 @@ extern "C" {
 
         // Used in debugging
         unsigned int tid : 8;
-        const char *fname;
-        const char *sym;
+        const char *sname;
     };
 
     struct StreamData {
