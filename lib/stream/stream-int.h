@@ -39,8 +39,9 @@ extern "C" {
         // Result of any reduction
         void *result;
 
-        bool debug;
-        int sid;
+        // Debug, 0=off, 1=on, 2=on in child stream (eg flatMap)
+        unsigned int debug : 2;
+        unsigned int sid : 30;
     };
 
     struct StreamTask {
@@ -59,8 +60,11 @@ extern "C" {
         // If set function to free taskContext
         void (*freeTaskContext)(void *);
 
+        // If set free will not follow
+        unsigned int freeNotFollow : 1;
+        
         // Used in debugging
-        unsigned int tid : 8;
+        unsigned int tid : 15;
         const char *sname;
     };
 
@@ -82,8 +86,8 @@ extern "C" {
 
     extern void stream_debug_r(Stream *, bool);
     extern void stream_debug_task(StreamData *);
-    extern void stream_debug_res(const char *, void *);
-    extern void stream_debug_run(const char *, void *, void *);
+    extern void stream_debug_res(Stream *, const char *, void *);
+    extern void stream_debug_run(Stream *, const char *, void *, void *);
 
 #ifdef __cplusplus
 }

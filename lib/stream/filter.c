@@ -30,16 +30,20 @@ static void freeFilter(void *c) {
     }
 }
 
-int stream_filter(Stream *s, bool(*f)(void *, void *), void *c, void (*free)(void *)) {
+int stream_filter_r(Stream *s, bool(*f)(void *, void *), void *c, void (*free)(void *), const char *n) {
     struct ctx *ctx = malloc(sizeof (struct ctx));
     if (ctx) {
         memset(ctx, 0, sizeof (struct ctx));
         ctx->filter = f;
         ctx->context = c;
         ctx->freeContext = free;
-        return stream_invoke(s, filter, ctx, freeFilter);
+        return stream_invoke_r(s, filter, ctx, freeFilter, n);
     }
     return EXIT_FAILURE;
+}
+
+int stream_filter(Stream *s, bool(*f)(void *, void *), void *c, void (*free)(void *)) {
+    return stream_filter_r(s, f, c, free, __PRETTY_FUNCTION__);
 }
 
 static bool equal(void *v, void *c) {
@@ -51,9 +55,13 @@ static bool notEqual(void *v, void *c) {
 }
 
 int stream_equal(Stream *s, void *v, void (*f)(void *)) {
-    return stream_filter(s, equal, v, f);
+    return stream_filter_r(s, equal, v, f, __PRETTY_FUNCTION__);
 }
 
 int stream_notEqual(Stream *s, void *v, void (*f)(void *)) {
-    return stream_filter(s, notEqual, v, f);
+    return stream_filter_r(s, notEqual, v, f, __PRETTY_FUNCTION__);
+}
+
+int stream_notNull(Stream *s) {
+    return stream_filter_r(s, notEqual, NULL, NULL, __PRETTY_FUNCTION__);
 }

@@ -16,6 +16,13 @@ static void link(StreamData *d) {
         child->free = NULL;
 
         child->task = parent->task->next;
+
+        // Don't free beyond this point as it's not this stream
+        child->task->freeNotFollow = 1;
+
+        if (child->task->stream->debug)
+            stream_debug_task(child);
+
         child->task->action(child);
 
         if (child->val && child->free)
@@ -30,6 +37,8 @@ struct ctx {
     void *c;
 };
 
+static const char *BACK = "<-- back";
+
 static void flatMap(StreamData *d) {
     struct ctx *ctx = stream_getTaskContext(d);
 
@@ -40,7 +49,7 @@ static void flatMap(StreamData *d) {
     Stream *s = ctx->mapper(d, ctx->c);
 
     if (s) {
-        if (stream_invoke(s, link, d, NULL)) {
+        if (stream_invoke_r(s, link, d, NULL, BACK)) {
             stream_free(s);
             return;
         }

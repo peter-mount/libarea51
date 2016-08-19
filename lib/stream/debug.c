@@ -6,8 +6,8 @@
 #include "stream-int.h"
 
 static const char *SEP = "-----------------------------------------------------------";
-static const char *RES = "%8s %16lx";
-static const char *RUN = "%8s %16lx %16lx";
+static const char *RES = " %03d     %3s %12lx";
+static const char *RUN = " %03d     %3s %12lx %16lx";
 //static const char *NUM = "%8s %16lx %16lx %16lx";
 static const char *STR = "%8s %16s %16s %16s";
 static const char *STP = " %03d-%03d %16lx %16lx %16lx %s";
@@ -25,31 +25,31 @@ void stream_debug_task(StreamData *d) {
     logconsole(STP, d->task->stream->sid, d->task->tid, d->task, stream_getVal(d), stream_getTaskContext(d), d->task->sname);
 }
 
-void stream_debug_res(const char *s, void *r) {
-    logconsole(RES, s, r);
+void stream_debug_res(Stream *st, const char *s, void *r) {
+    logconsole(RES, st->sid, s, r);
 }
 
-void stream_debug_run(const char *s, void *a, void *b) {
-    logconsole(RUN, s, a, b);
+void stream_debug_run(Stream *st, const char *s, void *a, void *b) {
+    logconsole(RUN, st->sid, s, a, b);
 }
 
 void stream_debug_r(Stream *s, bool child) {
 
-    //#ifdef DEBUG_FULL
+#ifdef DEBUG_FULL
     logconsole(SEP);
     stream_debug_res(STREAM, s);
-    //#endif
+#endif
 
     if (s) {
         s->sid = ++sid;
-        s->debug = true;
+        s->debug = child ? 2 : s->debug > 1 ? s->debug : 1;
         StreamTask *t = s->start;
         int c = 0;
 
-        //#ifdef DEBUG_FULL
+#ifdef DEBUG_FULL
         logconsole(STR, STEP, TASK, NEXT, CONTEXT);
         logconsole(SEP);
-        //#endif
+#endif
 
         while (t) {
             t->tid = ++c;
@@ -57,15 +57,20 @@ void stream_debug_r(Stream *s, bool child) {
             if (!t->sname)
                 t->sname = BLANK;
 
+#ifdef DEBUG_FULL
             logconsole(STP, sid, t->tid, t, t->next, t->taskContext, t->sname);
+#endif
+
             t = t->next;
         }
 
+#ifdef DEBUG_FULL
         if (!child) {
             logconsole(SEP);
             logconsole(STR, ACTION, TASK, VALUE, CONTEXT);
             logconsole(SEP);
         }
+#endif
     }
 }
 

@@ -10,10 +10,10 @@ void *stream_run(Stream *s, void *context) {
     void *r = NULL;
 
     if (s) {
-        bool debug = s->debug;
+        unsigned int debug = s->debug;
 
-        if (debug)
-            stream_debug_run("Running", s, context);
+        if (debug == 1)
+            stream_debug_run(s, "Run", s, context);
 
         s->context = context;
         s->result = NULL;
@@ -39,17 +39,19 @@ void *stream_run(Stream *s, void *context) {
             } else
                 s->continueStream = false;
 
+/*
             if (debug)
-                stream_debug_res("Continue", stream_long_void(s->continueStream));
+                stream_debug_res(s, "Con", stream_long_void(s->continueStream));
+*/
         }
 
-        if (debug)
-            stream_debug_res("Stopped", s);
+        if (debug == 1)
+            stream_debug_res(s, "Sto", s);
 
         r = stream_free(s);
 
-        if (debug)
-            stream_debug_res("Result", r);
+        if (debug == 1)
+            stream_debug_res(s, "Res", r);
     }
 
     return r;

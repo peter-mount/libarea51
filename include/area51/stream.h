@@ -50,10 +50,10 @@ extern "C" {
     extern int stream_flatMap(Stream *, Stream *(*)(StreamData *, void *), void *);
 
     extern int stream_filter(Stream *, bool (*)(void *, void *), void *, void (*)(void *));
+    extern int stream_filter_r(Stream *, bool (*)(void *, void *), void *, void (*)(void *),const char *);
     extern int stream_equal(Stream *, void *, void (*)(void *));
     extern int stream_notEqual(Stream *, void *, void (*)(void *));
-
-#define stream_notNull(s) stream_notEqual(s,NULL,NULL);
+    extern int stream_notNull(Stream *);
 
     extern int stream_onFirst(Stream *s, void (*)(StreamData *));
     extern int stream_notFirst(Stream *s, void (*)(StreamData *));
