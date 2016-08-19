@@ -5,6 +5,7 @@
 # Streams
 OBJS  = stream/_run.o \
 	stream/collect.o \
+	stream/debug.o \
 	stream/on.o
 
 ######################################################################

@@ -1,3 +1,4 @@
+#define _GNU_SOURCE
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -6,12 +7,16 @@
 #include <area51/log.h>
 #include "stream-int.h"
 
+// Symbol retrieval - this works on alpine - may need to make this configurable
+// in configure when we return to raspian/debian builds as well
+#include <dlfcn.h>
+
 static const char *SEP = "-----------------------------------------------------------";
 static const char *RES = "%8s %16lx";
 static const char *RUN = "%8s %16lx %16lx";
 //static const char *NUM = "%8s %16lx %16lx %16lx";
 static const char *STR = "%8s %16s %16s %16s";
-static const char *STP = " %03d-%03d %16lx %16lx %16lx";
+static const char *STP = " %03d-%03d %16lx %16lx %16lx %s:%s";
 static const char *ACTION = "Action";
 static const char *CONTEXT = "Context";
 static const char *NEXT = "Next";
@@ -23,7 +28,7 @@ static const char *STREAM = "Stream";
 static int sid = 0;
 
 void stream_debug_task(StreamData *d) {
-    logconsole(STP, d->task->stream->sid, d->task->tid, d->task, stream_getVal(d), stream_getTaskContext(d));
+    logconsole(STP, d->task->stream->sid, d->task->tid, d->task, stream_getVal(d), stream_getTaskContext(d), d->task->fname, d->task->sym);
 }
 
 void stream_debug_res(const char *s, void *r) {
@@ -36,10 +41,10 @@ void stream_debug_run(const char *s, void *a, void *b) {
 
 void stream_debug_r(Stream *s, bool child) {
 
-#ifdef DEBUG_FULL
+    //#ifdef DEBUG_FULL
     logconsole(SEP);
     stream_debug_res(STREAM, s);
-#endif
+    //#endif
 
     if (s) {
         s->sid = ++sid;
@@ -47,14 +52,23 @@ void stream_debug_r(Stream *s, bool child) {
         StreamTask *t = s->start;
         int c = 0;
 
-#ifdef DEBUG_FULL
+        //#ifdef DEBUG_FULL
         logconsole(STR, STEP, TASK, NEXT, CONTEXT);
         logconsole(SEP);
-#endif
+        //#endif
 
         while (t) {
             t->tid = ++c;
-            logconsole(STP, sid, t->tid, t, t->next, t->taskContext);
+            t->sym = NULL;
+#ifdef _DLFCN_H
+            if (t->action) {
+                Dl_info info;
+                dladdr(t->action, &info);
+                t->fname = info.dli_fname;
+                t->sym = info.dli_sname;
+            }
+#endif
+            logconsole(STP, sid, t->tid, t, t->next, t->taskContext, t->fname, t->sym);
             t = t->next;
         }
 
