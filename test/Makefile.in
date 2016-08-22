@@ -6,6 +6,7 @@
 OBJS  = stream/_run.o \
 	stream/collect.o \
 	stream/debug.o \
+	stream/findFirst.o \
 	stream/flatMap.o \
 	stream/ofInt.o \
 	stream/on.o
