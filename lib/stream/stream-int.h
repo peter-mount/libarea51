@@ -62,7 +62,7 @@ extern "C" {
 
         // If set free will not follow
         unsigned int freeNotFollow : 1;
-        
+
         // Used in debugging
         unsigned int tid : 15;
         const char *sname;
@@ -83,6 +83,7 @@ extern "C" {
         void *context;
         void (*freeContext)(void *);
     };
+    extern void *stream_run_r(Stream *, Stream *, void *);
 
     extern void stream_debug_r(Stream *, bool);
     extern void stream_debug_task(StreamData *);

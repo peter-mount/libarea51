@@ -1,7 +1,6 @@
 /*
- * Test that a basic collector works. Here we will do a basic reduction, keeping
- * the last value received
- * 
+ * Test that flatMap runs correctly, returning the correct result when filling
+ * a collector.
  */
 #include "../tests.h"
 #include <area51/log.h>

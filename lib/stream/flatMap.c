@@ -57,7 +57,7 @@ static void flatMap(StreamData *d) {
         if (d->task->stream->debug)
             stream_debug_r(s, true);
 
-        stream_run(s, NULL);
+        stream_run_r( d->task->stream, s, NULL);
     }
 }
 

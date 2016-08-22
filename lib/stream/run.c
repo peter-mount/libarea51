@@ -6,7 +6,22 @@
 #include <area51/log.h>
 #include "stream-int.h"
 
+/*
+ * Run a stream
+ * @param s Stream
+ * @param context optional context object
+ */
 void *stream_run(Stream *s, void *context) {
+    return stream_run_r(s, s, context);
+}
+
+/*
+ * Run a stream
+ * @param ps parent Stream
+ * @param s child Stream
+ * @param context optional context object
+ */
+void *stream_run_r(Stream *ps, Stream *s, void *context) {
     void *r = NULL;
 
     if (s) {
@@ -17,7 +32,7 @@ void *stream_run(Stream *s, void *context) {
 
         s->context = context;
         s->result = NULL;
-        while (s->continueStream) {
+        while (s->continueStream && ps->continueStream) {
             StreamData *d = malloc(sizeof (StreamData));
             if (d) {
                 memset(d, 0, sizeof (StreamData));
@@ -38,11 +53,6 @@ void *stream_run(Stream *s, void *context) {
 
             } else
                 s->continueStream = false;
-
-/*
-            if (debug)
-                stream_debug_res(s, "Con", stream_long_void(s->continueStream));
-*/
         }
 
         if (debug == 1)
