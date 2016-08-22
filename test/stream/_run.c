@@ -6,6 +6,8 @@ extern void test_stream_collect_summary(Test *);
 
 extern void test_stream_flatMap(Test *);
 
+extern void test_stream_ofInt(Test *);
+
 void test_stream(Test *t) {
     // Test debugging first, if this breaks then it may not help later on
     test_stream_debug(t);
@@ -13,4 +15,6 @@ void test_stream(Test *t) {
     test_stream_array(t);
     test_stream_collect_summary(t);
     test_stream_flatMap(t);
+    
+    test_stream_ofInt(t);
 }
