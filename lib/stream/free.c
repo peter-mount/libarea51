@@ -11,18 +11,20 @@ void *stream_free(Stream *s) {
 
         StreamTask *t = s->start;
         while (t) {
-            StreamTask *n = t->next;
-            if (t->taskContext && t->freeTaskContext)
-                t->freeTaskContext(t->taskContext);
-            free(t);
-
             /*
              * Move to next task, abort if the freeNotFollow flag is set.
              * 
              * e.g. this is a flat mapped stream, so we don't want to free
              * the parent stream
              */
-            t = t->freeNotFollow ? NULL : n;
+            StreamTask *n = t->freeNotFollow ? NULL : t->next;
+            
+            if (t->taskContext && t->freeTaskContext)
+                t->freeTaskContext(t->taskContext);
+            
+            free(t);
+            
+            t=n;
         }
 
         if (s->context && s->freeContext)
