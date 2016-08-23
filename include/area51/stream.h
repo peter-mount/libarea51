@@ -50,7 +50,7 @@ extern "C" {
     extern int stream_flatMap(Stream *, Stream *(*)(StreamData *, void *), void *);
 
     extern int stream_filter(Stream *, bool (*)(void *, void *), void *, void (*)(void *));
-    extern int stream_filter_r(Stream *, bool (*)(void *, void *), void *, void (*)(void *),const char *);
+    extern int stream_filter_r(Stream *, bool (*)(void *, void *), void *, void (*)(void *), const char *);
     extern int stream_equal(Stream *, void *, void (*)(void *));
     extern int stream_notEqual(Stream *, void *, void (*)(void *));
     extern int stream_notNull(Stream *);
@@ -72,6 +72,9 @@ extern "C" {
     extern int stream_invoke_r(Stream *, void (*)(StreamData *), void *, void (*)(void *), const char *);
 
     extern int stream_collect(Stream *, void (*)(void *), void (*)(void *, void *), void *(*)(void *), void*, void*);
+
+    extern int stream_removeDuplicateStrings(Stream *);
+    extern int stream_removeDuplicateValues(Stream *);
 
     extern void stream_debug(Stream *s);
 

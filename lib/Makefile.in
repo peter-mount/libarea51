@@ -207,7 +207,9 @@ OBJS += stream/collect.o \
 	stream/streamRange.o \
 	stream/skip.o \
 	stream/terminate.o \
-	stream/values.o
+	stream/values.o \
+	stream/filter/removeDuplicateStrings.o \
+	stream/filter/removeDuplicateValues.o
 
 # String
 OBJS += string/extractString.o \
