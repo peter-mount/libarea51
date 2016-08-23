@@ -17,9 +17,6 @@ static void link(StreamData *d) {
 
         child->task = parent->task->next;
 
-        // Don't free beyond this point as it's not this stream
-        child->task->freeNotFollow = 1;
-
         if (child->task->stream->debug)
             stream_debug_task(child);
 
@@ -53,6 +50,9 @@ static void flatMap(StreamData *d) {
             stream_free(s);
             return;
         }
+        
+        // Don't free beyond this point as it's not this stream
+        s->tail->freeNotFollow = 1;
 
         if (d->task->stream->debug)
             stream_debug_r(s, true);
