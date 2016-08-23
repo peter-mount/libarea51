@@ -5,6 +5,7 @@
 # Streams
 OBJS  = stream/_run.o \
 	stream/collect.o \
+	stream/collect_findFirst.o \
 	stream/debug.o \
 	stream/findFirst.o \
 	stream/findFirst_flatMap.o \
