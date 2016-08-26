@@ -5,11 +5,13 @@
 #include <stdlib.h>
 #include <memory.h>
 #include <stdio.h>
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
+#include "charbuffer-int.h"
 
 void charbuffer_appendbuffer(CharBuffer *dest, CharBuffer *src) {
-    if (0 == pthread_mutex_lock(&src->mutex)) {
+    if (dest && src) {
+        charbuffer_lock(src);
         charbuffer_put(dest, src->buffer, src->pos);
-        pthread_mutex_unlock(&src->mutex);
+        charbuffer_unlock(src);
     }
 }

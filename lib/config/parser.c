@@ -13,7 +13,8 @@
 #include <strings.h>
 #include <string.h>
 #include <dirent.h>
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
+#include "../charbuffer/charbuffer-int.h"
 #include "area51/config.h"
 #include <area51/list.h>
 #include "area51/string.h"
@@ -159,8 +160,7 @@ static void config_parse_file(CharBuffer *buffer, char *name) {
 }
 
 void config_parse_dir(char *name) {
-    CharBuffer buffer;
-    charbuffer_init(&buffer);
+    CharBuffer *buffer = charbuffer_new();
 
     if (config)
         config_free();
@@ -177,7 +177,7 @@ void config_parse_dir(char *name) {
             if (ent->d_name[0] != '.') {
                 char *f = (char *) malloc(strlen(name) + strlen(ent->d_name) + 2);
                 sprintf(f, "%s/%s", name, ent->d_name);
-                config_parse_file(&buffer, f);
+                config_parse_file(buffer, f);
                 free(f);
             }
         }
@@ -187,5 +187,5 @@ void config_parse_dir(char *name) {
         exit(1);
     }
 
-    charbuffer_free(&buffer);
+    charbuffer_free(buffer);
 }

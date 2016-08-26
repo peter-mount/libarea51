@@ -5,7 +5,8 @@
 #include <stdlib.h>
 #include <memory.h>
 #include <stdio.h>
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
+#include "charbuffer-int.h"
 
 /**
  * Resets a buffer so new data can be appended to it using the existing buffer.
@@ -13,7 +14,7 @@
  * @return 0 if reset, 1 if error
  */
 void charbuffer_reset(CharBuffer *b) {
-    pthread_mutex_lock(&b->mutex);
+    charbuffer_lock(b);
     b->pos = 0;
-    pthread_mutex_unlock(&b->mutex);
+    charbuffer_unlock(b);
 }

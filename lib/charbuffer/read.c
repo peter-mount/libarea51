@@ -5,7 +5,8 @@
 #include <stdlib.h>
 #include <memory.h>
 #include <stdio.h>
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
+#include "charbuffer-int.h"
 
 void charbuffer_read(CharBuffer *b, FILE *in) {
     char t[1024];

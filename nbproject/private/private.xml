@@ -19,7 +19,8 @@
             <file>file:/home/peter/NetBeansProjects/libarea51/SubMakefile.in</file>
         </group>
         <group name="Alpine">
-            <file>file:/home/peter/NetBeansProjects/libarea51/include/area51/stream.h</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/lib/hashmap/readMemMap.c</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/lib/blockingqueue/init.c</file>
         </group>
     </open-files>
 </project-private>

@@ -10,7 +10,8 @@
 #include <sys/mman.h>
 #include <sys/stat.h>
 
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
+#include "charbuffer-int.h"
 
 /*
  * Similar to charbuffer_read() but this uses a filehandle and memory maps the file
@@ -34,11 +35,7 @@ int charbuffer_readmem(CharBuffer *b, int fh) {
 
     memcpy(newbuffer, fmap, sb.st_size);
 
-    if (0 != pthread_mutex_lock(&b->mutex)) {
-        free(newbuffer);
-        munmap(fmap, sb.st_size);
-        return CHARBUFFER_ERROR;
-    }
+    charbuffer_lock(b);
 
     if (b->buffer) {
         free(b->buffer);
@@ -46,7 +43,8 @@ int charbuffer_readmem(CharBuffer *b, int fh) {
 
     b->size = b->pos = sb.st_size;
     b->buffer = newbuffer;
-    pthread_mutex_unlock(&b->mutex);
+    
+    charbuffer_unlock(b);
 
     munmap(fmap, sb.st_size);
 

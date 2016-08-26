@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <math.h>
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
 
 /**
  * Append time to a charbuffer as HH:MM

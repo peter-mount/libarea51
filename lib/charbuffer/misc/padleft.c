@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <memory.h>
 #include <stdio.h>
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
 
 int charbuffer_append_padleft(CharBuffer *b, char *src, int width) {
     int l = strlen(src);

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
 
 static char *START = "{";
 #define START_SIZE 1

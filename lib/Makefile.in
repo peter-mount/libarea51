@@ -48,8 +48,10 @@ OBJS += bytebuffer/free.o \
 # Char buffer
 OBJS += charbuffer/append.o \
 	charbuffer/appendbuffer.o \
+	charbuffer/getBuffer.o \
 	charbuffer/free.o \
-	charbuffer/init.o \
+	charbuffer/new.o \
+	charbuffer/lock.o \
 	charbuffer/printf.o \
 	charbuffer/put.o \
 	charbuffer/read.o \
@@ -179,6 +181,9 @@ OBJS += math/statistic_getCount.o \
 	math/statistic_init.o \
 	math/statistic_reset.o \
 	math/statistic_setValue.o
+
+# Memory
+OBJS += memory/freeable.o
 
 # Pool
 OBJS +=	pool/fill.o \

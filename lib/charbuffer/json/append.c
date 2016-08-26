@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
+#include "../charbuffer-int.h"
 
 /**
  * Appends to a charbuffer being used to generate json field

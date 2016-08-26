@@ -5,7 +5,8 @@
 #include <stdlib.h>
 #include <memory.h>
 #include <stdio.h>
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
+#include "charbuffer-int.h"
 
 /**
  * Returns a new array containing the buffer's content.
@@ -20,9 +21,7 @@
  */
 
 char *charbuffer_tostring(CharBuffer *b, int *len) {
-    if (0 != pthread_mutex_lock(&b->mutex)) {
-        return NULL;
-    }
+    charbuffer_lock(b);
 
     *len = b->pos;
 
@@ -33,6 +32,6 @@ char *charbuffer_tostring(CharBuffer *b, int *len) {
         ret[*len] = '\0';
     }
 
-    pthread_mutex_unlock(&b->mutex);
+    charbuffer_unlock(b);
     return ret;
 }

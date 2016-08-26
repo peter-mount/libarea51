@@ -5,7 +5,8 @@
 #include <stdlib.h>
 #include <memory.h>
 #include <stdio.h>
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
+#include "charbuffer-int.h"
 
 static int ensure_capacity(CharBuffer *b, int size) {
     if (size > b->size) {
@@ -35,9 +36,10 @@ static int ensure_capacity(CharBuffer *b, int size) {
  * @return 0 if added, 1 if error
  */
 int charbuffer_put(CharBuffer *b, char *src, int len) {
-    if (0 != pthread_mutex_lock(&b->mutex)) {
+    if (!b)
         return CHARBUFFER_ERROR;
-    }
+
+    charbuffer_lock(b);
 
     if (ensure_capacity(b, b->pos + len + 64) == CHARBUFFER_ERROR)
         return CHARBUFFER_ERROR;
@@ -48,7 +50,7 @@ int charbuffer_put(CharBuffer *b, char *src, int len) {
     // Ensure we are terminated
     b->buffer[b->pos] = '\0';
 
-    pthread_mutex_unlock(&b->mutex);
+    charbuffer_unlock(b);
     return CHARBUFFER_OK;
 }
 
@@ -62,9 +64,10 @@ int charbuffer_put(CharBuffer *b, char *src, int len) {
  * @return 0 if added, 1 if error
  */
 int charbuffer_add(CharBuffer *b, char c) {
-    if (0 != pthread_mutex_lock(&b->mutex)) {
+    if (!b)
         return CHARBUFFER_ERROR;
-    }
+
+    charbuffer_lock(b);
 
     // Ensure we have room, but do so in a way we don't keep growing just for 1 character
     ensure_capacity(b, b->pos + (b->pos % 64) + 1);
@@ -73,6 +76,6 @@ int charbuffer_add(CharBuffer *b, char c) {
     // Ensure we are terminated
     b->buffer[b->pos] = '\0';
 
-    pthread_mutex_unlock(&b->mutex);
+    charbuffer_unlock(b);
     return CHARBUFFER_OK;
 }

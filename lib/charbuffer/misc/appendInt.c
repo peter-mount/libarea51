@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <stdbool.h>
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
 
 #define INT_DIGITS 19		/* enough for 64 bit integer */
 

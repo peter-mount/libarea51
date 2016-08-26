@@ -5,7 +5,8 @@
 #include <stdlib.h>
 #include <memory.h>
 #include <stdio.h>
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
+#include "charbuffer-int.h"
 
 /**
  * Returns the size of data currently in the charbuffer
@@ -15,10 +16,9 @@
  */
 int charbuffer_size(CharBuffer *b) {
     int ret = -1;
-    if (0 == pthread_mutex_lock(&b->mutex)) {
-        // pos is the append point so to the client the size of data present!
-        ret = b->pos;
-        pthread_mutex_unlock(&b->mutex);
-    }
+    charbuffer_lock(b);
+    // pos is the append point so to the client the size of data present!
+    ret = b->pos;
+    charbuffer_unlock(b);
     return ret;
 }

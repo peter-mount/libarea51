@@ -6,7 +6,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
+#include "charbuffer-int.h"
 
 int charbuffer_printf(CharBuffer *b, char *fmt, ...) {
     va_list argp;

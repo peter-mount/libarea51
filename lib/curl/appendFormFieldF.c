@@ -3,7 +3,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
-#include "area51/charbuffer.h"
+#include <area51/charbuffer.h>
+#include "../charbuffer/charbuffer-int.h"
 
 int charbuffer_append_form_fieldf(CharBuffer *b, char *name, char *fmt, ...) {
     va_list argp;
