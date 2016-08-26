@@ -23,6 +23,9 @@ int curl_get(char *url, CharBuffer *buf) {
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, charbuffer_curl_write);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, buf);
 
+        /* some servers don't like requests that are made without a user-agent field, so we provide one */
+        curl_easy_setopt(curl, CURLOPT_USERAGENT, "libarea51-agent/1.0");
+
         CURLcode res = curl_easy_perform(curl);
 
         long httpCode = 0;
