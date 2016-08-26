@@ -13,6 +13,7 @@
 extern "C" {
 #endif
 
+#include <stdbool.h>
 #include <json-c/json.h>
     
     /**
@@ -37,6 +38,14 @@ extern "C" {
      * @return value or INT_MIN if not present, null etc
      */
     extern int json_getInt(struct json_object *obj, const char *key);
+    
+    /**
+     * Is a value null
+     * @param obj json object
+     * @param key key name
+     * @return true if null, false if not
+     */
+    extern bool json_isNull(struct json_object *obj, const char *key);
     
     /**
      * Parse a file

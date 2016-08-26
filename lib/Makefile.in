@@ -139,6 +139,7 @@ OBJS += history/append.o \
 OBJS += json/copyString.o \
 	json/getInt.o \
 	json/getString.o \
+	json/isNull.o \
 	json/parseFile.o
 
 # Linked lists
