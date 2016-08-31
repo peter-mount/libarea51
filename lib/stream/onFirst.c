@@ -4,7 +4,6 @@
 #include <string.h>
 #include <stdbool.h>
 #include "stream-int.h"
-#include "../stream.h"
 
 struct firstLast {
     void (*action)(StreamData *);
