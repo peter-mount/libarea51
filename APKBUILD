@@ -1,8 +1,8 @@
 # Maintainer: Peter Mount <peter@retep.org>
 
 pkgname="libarea51"
-pkgver="0.1"
-pkgrel="31"
+pkgver="0.2"
+pkgrel="3"
 pkgdesc="Area51 core C library"
 arch="x86_64"
 url="https://area51.onl/"
@@ -22,6 +22,7 @@ package() {
   ./configure
   make clean
   make
+  make test
   mkdir -p "$pkgdir/usr/lib"
   cp -rp build/package/usr/lib/* "$pkgdir/usr/lib"
 }
