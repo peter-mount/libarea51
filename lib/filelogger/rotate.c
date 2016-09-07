@@ -80,7 +80,6 @@ void filelogger_rotate(FileLogger *f) {
             free(f->path);
         f->path = charbuffer_tostring(f->b, &len);
         f->f = fopen(f->path, "a");
-        free(p);
 
         f->last = v;
     }
