@@ -21,19 +21,20 @@ extern "C" {
     // Initial charbuffer size
 #define CHARBUFFER_INITIAL_SIZE 1024
 
-struct charbuffer {
-    // The current position in the buffer where new data will be appended
-    int pos;
-    // The actual size of the buffer in memory, not it's contents
-    size_t size;
-    // The actual memory being used by the buffer
-    char *buffer;
-    // mutex used to ensure the buffer is concurrent
-    pthread_mutex_t mutex;
-};
+    struct charbuffer {
+        // The current position in the buffer where new data will be appended
+        int pos;
+        // The actual size of the buffer in memory, not it's contents
+        size_t size;
+        // The actual memory being used by the buffer
+        char *buffer;
+        // mutex used to ensure the buffer is concurrent
+        pthread_mutex_t mutex;
+    };
 
-extern void charbuffer_lock(CharBuffer *);
-extern void charbuffer_unlock(CharBuffer *);
+    extern int charbuffer_ensure_capacity(CharBuffer *, int);
+    extern void charbuffer_lock(CharBuffer *);
+    extern void charbuffer_unlock(CharBuffer *);
 
 #ifdef __cplusplus
 }

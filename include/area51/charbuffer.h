@@ -56,5 +56,8 @@ extern int charbuffer_append_form_fieldf(CharBuffer *, char *name, char *fmt, ..
 extern size_t charbuffer_curl_write(void *b, size_t s, size_t n, void *stream);
 extern size_t charbuffer_curl_write_sink(void *b, size_t s, size_t n, void *stream);
 
+extern void charbuffer_replace(CharBuffer *,char *,char *);
+extern void charbuffer_replace_int(CharBuffer *,char *,int);
+
 #endif /* CHARBUFFER_H */
 

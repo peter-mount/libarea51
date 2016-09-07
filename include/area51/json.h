@@ -39,6 +39,8 @@ extern "C" {
      */
     extern int json_getInt(struct json_object *obj, const char *key);
     
+    extern bool json_getBoolean(struct json_object *obj, const char *key);
+    
     /**
      * Is a value null
      * @param obj json object

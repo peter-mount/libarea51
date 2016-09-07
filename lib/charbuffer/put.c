@@ -8,7 +8,7 @@
 #include <area51/charbuffer.h>
 #include "charbuffer-int.h"
 
-static int ensure_capacity(CharBuffer *b, int size) {
+int charbuffer_ensure_capacity(CharBuffer *b, int size) {
     if (size > b->size) {
         char *newbuffer = (char *) malloc(size);
 
@@ -41,7 +41,7 @@ int charbuffer_put(CharBuffer *b, char *src, int len) {
 
     charbuffer_lock(b);
 
-    if (ensure_capacity(b, b->pos + len + 64) == CHARBUFFER_ERROR)
+    if (charbuffer_ensure_capacity(b, b->pos + len + 64) == CHARBUFFER_ERROR)
         return CHARBUFFER_ERROR;
 
     memcpy(b->buffer + b->pos, src, len);
@@ -70,7 +70,7 @@ int charbuffer_add(CharBuffer *b, char c) {
     charbuffer_lock(b);
 
     // Ensure we have room, but do so in a way we don't keep growing just for 1 character
-    ensure_capacity(b, b->pos + (b->pos % 64) + 1);
+    charbuffer_ensure_capacity(b, b->pos + (b->pos % 64) + 1);
     b->buffer[b->pos++] = c;
 
     // Ensure we are terminated

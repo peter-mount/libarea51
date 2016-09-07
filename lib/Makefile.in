@@ -68,6 +68,7 @@ OBJS += charbuffer/json/append.o \
 	charbuffer/misc/center.o \
 	charbuffer/misc/padleft.o \
 	charbuffer/misc/padright.o \
+	charbuffer/misc/replace.o \
 	charbuffer/misc/time_hm.o \
 	charbuffer/misc/time_hms.o \
 	charbuffer/xml/append.o \
@@ -137,6 +138,7 @@ OBJS += history/append.o \
 
 # Json
 OBJS += json/copyString.o \
+	json/getBoolean.o \
 	json/getInt.o \
 	json/getString.o \
 	json/isNull.o \
@@ -173,15 +175,25 @@ OBJS += list/addHead.o \
 # log
 OBJS += log/log.o
 
+# main
+OBJS += main/init.o \
+	main/lock.o \
+	main/loop.o \
+	main/periodic.o \
+	main/task.o
+
 # Math
-OBJS += math/statistic_getCount.o \
-	math/statistic_getMax.o \
-	math/statistic_getMin.o \
-	math/statistic_getTotal.o \
-	math/statistic_getValue.o \
-	math/statistic_init.o \
-	math/statistic_reset.o \
-	math/statistic_setValue.o
+OBJS += math/statistic/copy.o \
+	math/statistic/getCount.o \
+	math/statistic/getMax.o \
+	math/statistic/getMin.o \
+	math/statistic/getTotal.o \
+	math/statistic/getValue.o \
+	math/statistic/increment.o \
+	math/statistic/init.o \
+	math/statistic/recorder.o \
+	math/statistic/reset.o \
+	math/statistic/setValue.o
 
 # Memory
 OBJS += memory/freeable.o
