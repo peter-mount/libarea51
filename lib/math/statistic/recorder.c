@@ -14,6 +14,8 @@
 struct logging {
     // Source statistic
     struct Statistic *src;
+    // Flags on what to reset
+    int flags;
     // Last value
     struct Statistic stat;
     time_t time;
@@ -36,7 +38,6 @@ static void sendGet(char *path, struct logging *l) {
         charbuffer_replace_int(b, "{value}", l->stat.value);
         int len;
         char *url = charbuffer_tostring(b, &len);
-        logconsole("logGet %s", url);
         curl_get(url, b);
         free(url);
         charbuffer_free(b);
@@ -47,7 +48,7 @@ static void logStats(MainTask *t) {
     struct logging *l = area51_mainGetUserData(t);
 
     // get & reset the statistic
-    statistic_reset_r(l->src, &l->stat);
+    statistic_reset_r(l->src, &l->stat, l->flags);
     time(&l->time);
 
     if (l->log)
@@ -73,10 +74,28 @@ void statistic_recorder(MainTasks *main, struct Statistic *s, struct json_object
     if (logging) {
         memset(logging, 0, sizeof (struct logging));
         list_init(&logging->get);
+        statistic_init(&logging->stat);
 
         logging->src = s;
 
-        char *str = json_getString(obj, "name");
+        char *str = json_getString(obj, "reset");
+        if (str) {
+            if (strcasecmp(str, "none") == 0)
+                logging->flags = STAT_RESET_NONE;
+            else if (strcasecmp(str, "all") == 0)
+                logging->flags = STAT_RESET_ALL;
+            else if (strcasecmp(str, "minmax") == 0)
+                logging->flags = STAT_RESET_MINMAX;
+            else if (strcasecmp(str, "value") == 0)
+                logging->flags = STAT_RESET_VALUE | STAT_RESET_COUNT | STAT_RESET_TOTAL;
+            else
+                logging->flags = STAT_RESET_ALL;
+        } else logging->flags = STAT_RESET_ALL;
+
+        if (json_getString(obj, "minmax"))
+            logging->flags |= STAT_CALCULATE_MINMAX;
+
+        str = json_getString(obj, "name");
         if (str)
             logging->name = strdup(str);
         if (!logging->name)

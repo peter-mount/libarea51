@@ -2,7 +2,7 @@
 
 pkgname="libarea51"
 pkgver="0.3"
-pkgrel="1"
+pkgrel="3"
 pkgdesc="Area51 core C library"
 arch="x86_64"
 url="https://area51.onl/"
