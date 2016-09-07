@@ -5,6 +5,9 @@
       <df name="include">
         <df name="area51">
           <in>math.h</in>
+          <in>memory.h</in>
+          <in>test.h</in>
+          <in>trace.h</in>
         </df>
       </df>
       <df name="lib">
@@ -34,6 +37,7 @@
             <in>center.c</in>
             <in>padleft.c</in>
             <in>padright.c</in>
+            <in>replace.c</in>
             <in>time_hm.c</in>
             <in>time_hms.c</in>
           </df>
@@ -44,8 +48,11 @@
           </df>
           <in>append.c</in>
           <in>appendbuffer.c</in>
+          <in>charbuffer-int.h</in>
           <in>free.c</in>
-          <in>init.c</in>
+          <in>getBuffer.c</in>
+          <in>lock.c</in>
+          <in>new.c</in>
           <in>printf.c</in>
           <in>put.c</in>
           <in>read.c</in>
@@ -77,6 +84,7 @@
           <in>write.c</in>
         </df>
         <df name="file">
+          <in>backupfile.c</in>
           <in>mkdirs.c</in>
         </df>
         <df name="hashmap">
@@ -110,6 +118,9 @@
           <in>get.c</in>
           <in>init.c</in>
         </df>
+        <df name="json">
+          <in>isNull.c</in>
+        </df>
         <df name="list">
           <in>addHead.c</in>
           <in>addTail.c</in>
@@ -134,14 +145,22 @@
           <in>size.c</in>
         </df>
         <df name="math">
-          <in>statistic_getCount.c</in>
-          <in>statistic_getMax.c</in>
-          <in>statistic_getMin.c</in>
-          <in>statistic_getTotal.c</in>
-          <in>statistic_getValue.c</in>
-          <in>statistic_init.c</in>
-          <in>statistic_reset.c</in>
-          <in>statistic_setValue.c</in>
+          <df name="statistic">
+            <in>copy.c</in>
+            <in>getCount.c</in>
+            <in>getMax.c</in>
+            <in>getMin.c</in>
+            <in>getTotal.c</in>
+            <in>getValue.c</in>
+            <in>increment.c</in>
+            <in>init.c</in>
+            <in>recorder.c</in>
+            <in>reset.c</in>
+            <in>setValue.c</in>
+          </df>
+        </df>
+        <df name="memory">
+          <in>freeable.c</in>
         </df>
         <df name="string">
           <in>extractString.c</in>
@@ -164,6 +183,9 @@
           <in>newcell.c</in>
           <in>newrow.c</in>
         </df>
+        <df name="test">
+          <in>test.c</in>
+        </df>
         <df name="thread">
           <in>setPriority.c</in>
         </df>
@@ -172,6 +194,18 @@
           <in>start.c</in>
           <in>submit.c</in>
         </df>
+      </df>
+      <df name="test">
+        <df name="stream">
+          <in>_run.c</in>
+          <in>collect.c</in>
+          <in>collect_findFirst.c</in>
+          <in>findFirst.c</in>
+          <in>findFirst_flatMap.c</in>
+          <in>on.c</in>
+        </df>
+        <in>runtest.c</in>
+        <in>tests.h</in>
       </df>
     </df>
     <logicalFolder name="ExternalFiles"
@@ -197,6 +231,7 @@
       </toolsSet>
       <codeAssistance>
         <buildAnalyzer>false</buildAnalyzer>
+        <includeAdditional>true</includeAdditional>
       </codeAssistance>
       <makefileType>
         <makeTool>
@@ -206,7 +241,6 @@
           <executablePath></executablePath>
           <cTool>
             <incDir>
-              <pElem>.</pElem>
               <pElem>include</pElem>
               <pElem>lib</pElem>
             </incDir>
@@ -221,6 +255,12 @@
       <item path="dependencies/ubuntu" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/area51/math.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/area51/memory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/area51/test.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/area51/trace.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lib/blockingqueue/add.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -248,15 +288,19 @@
       </item>
       <item path="lib/charbuffer/appendbuffer.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="lib/charbuffer/charbuffer-int.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="lib/charbuffer/free.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="lib/charbuffer/init.c" ex="false" tool="0" flavor2="0">
+      <item path="lib/charbuffer/getBuffer.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/charbuffer/json/append.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/charbuffer/json/end.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/charbuffer/json/reset.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/charbuffer/lock.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/charbuffer/misc/appendInt.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -266,9 +310,13 @@
       </item>
       <item path="lib/charbuffer/misc/padright.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="lib/charbuffer/misc/replace.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="lib/charbuffer/misc/time_hm.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/charbuffer/misc/time_hms.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/charbuffer/new.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/charbuffer/printf.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -326,6 +374,8 @@
       </item>
       <item path="lib/curl/write.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="lib/file/backupfile.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="lib/file/mkdirs.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/hashmap/calculateIndex.c" ex="false" tool="0" flavor2="0">
@@ -378,6 +428,8 @@
       </item>
       <item path="lib/history/init.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="lib/json/isNull.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="lib/list/addHead.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/list/addTail.c" ex="false" tool="0" flavor2="0">
@@ -420,21 +472,29 @@
       </item>
       <item path="lib/list/size.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="lib/math/statistic_getCount.c" ex="false" tool="0" flavor2="0">
+      <item path="lib/math/statistic/copy.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="lib/math/statistic_getMax.c" ex="false" tool="0" flavor2="0">
+      <item path="lib/math/statistic/getCount.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="lib/math/statistic_getMin.c" ex="false" tool="0" flavor2="0">
+      <item path="lib/math/statistic/getMax.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="lib/math/statistic_getTotal.c" ex="false" tool="0" flavor2="0">
+      <item path="lib/math/statistic/getMin.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="lib/math/statistic_getValue.c" ex="false" tool="0" flavor2="0">
+      <item path="lib/math/statistic/getTotal.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="lib/math/statistic_init.c" ex="false" tool="0" flavor2="0">
+      <item path="lib/math/statistic/getValue.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="lib/math/statistic_reset.c" ex="false" tool="0" flavor2="0">
+      <item path="lib/math/statistic/increment.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="lib/math/statistic_setValue.c" ex="false" tool="0" flavor2="0">
+      <item path="lib/math/statistic/init.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/math/statistic/recorder.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/math/statistic/reset.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/math/statistic/setValue.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/memory/freeable.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/string/extractString.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -470,6 +530,8 @@
       </item>
       <item path="lib/table/newrow.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="lib/test/test.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="lib/thread/setPriority.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/threadpool/init.c" ex="false" tool="0" flavor2="0">
@@ -477,6 +539,22 @@
       <item path="lib/threadpool/start.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/threadpool/submit.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test/runtest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test/stream/_run.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test/stream/collect.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test/stream/collect_findFirst.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test/stream/findFirst.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test/stream/findFirst_flatMap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test/stream/on.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test/tests.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
