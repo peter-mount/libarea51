@@ -98,6 +98,13 @@ OBJS += curl/append.o \
 OBJS += file/backupfile.o \
 	file/mkdirs.o
 
+# FileLogger
+OBJS += filelogger/charbuffer.o \
+	filelogger/init.o \
+	filelogger/lock.o \
+	filelogger/log.o \
+	filelogger/rotate.o
+
 # Hashmap
 OBJS += hashmap/addList.o \
 	hashmap/calculateIndex.o \
@@ -263,3 +270,4 @@ OBJS += thread/setPriority.o \
 OBJS += time/parse_iso8601.o
 
 include ../SubMakefile
+

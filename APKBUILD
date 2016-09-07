@@ -1,8 +1,8 @@
 # Maintainer: Peter Mount <peter@retep.org>
 
 pkgname="libarea51"
-pkgver="0.3"
-pkgrel="4"
+pkgver="0.4"
+pkgrel="1"
 pkgdesc="Area51 core C library"
 arch="x86_64"
 url="https://area51.onl/"

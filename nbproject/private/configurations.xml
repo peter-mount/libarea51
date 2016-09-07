@@ -28,6 +28,8 @@
               </df>
               <df name="file">
               </df>
+              <df name="hashmap">
+              </df>
             </df>
           </df>
         </df>
@@ -149,6 +151,8 @@
         <df name="file">
           <in>backupfile.c</in>
           <in>mkdirs.c</in>
+        </df>
+        <df name="filelogger">
         </df>
         <df name="hashmap">
           <df name="hash">

@@ -19,7 +19,21 @@
             <file>file:/home/peter/NetBeansProjects/libarea51/SubMakefile.in</file>
         </group>
         <group name="Alpine">
-            <file>file:/home/peter/NetBeansProjects/libarea51/APKBUILD</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/lib/math/statistic/getMax.c</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/lib/filelogger/charbuffer.c</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/lib/main/periodic.c</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/lib/log/log.c</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/include/area51/json.h</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/lib/charbuffer/append.c</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/lib/file/mkdirs.c</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/lib/list/node_alloc.c</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/lib/charbuffer/free.c</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/lib/charbuffer/charbuffer-int.h</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/include/area51/math.h</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/include/area51/filelogger.h</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/lib/charbuffer/put.c</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/include/area51/charbuffer.h</file>
+            <file>file:/home/peter/NetBeansProjects/libarea51/lib/list/node_free.c</file>
         </group>
     </open-files>
 </project-private>
