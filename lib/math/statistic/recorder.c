@@ -11,6 +11,8 @@
 
 #include "area51/list.h"
 
+#define TIMESTAMP_LEN 31
+
 struct logging {
     // Source statistic
     struct Statistic *src;
@@ -19,6 +21,11 @@ struct logging {
     // Last value
     struct Statistic stat;
     time_t time;
+    struct tm tm;
+    // Timestamp as YYYY-MM-DD HH:MM;SS (in GMT)
+    char timestamp[TIMESTAMP_LEN + 1];
+    // ISO timestamp YYYY-MM-DDTHH:MM:SSZ
+    char iso[TIMESTAMP_LEN + 1];
     // Name of this statistic
     char *name;
     // Log to console
@@ -36,6 +43,8 @@ static void sendGet(char *path, struct logging *l) {
         charbuffer_replace_int(b, "{min}", l->stat.min);
         charbuffer_replace_int(b, "{total}", l->stat.total);
         charbuffer_replace_int(b, "{value}", l->stat.value);
+        charbuffer_replace(b, "{timestamp}", l->timestamp);
+        charbuffer_replace(b, "{iso}", l->iso);
         int len;
         char *url = charbuffer_tostring(b, &len);
         curl_get(url, b);
@@ -50,6 +59,15 @@ static void logStats(MainTask *t) {
     // get & reset the statistic
     statistic_reset_r(l->src, &l->stat, l->flags);
     time(&l->time);
+    gmtime_r(&l->time, &l->tm);
+    snprintf(l->timestamp, TIMESTAMP_LEN,
+            "%04d-%02d-%02d%%20%02d:%02d:%02d",
+            l->tm.tm_year + 1900, l->tm.tm_mon + 1, l->tm.tm_mday,
+            l->tm.tm_hour, l->tm.tm_min, l->tm.tm_sec);
+    snprintf(l->iso, TIMESTAMP_LEN,
+            "%04d-%02d-%02dT%02d:%02d:%02dZ",
+            l->tm.tm_year + 1900, l->tm.tm_mon + 1, l->tm.tm_mday,
+            l->tm.tm_hour, l->tm.tm_min, l->tm.tm_sec);
 
     if (l->log)
         logconsole("%s value %d count %d max %d min %d total %d",

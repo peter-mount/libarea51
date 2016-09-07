@@ -77,6 +77,8 @@ extern "C" {
      * 
      * For "http.get" you can use the following substitutions: for each statistic value:
      * "{count}", "{max}", "{min}", "{total}", "{value}"
+     * Also "{timestamp}" for time in "YYYY-MM-DD HH:MM:SS" format (GMT)
+     *      "{iso}" for ISO timestamp "YYYY-MM-DDTHH:MM:SSZ"
      * 
      * Example:
      * {
