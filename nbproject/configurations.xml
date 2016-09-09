@@ -4,6 +4,7 @@
     <df root="." name="0">
       <df name="include">
         <df name="area51">
+          <in>id.h</in>
           <in>math.h</in>
           <in>memory.h</in>
           <in>test.h</in>
@@ -118,6 +119,9 @@
           <in>get.c</in>
           <in>init.c</in>
         </df>
+        <df name="id">
+          <in>url.c</in>
+        </df>
         <df name="json">
           <in>isNull.c</in>
         </df>
@@ -158,6 +162,7 @@
             <in>reset.c</in>
             <in>setValue.c</in>
           </df>
+          <in>i128tos.c</in>
         </df>
         <df name="memory">
           <in>freeable.c</in>
@@ -253,6 +258,8 @@
         </preBuild>
       </makefileType>
       <item path="dependencies/ubuntu" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/area51/id.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/area51/math.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -428,6 +435,8 @@
       </item>
       <item path="lib/history/init.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="lib/id/url.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="lib/json/isNull.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/list/addHead.c" ex="false" tool="0" flavor2="0">
@@ -471,6 +480,8 @@
       <item path="lib/list/removeTail.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/list/size.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/math/i128tos.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/math/statistic/copy.c" ex="false" tool="0" flavor2="0">
       </item>

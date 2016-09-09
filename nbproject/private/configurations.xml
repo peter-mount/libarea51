@@ -28,9 +28,88 @@
               </df>
               <df name="file">
               </df>
+              <df name="filelogger">
+              </df>
               <df name="hashmap">
+                <df name="hash">
+                </df>
+                <df name="map">
+                </df>
+              </df>
+              <df name="history">
+              </df>
+              <df name="json">
+              </df>
+              <df name="list">
+              </df>
+              <df name="log">
+              </df>
+              <df name="main">
+              </df>
+              <df name="math">
+                <df name="statistic">
+                </df>
+              </df>
+              <df name="memory">
+              </df>
+              <df name="pool">
+              </df>
+              <df name="stream">
+                <df name="filter">
+                </df>
+              </df>
+              <df name="string">
+              </df>
+              <df name="table">
+              </df>
+              <df name="test">
+              </df>
+              <df name="thread">
+              </df>
+              <df name="threadpool">
+              </df>
+              <df name="time">
               </df>
             </df>
+          </df>
+        </df>
+        <df name="package">
+          <df name="usr">
+            <df name="include">
+              <df name="area51">
+                <in>blockingQueue.h</in>
+                <in>bytebuffer.h</in>
+                <in>charbuffer.h</in>
+                <in>comparator.h</in>
+                <in>config.h</in>
+                <in>curl.h</in>
+                <in>file.h</in>
+                <in>filelogger.h</in>
+                <in>hashmap.h</in>
+                <in>history.h</in>
+                <in>json.h</in>
+                <in>list.h</in>
+                <in>log.h</in>
+                <in>main.h</in>
+                <in>math.h</in>
+                <in>memory.h</in>
+                <in>pool.h</in>
+                <in>stream.h</in>
+                <in>string.h</in>
+                <in>table.h</in>
+                <in>test.h</in>
+                <in>thread.h</in>
+                <in>threadpool.h</in>
+                <in>time.h</in>
+                <in>trace.h</in>
+              </df>
+            </df>
+            <df name="lib">
+            </df>
+          </df>
+        </df>
+        <df name="test">
+          <df name="stream">
           </df>
         </df>
       </df>
@@ -45,8 +124,10 @@
           <in>config.h</in>
           <in>curl.h</in>
           <in>file.h</in>
+          <in>filelogger.h</in>
           <in>hashmap.h</in>
           <in>history.h</in>
+          <in>id.h</in>
           <in>json.h</in>
           <in>list.h</in>
           <in>log.h</in>
@@ -153,6 +234,12 @@
           <in>mkdirs.c</in>
         </df>
         <df name="filelogger">
+          <in>charbuffer.c</in>
+          <in>filelogger-int.h</in>
+          <in>init.c</in>
+          <in>lock.c</in>
+          <in>log.c</in>
+          <in>rotate.c</in>
         </df>
         <df name="hashmap">
           <df name="hash">
@@ -196,6 +283,9 @@
           <in>free.c</in>
           <in>get.c</in>
           <in>init.c</in>
+        </df>
+        <df name="id">
+          <in>url.c</in>
         </df>
         <df name="json">
           <in>copyString.c</in>
@@ -258,6 +348,7 @@
             <in>reset.c</in>
             <in>setValue.c</in>
           </df>
+          <in>i128tos.c</in>
         </df>
         <df name="memory">
           <in>freeable.c</in>

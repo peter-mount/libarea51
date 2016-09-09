@@ -143,6 +143,9 @@ OBJS += history/append.o \
 	history/get.o \
 	history/init.o
 
+# ID generation
+OBJS +=	id/url.o
+
 # Json
 OBJS += json/copyString.o \
 	json/getBoolean.o \

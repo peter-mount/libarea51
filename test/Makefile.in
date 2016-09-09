@@ -2,8 +2,12 @@
 # Build and run local tests
 ######################################################################
 
+# ID
+OBJS =	id/_run.o \
+	id/url.o
+
 # Streams
-OBJS  = stream/_run.o \
+OBJS +=	stream/_run.o \
 	stream/collect.o \
 	stream/collect_findFirst.o \
 	stream/debug.o \
