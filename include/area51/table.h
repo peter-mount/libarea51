@@ -39,6 +39,7 @@ typedef struct {
 
 extern void table_append(CharBuffer *b, TABLE *t);
 extern TABLE *table_create();
+extern void table_format(TABLE *);
 extern void table_destroy(TABLE *t);
 extern TABLE_ROW *table_newRow(TABLE *t);
 extern TABLE_CELL *table_blankCell(TABLE_ROW *r);
