@@ -92,16 +92,18 @@ static int encode(URLIDGenerator *g, char *s, int p, int l, long val, bool first
     }
 
     p = encode(g, s, p, l, val, false);
-    
+
     if (p < l)
         s[p++] = g->table[idx];
-    
+
     return p;
 }
 
-void urlidgenerator_generate(URLIDGenerator *g, char *s, int l) {
+static void genId(URLIDGenerator *g, long *workerId, long *prefix, long *id, long *counter) {
     time_t now, base;
     struct tm tm;
+
+    pthread_mutex_lock(&g->mutex);
 
     do {
         time(&now);
@@ -120,25 +122,39 @@ void urlidgenerator_generate(URLIDGenerator *g, char *s, int l) {
         }
     } while (g->counter >= g->maxCounter);
 
-    int p = 0;
-
-    if (version)
-        p = encode(g, s, p, l, version, true);
-
-    if (g->workerId)
-        p = encode(g, s, p, l, g->workerId, true);
 
     // Work out a suitable base time for the start of the month
     gmtime_r(&now, &tm);
     tm.tm_mday = tm.tm_hour = tm.tm_min = tm.tm_sec = 0;
     base = mktime(&tm);
 
-    p = encode(g, s, p, l, (long) (((tm.tm_year - 100)*12) + tm.tm_mon), true);
+    *workerId = g->workerId;
+    *prefix = (long) (((tm.tm_year - 100)*12) + tm.tm_mon);
+    *id = (long) (now - base);
+    *counter = g->counter;
 
-    p = encode(g, s, p, l, (long) (now - base), true);
+    pthread_mutex_unlock(&g->mutex);
+}
 
-    if (g->counter)
-        p = encode(g, s, p, l, g->counter, true);
+void urlidgenerator_generate(URLIDGenerator *g, char *s, int l) {
+    long workerId, prefix, id, counter;
+
+    genId(g, &workerId, &prefix, &id, &counter);
+
+    int p = 0;
+
+    if (version)
+        p = encode(g, s, p, l, version, true);
+
+    if (workerId)
+        p = encode(g, s, p, l, workerId, true);
+
+    p = encode(g, s, p, l, prefix, true);
+
+    p = encode(g, s, p, l, id, true);
+
+    if (counter)
+        p = encode(g, s, p, l, counter, true);
 
     s[p] = 0;
 }
