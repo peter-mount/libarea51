@@ -41,11 +41,15 @@ extern "C" {
         size_t maxSize;
         // method to free a key
         void (*freeKey)(void *);
-        // Flags
-        unsigned int flags;
         // Lookup function to use when we get a non-existent entry
         void (*lookup) (void *, void *, Freeable *);
         Freeable lookupContext;
+        // Flags
+        unsigned int updateTime : 1;
+        unsigned int expireLeastUsed : 1;
+        unsigned int expireOriginalTime : 1;
+        unsigned int noUpdateIfSameValue : 1;
+        unsigned int lookupConcurrent : 1;
     };
 
     struct CacheEntry {

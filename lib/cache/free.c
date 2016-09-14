@@ -18,5 +18,7 @@ void cacheFree(Cache *c) {
 
     hashmapFree(c->map);
 
+    freeable_clear(&c->lookupContext);
+
     free(c);
 }

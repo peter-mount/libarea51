@@ -41,12 +41,15 @@ Cache *cacheCreate(
     c->maxSize = maxSize;
     c->freeKey = fk;
 
-    c->flags = flags;
+    c->updateTime = (flags & CACHE_GET_UPDATE_TIME) != 0;
+    c->expireLeastUsed = (flags & CACHE_EXPIRE_LEAST_USED) != 0;
+    c->expireOriginalTime = (flags & CACHE_EXPIRE_ORIGINAL_TIME) != 0;
+    c->noUpdateIfSameValue = (flags & CACHE_NO_UPDATE_IF_VALUE_SAME) != 0;
+    c->lookupConcurrent = (flags & CACHE_LOOKUP_CONCURRENT) != 0;
 
-    // Update time implies least used mode as we need to move the entry to the
-    // top of the list
-    if (c->flags & CACHE_GET_UPDATE_TIME)
-        c->flags |= CACHE_EXPIRE_LEAST_USED;
+    // Update time implies least used mode as we need to move the entry to the top of the list
+    if (c->updateTime)
+        c->expireLeastUsed = 1;
 
     c->lookup == lookup;
     if (lookupContext)

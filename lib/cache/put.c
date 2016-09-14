@@ -16,7 +16,7 @@ struct CacheEntry *cachePutEntry(Cache *c, void *k) {
         memset(e, 0, sizeof (struct CacheEntry));
         e->key = k;
 
-        if ((c->flags & CACHE_LOOKUP_CONCURRENT))
+        if (c->lookupConcurrent)
             pthread_mutex_init(&e->mutex, NULL);
 
         if (c->maxage) {
@@ -45,7 +45,7 @@ static void put(Cache *c, void *k, void *v, void (*f)(void*)) {
         bool same = v == e->value.val && f == e->value.free;
 
         // CACHE_NO_UPDATE_IF_VALUE_SAME and values are equal then do nothing
-        if ((c->flags & CACHE_NO_UPDATE_IF_VALUE_SAME) && same)
+        if (c->noUpdateIfSameValue && same)
             return;
 
         // Update the record rather than remove/free & create a new one
@@ -55,12 +55,10 @@ static void put(Cache *c, void *k, void *v, void (*f)(void*)) {
             freeable_set(&e->value, v, f);
 
         // Update the expiry time
-        // Note we force this as it's a new value
+        // Note we force this as it's a new value but we don't change original expires time
         if (c->maxage) {
             time(&e->expires);
             e->expires += c->maxage;
-            // Copy so CACHE_EXPIRE_ORIGINAL_TIME will work when CACHE_GET_UPDATE_TIME is in use
-            e->original_expires = e->expires;
         }
 
         // Move to the end of the list so when full we remove the least used entry

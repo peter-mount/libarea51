@@ -10,6 +10,13 @@
 
 #include "cache-int.h"
 
+static Node *expire(Cache *c, Node *n) {
+    struct CacheEntry *e = (struct CacheEntry *) n;
+    n = list_getNext(n);
+    cacheRemoveEntry(c, e);
+    return n;
+}
+
 /**
  * Internal (does not lock) entry point for expiring entries from a cache
  * @param c
@@ -22,11 +29,12 @@ void cacheExpireIntl(Cache *c) {
             time_t now;
             time(&now);
 
-            while (list_isNode(n) && ((struct CacheEntry *) n)->expires < now) {
-                struct CacheEntry *e = (struct CacheEntry *) n;
-                n = list_getNext(n);
-                cacheRemoveEntry(c, e);
-            }
+            if (c->expireOriginalTime)
+                while (list_isNode(n) && ((struct CacheEntry *) n)->original_expires < now)
+                    expire(c, n);
+            else
+                while (list_isNode(n) && ((struct CacheEntry *) n)->expires < now)
+                    expire(c, n);
         }
     }
 }

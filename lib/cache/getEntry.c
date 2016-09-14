@@ -25,7 +25,7 @@ struct CacheEntry *cacheGetEntry(Cache *c, void *k) {
     if (!e && c->lookup) {
         e = cachePutEntry(c, k);
 
-        if ((c->flags && CACHE_LOOKUP_CONCURRENT)) {
+        if ((c->lookupConcurrent)) {
             pthread_mutex_lock(&e->mutex);
             if (freeable_get(&e->value) == NULL) {
                 cacheUnlock(c);
