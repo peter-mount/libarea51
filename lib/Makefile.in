@@ -45,6 +45,19 @@ OBJS += bytebuffer/free.o \
 	bytebuffer/toarray.o \
 	bytebuffer/write.o
 
+# Cache
+OBJS +=	cache/free.o \
+	cache/get.o \
+	cache/getEntry.o \
+	cache/init.o \
+	cache/lock.o \
+	cache/put.o \
+	cache/remove.o \
+	cache/removeAll.o \
+	cache/removeEntry.o \
+	cache/removeIf.o \
+	cache/size.o
+
 # Char buffer
 OBJS += charbuffer/append.o \
 	charbuffer/appendbuffer.o \

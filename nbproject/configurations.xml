@@ -201,6 +201,18 @@
         </df>
       </df>
       <df name="test">
+        <df name="cache">
+          <in>_run.c</in>
+          <in>single.c</in>
+        </df>
+        <df name="hashmap">
+          <in>_run.c</in>
+          <in>single.c</in>
+        </df>
+        <df name="id">
+          <in>_run.c</in>
+          <in>url.c</in>
+        </df>
         <df name="stream">
           <in>_run.c</in>
           <in>collect.c</in>
@@ -550,6 +562,18 @@
       <item path="lib/threadpool/start.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/threadpool/submit.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test/cache/_run.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test/cache/single.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test/hashmap/_run.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test/hashmap/single.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test/id/_run.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test/id/url.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="test/runtest.c" ex="false" tool="0" flavor2="0">
       </item>

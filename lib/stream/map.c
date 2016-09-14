@@ -5,7 +5,7 @@
 #include "stream-int.h"
 
 static void map(StreamData *d) {
-    void *(*mapper)(void *) = d->task->taskContext;
+    void *(*mapper)(void *) = stream_getTaskContext(d);
     if (mapper)
         mapper(d);
     stream_next(d);

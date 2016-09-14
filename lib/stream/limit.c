@@ -10,7 +10,7 @@ struct ctx {
 };
 
 static void action(StreamData *d) {
-    struct ctx *ctx = d->task->taskContext;
+    struct ctx *ctx = stream_getTaskContext(d);
     stream_next(d);
 
     ctx->count++;

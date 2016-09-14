@@ -5,7 +5,7 @@
 #include "../../libarea51/lib/stream/stream-int.h"
 
 static void setVal(StreamData *d) {
-    d->val = d->task->taskContext;
+    d->val = stream_getTaskContext(d);
     d->free = NULL;
     stream_next(d);
 
@@ -18,7 +18,7 @@ Stream *stream_of(void *v, void (*f)(void *)) {
     if (s) {
         if (stream_invoke(s, setVal, v, f)) {
             stream_free(s);
-            if (f)
+            if (f&&v)
                 f(v);
             return NULL;
         }

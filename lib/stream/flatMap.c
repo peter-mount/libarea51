@@ -5,7 +5,7 @@
 #include "../../libarea51/lib/stream/stream-int.h"
 
 static void link(StreamData *d) {
-    StreamData *parent = d->task->taskContext;
+    StreamData *parent = stream_getTaskContext(d);
 
     StreamData *child = malloc(sizeof (StreamData));
     if (child) {

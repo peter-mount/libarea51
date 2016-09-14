@@ -11,7 +11,7 @@ struct ctx {
 };
 
 static void setVal(StreamData *d) {
-    struct ctx *ctx = d->task->taskContext;
+    struct ctx *ctx = stream_getTaskContext(d);
 
     stream_setVal(d, ctx->array[ctx->pos], NULL);
     ctx->pos++;

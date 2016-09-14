@@ -26,7 +26,7 @@ static int onFirstLast(Stream *s, void (*action)(StreamData *), void (*task)(Str
 }
 
 static void first(StreamData *d) {
-    struct firstLast *ctx = d->task->taskContext;
+    struct firstLast *ctx = stream_getTaskContext(d);
     if (ctx && !ctx->flag && ctx->action) {
         ctx->flag = true;
         ctx->action(d);
@@ -40,7 +40,7 @@ int stream_onFirst(Stream *s, void (*action)(StreamData *)) {
 }
 
 static void notFirst(StreamData *d) {
-    struct firstLast *ctx = d->task->taskContext;
+    struct firstLast *ctx = stream_getTaskContext(d);
     if (ctx && ctx->flag && ctx->action)
         ctx->action(d);
     else

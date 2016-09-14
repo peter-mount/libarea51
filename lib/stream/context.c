@@ -12,11 +12,11 @@ void *stream_getTaskContext(StreamData *d) {
     return d && d->task ? d->task->taskContext : NULL;
 }
 
-void stream_setTaskContext(StreamData *d, void *c, void (*free)(void *)) {
+void stream_setTaskContext(StreamData *d, void *c, void (*fc)(void *)) {
     if (d && d->task) {
         if (d->task->taskContext && d->task->freeTaskContext)
             d->task->freeTaskContext(d->task->taskContext);
         d->task->taskContext = c;
-        d->task->freeTaskContext = free;
+        d->task->freeTaskContext = fc;
     }
 }
