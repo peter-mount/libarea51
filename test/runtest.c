@@ -2,10 +2,14 @@
 
 extern void test_stream(Test *);
 extern void test_id(Test *);
+extern void test_cache(Test *);
+extern void test_hashmap(Test *);
 
 static struct TestSuite TESTS [] = {
     {"Stream", test_stream},
-    {"ID Generators", test_id},
+  //  {"Hashmap", test_hashmap},
+  //  {"ID Generators", test_id},
+    {"Cache", test_cache},
     // End test marker
     {NULL, NULL}
 };

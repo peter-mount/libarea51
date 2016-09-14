@@ -22,8 +22,6 @@ void test_stream(Test *t) {
     test_stream_collect_findFirst(t);
     test_stream_collect_summary(t);
 
-    test_stream_findFirst(t);
-
     test_stream_flatMap(t);
     test_stream_findFirst_flatMap(t);
 

@@ -2,8 +2,16 @@
 # Build and run local tests
 ######################################################################
 
+# Cache
+OBJS =	cache/_run.o \
+	cache/single.o
+
+# Hashmap
+OBJS +=	hashmap/_run.o \
+	hashmap/single.o
+
 # ID
-OBJS =	id/_run.o \
+OBJS +=	id/_run.o \
 	id/url.o
 
 # Streams
@@ -23,6 +31,8 @@ OBJS +=	stream/_run.o \
 #OBJS        = runtest.o ${TESTS}
 CCFLAGS     = -O2 @CCFLAGS@
 CPPFLAGS    = -I.. @CPPFLAGS@
+
+#VALGRIND=valgrind
 
 # -rdynamic allows the test binary to have its symbols resolved by dladdr
 # see http://stackoverflow.com/a/37433934/6734016
@@ -55,4 +65,4 @@ $(TEST_BIN): $(DIR)/runtest.o $(TEST_LIB_A)
 # CD is required here to ensure that any core files from a test segfaulting
 # being generated within the source tree
 test: $(TEST_BIN)
-	cd $(BUILD_DIR);LD_LIBRARY_PATH=${LIBDIR} $(TEST_BIN)
+	cd $(BUILD_DIR);LD_LIBRARY_PATH=${LIBDIR} $(VALGRIND) $(TEST_BIN)
