@@ -27,6 +27,29 @@ extern "C" {
      */
     typedef struct Cache Cache;
 
+    /*
+     *  If set, a get will update the entry timestamp so we don't expire it
+     */
+#define CACHE_GET_UPDATE_TIME       0x01
+    /*
+     *  If set then a get moves the entry so when we are full we remove the
+     * least used enty rather than the oldest
+     */
+#define CACHE_EXPIRE_LEAST_USED     0x02
+    /*
+     * If set then when the cache is expired we expire entries based on when
+     * the value was set rather than when they were last used.
+     * 
+     * This only kicks in when cacheExpire() is used or when the auto-expiry
+     * thread is used.
+     */
+#define CACHE_EXPIRE_ORIGINAL_TIME  0x04
+    /*
+     * If set then when a put is made with the same value as already in the
+     * cache then we do nothing to the existing entry, no time updates etc
+     */
+#define CACHE_NO_UPDATE_IF_VALUE_SAME  0x08
+
     /**
      * 
      * @param maxSize Max number of entries in the cache
@@ -34,15 +57,14 @@ extern "C" {
      * @param hash hash function for key
      * @param equals equals function for key
      * @param fk free key
-     * @param fv free value
      * @return 
      */
     extern Cache *cacheCreate(size_t maxSize, time_t maxage,
             int (*hash)(void* key), bool (*equals)(void* keyA, void* keyB),
             void (*fk)(void *),
-            void (*fv)(void *)
+            unsigned int flags
             );
-    
+
     /**
      * Free a cache
      * @param c
@@ -62,7 +84,7 @@ extern "C" {
      * @param k key
      * @param v value
      */
-    extern void cachePut(Cache *c, void *k, void *v);
+    extern void cachePut(Cache *c, void *k, void *v, void (*f)(void *));
 
     /**
      * Remove an entry from the cache
@@ -76,21 +98,27 @@ extern "C" {
      * @param c Cache
      */
     extern void cacheRemoveAll(Cache *c);
-    
+
     /**
      * Remove entries if they pass a Predicate
      * @param c Cache
      * @param p predicate, returns true to remove, false to keep
      */
     extern void cacheRemoveIf(Cache *c, bool(*p)(void *k, void *v));
-    
+
     /**
      * The size of the cache at a moment in time
      * 
-     * @param c
+     * @param c Cache
      * @return 
      */
     extern size_t cacheSize(Cache *c);
+
+    /**
+     * Expire any entries from a cache
+     * @param c Cache
+     */
+    extern void cacheExpire(Cache *c);
 
 #ifdef __cplusplus
 }

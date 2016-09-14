@@ -18,7 +18,10 @@ size_t cacheSize(Cache *c) {
 
     cacheLock(c);
     {
+        cacheExpireIntl(c);
         s = hashmapSize(c->map);
     }
     cacheUnlock(c);
+
+    return s;
 }

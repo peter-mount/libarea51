@@ -46,7 +46,8 @@ OBJS += bytebuffer/free.o \
 	bytebuffer/write.o
 
 # Cache
-OBJS +=	cache/free.o \
+OBJS +=	cache/expire.o \
+	cache/free.o \
 	cache/get.o \
 	cache/getEntry.o \
 	cache/init.o \

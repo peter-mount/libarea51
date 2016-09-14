@@ -165,6 +165,7 @@
           <in>i128tos.c</in>
         </df>
         <df name="memory">
+          <in>freeable-int.h</in>
           <in>freeable.c</in>
         </df>
         <df name="string">
@@ -217,7 +218,6 @@
           <in>_run.c</in>
           <in>collect.c</in>
           <in>collect_findFirst.c</in>
-          <in>findFirst.c</in>
           <in>findFirst_flatMap.c</in>
           <in>on.c</in>
         </df>
@@ -517,6 +517,8 @@
       </item>
       <item path="lib/math/statistic/setValue.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="lib/memory/freeable-int.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="lib/memory/freeable.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/string/extractString.c" ex="false" tool="0" flavor2="0">
@@ -582,8 +584,6 @@
       <item path="test/stream/collect.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="test/stream/collect_findFirst.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="test/stream/findFirst.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="test/stream/findFirst_flatMap.c" ex="false" tool="0" flavor2="0">
       </item>

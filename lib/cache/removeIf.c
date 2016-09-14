@@ -21,7 +21,7 @@ void cacheRemoveIf(Cache *c, bool(*p)(void *k, void *v)) {
             struct CacheEntry *e = (struct CacheEntry *) n;
             n = list_getNext(n);
 
-            if (p(e->key, e->value))
+            if (p(e->key, e->value.val))
                 cacheRemoveEntry(c, e);
         }
     }

@@ -18,8 +18,7 @@ void cacheRemoveEntry(Cache *c, struct CacheEntry *e) {
         if (c->freeKey)
             c->freeKey(e->key);
 
-        if (c->freeValue)
-            c->freeValue(e->value);
+        freeable_clear(&e->value);
 
         free(e);
     }

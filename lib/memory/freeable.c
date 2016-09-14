@@ -1,5 +1,4 @@
-#include <stdlib.h>
-#include <area51/memory.h>
+#include "freeable-int.h"
 
 /*
  * Freeable - a freeable value.
@@ -25,10 +24,6 @@
  * then it's called to free the value.
  * 
  */
-struct Freeable {
-    void *val;
-    void (*free)(void *);
-};
 
 Freeable *freeable_new(void *v, void (*f)(void *)) {
     Freeable *ret = malloc(sizeof (struct Freeable));
@@ -39,10 +34,17 @@ Freeable *freeable_new(void *v, void (*f)(void *)) {
     return ret;
 }
 
-void freeable_free(Freeable *f) {
+void freeable_clear(Freeable *f) {
     if (f) {
         if (f->val && f->free)
             f->free(f->val);
+        free(f);
+    }
+}
+
+void freeable_free(Freeable *f) {
+    if (f) {
+        freeable_clear(f);
         free(f);
     }
 }

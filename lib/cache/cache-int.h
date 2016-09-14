@@ -24,6 +24,7 @@
 #include <area51/hashmap.h>
 #include <area51/list.h>
 
+#include "../memory/freeable-int.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -40,21 +41,27 @@ extern "C" {
         size_t maxSize;
         // method to free a key
         void (*freeKey)(void *);
-        // method to free a value
-        void (*freeValue)(void *);
+        // Flags
+        unsigned int flags;
     };
 
     struct CacheEntry {
         Node node;
+        // key
         void *key;
-        void *value;
+        // Value
+        Freeable value;
+        // Expiry time
         time_t expires;
+        // The original expiry time
+        time_t original_expires;
     };
 
     extern void cacheLock(Cache *);
     extern void cacheUnlock(Cache *);
-    extern struct CacheEntry *cacheGetEntry(Cache *c, void *k);
+    extern struct CacheEntry *cacheGetEntry(Cache *, void *);
     extern void cacheRemoveEntry(Cache *, struct CacheEntry *);
+    extern void cacheExpireIntl(Cache *);
 
 #ifdef __cplusplus
 }

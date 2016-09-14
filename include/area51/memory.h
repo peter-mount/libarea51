@@ -27,6 +27,13 @@ extern "C" {
      * @return Freeable or NULL
      */
     extern Freeable *freeable_new(void *, void (*)(void *));
+
+    /**
+     * Clear the value from a freeable
+     * @param Freeable may be null
+     */
+    extern void freeable_clear(Freeable *);
+
     /**
      * Free a Freeable
      * @param Freeable may be null

@@ -12,6 +12,8 @@
               </df>
               <df name="bytebuffer">
               </df>
+              <df name="cache">
+              </df>
               <df name="charbuffer">
                 <df name="json">
                 </df>
@@ -20,11 +22,11 @@
                 <df name="xml">
                 </df>
               </df>
-              <df name="comparator">
-              </df>
               <df name="config">
               </df>
               <df name="curl">
+              </df>
+              <df name="file">
               </df>
             </df>
           </df>
@@ -81,6 +83,7 @@
         </df>
         <df name="cache">
           <in>cache-int.h</in>
+          <in>expire.c</in>
           <in>free.c</in>
           <in>get.c</in>
           <in>getEntry.c</in>
@@ -283,6 +286,7 @@
           <in>i128tos.c</in>
         </df>
         <df name="memory">
+          <in>freeable-int.h</in>
           <in>freeable.c</in>
         </df>
         <df name="pool">
@@ -379,7 +383,6 @@
           <in>collect.c</in>
           <in>collect_findFirst.c</in>
           <in>debug.c</in>
-          <in>findFirst.c</in>
           <in>findFirst_flatMap.c</in>
           <in>flatMap.c</in>
           <in>ofInt.c</in>

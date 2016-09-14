@@ -20,10 +20,19 @@ void *cacheGet(Cache *c, void *k) {
         struct CacheEntry *e = cacheGetEntry(c, k);
 
         if (e) {
-            v = e->value;
+            v = freeable_get(&e->value);
 
+            // Update expiry time
+            if (c->maxage && (c->flags & CACHE_GET_UPDATE_TIME)) {
+                time(&e->expires);
+                e->expires += c->maxage;
+            }
+
+            // LEAST USED move we need to move the entry to the tail of the list
+            if (c->maxSize && (c->flags & CACHE_EXPIRE_LEAST_USED)
+                    &&!list_isTail(&e->node)
+                    ) {
             // Move to the end of the list so when full we remove the least used entry
-            if (!list_isTail(&e->node)) {
                 list_remove(&e->node);
                 list_addTail(&c->list, &e->node);
             }

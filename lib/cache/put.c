@@ -7,75 +7,78 @@
 #include <area51/cache.h>
 #include <area51/hashmap.h>
 #include <area51/list.h>
-#include <area51/trace.h>
 
 #include "cache-int.h"
 
-static void put(Cache *c, void *k, void *v) {
+static void put(Cache *c, void *k, void *v, void (*f)(void*)) {
     if (!k || !v)
         return;
 
     // Look for existing entry, ignore expiry as we will reset if it exists
     struct CacheEntry *e = hashmapGet(c->map, k);
     if (e) {
-        logconsole("existing %s", k);
-        // Existing entry
-        if (c->freeValue)
-            c->freeValue(e->value);
+        // Existing entry, so update the record rather than remove/free & create a new one
 
-        e->value = v;
+        // Value is the same
+        bool same = v == e->value.val && f == e->value.free;
+
+        // CACHE_NO_UPDATE_IF_VALUE_SAME and values are equal then do nothing
+        if ((c->flags & CACHE_NO_UPDATE_IF_VALUE_SAME) && same)
+            return;
+
+        // Update the record rather than remove/free & create a new one
+
+        // Note only set if value not the same as we don't want to free something we should be
+        if (!same)
+            freeable_set(&e->value, v, f);
 
         // Update the expiry time
+        // Note we force this as it's a new value
         if (c->maxage) {
             time(&e->expires);
             e->expires += c->maxage;
+            // Copy so CACHE_EXPIRE_ORIGINAL_TIME will work when CACHE_GET_UPDATE_TIME is in use
+            e->original_expires = e->expires;
         }
 
         // Move to the end of the list so when full we remove the least used entry
+        // Note we force this as it's a new value
         if (!list_isTail(&e->node)) {
             list_remove(&e->node);
             list_addTail(&c->list, &e->node);
         }
     } else {
-        // New entry
-        trace;
 
         // Are we full? If so remove the least used entry
         if (c->maxSize && hashmapSize(c->map) >= c->maxSize) {
-            trace;
             e = (struct CacheEntry *) list_getHead(&c->list);
             if (e)
                 cacheRemoveEntry(c, e);
-            trace;
         }
 
-        trace;
+        // New entry
         e = malloc(sizeof (struct CacheEntry));
         if (e) {
-            trace;
             memset(e, 0, sizeof (struct CacheEntry));
             e->key = k;
-            e->value = v;
 
-            trace;
+            freeable_set(&e->value, v, f);
+
             if (c->maxage) {
                 time(&e->expires);
                 e->expires += c->maxage;
+                // Copy so CACHE_EXPIRE_ORIGINAL_TIME will work when CACHE_GET_UPDATE_TIME is in use
+                e->original_expires = e->expires;
             }
 
-            logconsole("new %lx %s %lx", c->map, k, e);
-            trace;
             list_addTail(&c->list, &e->node);
-            trace;
             hashmapPut(c->map, k, e);
-            trace;
         }
     }
-    trace;
 
 }
 
-void cachePut(Cache *c, void *k, void *v) {
+void cachePut(Cache *c, void *k, void *v, void (*f)(void*)) {
     if (!c || !k)
         return;
 
@@ -86,7 +89,7 @@ void cachePut(Cache *c, void *k, void *v) {
     }
 
     cacheLock(c);
-    put(c, k, v);
+    put(c, k, v, f);
     cacheUnlock(c);
 }
 
