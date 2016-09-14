@@ -3,6 +3,7 @@
  * the last value received
  * 
  */
+#include <unistd.h>
 #include "../tests.h"
 #include "area51/hashmap.h"
 #include <area51/cache.h>
@@ -45,7 +46,10 @@ void test_cache_single(Test *t) {
     Cache *cache = cacheCreate(maxSize,
             maxAge,
             hashmapStringHash, hashmapStringEquals, free,
-            CACHE_EXPIRE_LEAST_USED);
+            CACHE_EXPIRE_LEAST_USED,
+            // No lookup
+            NULL, NULL, NULL
+            );
 
     assertNonNull(t, cache);
 
@@ -62,7 +66,7 @@ void test_cache_single(Test *t) {
     assertTrue(t, cacheSize(cache) == maxSize);
 
     // Should remove some entries
-    sleep(maxAge - 1);
+    sleep_quarter_second(maxAge - 1);
 
     // Should have some expired now, give some allowance on the result
     assertTrue(t, cacheSize(cache) >= 5 || cacheSize(cache) <= 7);

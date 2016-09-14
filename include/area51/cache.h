@@ -15,6 +15,7 @@
 #define AREA51_CACHE_H
 
 #include <time.h>
+#include <area51/memory.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -49,6 +50,11 @@ extern "C" {
      * cache then we do nothing to the existing entry, no time updates etc
      */
 #define CACHE_NO_UPDATE_IF_VALUE_SAME  0x08
+    /*
+     * If set and we have a lookup function then only the cache key is locked
+     * until the lookup finishes
+     */
+#define CACHE_LOOKUP_CONCURRENT 0x10
 
     /**
      * 
@@ -57,12 +63,18 @@ extern "C" {
      * @param hash hash function for key
      * @param equals equals function for key
      * @param fk free key
+     * @param lookup optional lookup function when get misses
+     * @param lookupContext optional context
+     * @param lookupFree free lookupContext
      * @return 
      */
     extern Cache *cacheCreate(size_t maxSize, time_t maxage,
             int (*hash)(void* key), bool (*equals)(void* keyA, void* keyB),
             void (*fk)(void *),
-            unsigned int flags
+            unsigned int flags,
+            void (*lookup)(void *, void *, Freeable *),
+            void *lookupContext,
+            void (*lookupFree)(void *)
             );
 
     /**

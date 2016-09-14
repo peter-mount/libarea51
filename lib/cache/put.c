@@ -10,6 +10,28 @@
 
 #include "cache-int.h"
 
+struct CacheEntry *cachePutEntry(Cache *c, void *k) {
+    struct CacheEntry *e = malloc(sizeof (struct CacheEntry));
+    if (e) {
+        memset(e, 0, sizeof (struct CacheEntry));
+        e->key = k;
+
+        if ((c->flags & CACHE_LOOKUP_CONCURRENT))
+            pthread_mutex_init(&e->mutex, NULL);
+
+        if (c->maxage) {
+            time(&e->expires);
+            e->expires += c->maxage;
+            // Copy so CACHE_EXPIRE_ORIGINAL_TIME will work when CACHE_GET_UPDATE_TIME is in use
+            e->original_expires = e->expires;
+        }
+
+        list_addTail(&c->list, &e->node);
+        hashmapPut(c->map, k, e);
+    }
+    return e;
+}
+
 static void put(Cache *c, void *k, void *v, void (*f)(void*)) {
     if (!k || !v)
         return;
@@ -57,22 +79,9 @@ static void put(Cache *c, void *k, void *v, void (*f)(void*)) {
         }
 
         // New entry
-        e = malloc(sizeof (struct CacheEntry));
+        e = cachePutEntry(c, k);
         if (e) {
-            memset(e, 0, sizeof (struct CacheEntry));
-            e->key = k;
-
             freeable_set(&e->value, v, f);
-
-            if (c->maxage) {
-                time(&e->expires);
-                e->expires += c->maxage;
-                // Copy so CACHE_EXPIRE_ORIGINAL_TIME will work when CACHE_GET_UPDATE_TIME is in use
-                e->original_expires = e->expires;
-            }
-
-            list_addTail(&c->list, &e->node);
-            hashmapPut(c->map, k, e);
         }
     }
 

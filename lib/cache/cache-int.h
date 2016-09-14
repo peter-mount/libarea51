@@ -43,6 +43,9 @@ extern "C" {
         void (*freeKey)(void *);
         // Flags
         unsigned int flags;
+        // Lookup function to use when we get a non-existent entry
+        void (*lookup) (void *, void *, Freeable *);
+        Freeable lookupContext;
     };
 
     struct CacheEntry {
@@ -55,11 +58,14 @@ extern "C" {
         time_t expires;
         // The original expiry time
         time_t original_expires;
+        // Mutex for CACHE_LOOKUP_CONCURRENT mode
+        pthread_mutex_t mutex;
     };
 
     extern void cacheLock(Cache *);
     extern void cacheUnlock(Cache *);
     extern struct CacheEntry *cacheGetEntry(Cache *, void *);
+    extern struct CacheEntry *cachePutEntry(Cache *, void *);
     extern void cacheRemoveEntry(Cache *, struct CacheEntry *);
     extern void cacheExpireIntl(Cache *);
 

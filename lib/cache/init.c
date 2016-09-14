@@ -16,7 +16,10 @@ Cache *cacheCreate(
         int (*hash)(void* key),
         bool(*equals)(void* keyA, void* keyB),
         void (*fk)(void *),
-        unsigned int flags
+        unsigned int flags,
+        void (*lookup)(void *, void *, Freeable *),
+        void *lookupContext,
+        void (*lookupFree)(void *)
         ) {
     Cache *c = malloc(sizeof (struct Cache));
     if (!c)
@@ -37,12 +40,17 @@ Cache *cacheCreate(
     c->maxage = maxage;
     c->maxSize = maxSize;
     c->freeKey = fk;
+
     c->flags = flags;
-    
+
     // Update time implies least used mode as we need to move the entry to the
     // top of the list
-    if(c->flags & CACHE_GET_UPDATE_TIME)
+    if (c->flags & CACHE_GET_UPDATE_TIME)
         c->flags |= CACHE_EXPIRE_LEAST_USED;
-    
+
+    c->lookup == lookup;
+    if (lookupContext)
+        freeable_set(&c->lookupContext, lookupContext, lookupFree);
+
     return c;
 }
