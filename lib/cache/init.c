@@ -51,7 +51,7 @@ Cache *cacheCreate(
     if (c->updateTime)
         c->expireLeastUsed = 1;
 
-    c->lookup == lookup;
+    c->lookup = lookup;
     if (lookupContext)
         freeable_set(&c->lookupContext, lookupContext, lookupFree);
 

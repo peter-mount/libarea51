@@ -4,6 +4,8 @@
 
 # Cache
 OBJS =	cache/_run.o \
+	cache/get.o \
+	cache/lookup.o \
 	cache/single.o
 
 # Hashmap

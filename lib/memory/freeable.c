@@ -38,7 +38,6 @@ void freeable_clear(Freeable *f) {
     if (f) {
         if (f->val && f->free)
             f->free(f->val);
-        free(f);
     }
 }
 
